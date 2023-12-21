@@ -1,0 +1,35 @@
+*{
+    scroll-behavior: smooth;
+}
+.cardanimation {
+    animation: animate_4010 6s ease-in-out infinite;
+    /* animation-delay: -1s; */
+}
+
+@keyframes animate_4010 {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+.whatdiv {
+    animation: animatee_4010 6s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+@keyframes animatee_4010 {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
