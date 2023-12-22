@@ -100,7 +100,7 @@ export default function Footer() {
             </div>
             <div className="footer-col">
               <h4>follow us</h4>
-              <div class=" flex  justify-center gap-3">
+              <div className=" flex  justify-center gap-3">
                 <div className="social-links">
                   <a href="#" className="flex justify-center overflow-hidden  ">
                     <div className="flex justify-center pt-2">

@@ -10,6 +10,7 @@ module.exports = {
         robotoflex: ["Roboto Flex", "sans-serif"],
         cormorantgaramond: ["Cormorant Garamond", "serif"],
         sans: ["Nunito Sans", "Helvetica", "Arial", "sans-serif"],
+        merriweather: ["Merriweather", "serif"],
       },
       letterSpacing: {
         widest: ".10em",

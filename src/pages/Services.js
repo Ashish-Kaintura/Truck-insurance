@@ -41,7 +41,7 @@ export default function Services() {
       {/* // */}
       <main>
         <section className="py-12">
-          <div className="sm:flex flex-wrap sm:justify-between justify-center items-center   ps-12">
+          <div className="sm:flex flex-wrap sm:justify-between justify-center items-center sm:ps-12 px-4">
             <div className="flex flex-col uppercase ">
               <h1 className="text-5xl font-bold font-sans">
                 Affordable truck{" "}
