@@ -1,4 +1,4 @@
-import Nav from "../component/Nav";
+// import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../gif/ezgif.com-cro4.gif";
@@ -21,7 +21,37 @@ import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surro
 const Home = () => {
   return (
     <div>
-      <Nav />
+      <nav className="bg-[#515659]">
+        <ul className="flex justify-center py-6">
+          <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
+            <div className="w-32">
+              <img src="./red-removebg-preview.png" alt="" />
+            </div>
+            <div className="sm:flex hidden gap-5 uppercase font-sans text-white text-sm">
+              <Link to={"/"}>
+                <li>home</li>
+              </Link>
+              <Link to={"/Aboutus"}>
+                <li>About Us</li>
+              </Link>
+              <Link>
+                <li>Certificates</li>
+              </Link>
+              <Link to={"/contact"}>
+                <li>Contact Us</li>
+              </Link>
+            </div>
+            <div className="sm:flex hidden justify-center gap-8 font-sans">
+              <div>
+                <h1>Login</h1>
+              </div>
+              <div>
+                <h1>Signup</h1>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </nav>
       <main>
         <div
           id="banner"

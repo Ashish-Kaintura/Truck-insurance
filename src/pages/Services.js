@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
 import "../Css/Services.css";
 import image from "../gif/ezgif.com-crop2.gif";
@@ -7,37 +8,7 @@ import image1 from "../gif/ezgif.com-crop2.gif";
 export default function Services() {
   return (
     <div>
-      <nav className="bg-[white]">
-        <ul className="flex justify-center py-6">
-          <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
-            <div className="w-32">
-              <img src="./red-removebg-preview.png" alt="" />
-            </div>
-            <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
-              <Link to={"/"}>
-                <li>home</li>
-              </Link>
-              <Link to={"/Aboutus"}>
-                <li>About Us</li>
-              </Link>
-              <Link>
-                <li>Certificates</li>
-              </Link>
-              <Link>
-                <li>Contact Us</li>
-              </Link>
-            </div>
-            <div className="sm:flex hidden justify-center gap-8 font-sans">
-              <div>
-                <h1>Login</h1>
-              </div>
-              <div>
-                <h1>Signup</h1>
-              </div>
-            </div>
-          </div>
-        </ul>
-      </nav>
+      <Nav />
       {/* // */}
       <main>
         <section className="py-12">
