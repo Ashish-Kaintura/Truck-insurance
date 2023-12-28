@@ -5,6 +5,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito+Sans:opsz,wght@6..12,400&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
 * {
     scroll-behavior: smooth;
 }
+
+/* whatsapp .icon  start */
+.whats-app {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 150px;
+    right: 15px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+/* whatsapp end  */

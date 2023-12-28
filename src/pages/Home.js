@@ -1,5 +1,6 @@
 // import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../gif/ezgif.com-cro4.gif";
 import image2 from "../gif/ezgif.com-crop5.gif";
@@ -17,15 +18,21 @@ import TruckDamageSvg6 from "../images/truck-insurance_towing.svg";
 import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
 import backgroundImage from "../images/dimitar-donovski-yrjB4dYWUZU-unsplash.jpg";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
-
+import { FaWhatsapp } from "react-icons/fa";
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <nav className="bg-[#515659]">
         <ul className="flex justify-center py-6">
           <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
-            <div className="w-32">
-              <img src="./red-removebg-preview.png" alt="" />
+            <div className="w-48">
+              <img
+                src="./WhatsApp Image 2023-12-26 at 9.40.24 PM.jpeg"
+                alt=""
+              />
             </div>
             <div className="sm:flex hidden gap-5 uppercase font-sans text-white text-sm">
               <Link to={"/"}>
@@ -34,19 +41,26 @@ const Home = () => {
               <Link to={"/Aboutus"}>
                 <li>About Us</li>
               </Link>
-              <Link>
-                <li>Certificates</li>
+              <Link to={"/services"}>
+                <li>Services</li>
               </Link>
+              {/* <Link to={"/certificates"}>
+                <li>Certificates</li>
+              </Link> */}
               <Link to={"/contact"}>
                 <li>Contact Us</li>
               </Link>
             </div>
             <div className="sm:flex hidden justify-center gap-8 font-sans">
-              <div>
-                <h1>Login</h1>
+              <div className="flex justify-center">
+                <Link to={"/login"}>
+                  <button>Login</button>
+                </Link>
               </div>
-              <div>
-                <h1>Signup</h1>
+              <div className="flex justify-center">
+                <Link to={"/signup"}>
+                  <button>Signup</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -87,9 +101,16 @@ const Home = () => {
             alt=""
           />
         </div>
-        <div>
-          <img src={require("../images/Vehicle-Detail-Journey.png")} alt="" />
+        <div className="w-full">
+          <img
+            className="w-full"
+            src={require("../images/Vehicle-Detail-Journey.png")}
+            alt=""
+          />
         </div>
+        {/* <div>
+          <video autoPlay muted loop src={videoSrc}></video>
+        </div> */}
         <section className="bg-[#FAFAFA] pb-32 bg-[100vh] relative">
           <div className="flex justify-center pt-12">
             <h1 className=" font-cormorantgaramond text-4xl py-5">
@@ -324,12 +345,12 @@ const Home = () => {
                     with utmost commitment
                   </h3>
                   <div className="flex gap-5 justify-start  pt-8">
-                    <Link to={""}>
+                    <Link to={"/contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
                       </button>
                     </Link>
-                    <Link to={""}>
+                    <Link to={"/services"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 bg-[#7888A1] rounded-lg">
                         Know More
                       </button>
@@ -369,7 +390,7 @@ const Home = () => {
                 </h1>
               </div>
               <div className="sm:flex block gap-5 justify-start">
-                <Link to={""}>
+                <Link to={"/contact"}>
                   <button className="border-2 py-2 px-4 text-2xl text-white bg-[#816C54] mt-2 rounded-lg font-sans">
                     Contact Us
                   </button>
@@ -654,12 +675,12 @@ const Home = () => {
                   Insurance Agency.
                 </h3>
                 <div className="flex justify-center gap-5 pt-8">
-                  <Link to={""}>
+                  <Link to={"/contact"}>
                     <button className="border-2 py-2 px-4 text-2xl text-white font-sans mt-2 rounded-lg">
                       Contact Us
                     </button>
                   </Link>
-                  <Link to={""}>
+                  <Link to={"/services"}>
                     <button className="border-2 py-2 px-4 text-2xl text-white font-sans mt-2 bg-[#816C54] rounded-lg">
                       Know More
                     </button>
@@ -797,7 +818,7 @@ const Home = () => {
 
                   <button
                     type="submit"
-                    className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded text-white text-lg font-merriweather"
+                    className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded  text-lg font-merriweather"
                   >
                     Submit
                   </button>
@@ -829,12 +850,24 @@ const Home = () => {
                   <div className="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-700 delay-150 group-hover:delay-150"></div>
                   <div className="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-600 delay-150 group-hover:delay-200"></div>
                   <div className="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-500 delay-150 group-hover:delay-300"></div>
-                  <p className="z-10">Contact Us</p>
+                  <Link to={"/contact"} className="z-10">
+                    Contact Us
+                  </Link>
                 </button>
               </div>
             </div>
           </div>
         </section>
+        {/* <!-- whats app icon  --> */}
+        <Link
+          className="whats-app"
+          to="https://wa.me/7827110079"
+          target="_blank" // Optional: If you want to open the link in a new tab
+        >
+          <i className="fab fa-whatsapp icon animate-bounce my-float flex justify-center">
+            <FaWhatsapp />
+          </i>
+        </Link>
       </main>
     </div>
   );

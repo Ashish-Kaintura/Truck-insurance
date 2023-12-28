@@ -9,6 +9,8 @@ import Footer from "./component/Footer";
 import Conatct from "./pages/Conatct";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Certificates from "./pages/Certificates";
+import Profile from "./pages/Profile";
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/Aboutus" element={<Aboutus />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/contact" element={<Conatct />} />
+          <Route path="/certificates" element={<Certificates/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
         </Routes>

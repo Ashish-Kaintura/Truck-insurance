@@ -15,12 +15,22 @@ export default function Nav2() {
             <Link to={"/Aboutus"}>
               <li>About Us</li>
             </Link>
-            <Link>
+            <Link to={"/certificates"}>
               <li>Certificates</li>
+            </Link>
+            <Link to={"/profile"}>
+              <li >Profile</li>
             </Link>
             <Link to={"/contact"}>
               <li>Contact Us</li>
             </Link>
+          </div>
+          <div className="sm:flex hidden justify-center gap-8 font-sans">
+            <div className="flex justify-center">
+              <Link to={"/login"}>
+                <button>Logout</button>
+              </Link>
+            </div>
           </div>
         </div>
       </ul>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
 import "../Css/Services.css";
@@ -6,6 +7,9 @@ import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../gif/ezgif.com-crop2.gif";
 
 export default function Services() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Nav />

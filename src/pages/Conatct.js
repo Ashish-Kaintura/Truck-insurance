@@ -1,10 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Nav from "../component/Nav";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoTime } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 export default function Conatct() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Nav />
@@ -127,7 +130,9 @@ export default function Conatct() {
               <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
                 <FaPhoneAlt />
                 <div>
-                  <h1 className="text-lg sm:text-black font-semibold ">Phone :</h1>
+                  <h1 className="text-lg sm:text-black font-semibold ">
+                    Phone :
+                  </h1>
                   <h2 className="text-lg sm:text-gray-900">91+ 256586689489</h2>
                 </div>
               </div>
@@ -147,7 +152,9 @@ export default function Conatct() {
               <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
                 <IoMail className="text-2xl" />
                 <div>
-                  <h1 className="text-lg sm:text-black font-semibold ">E-mail:</h1>
+                  <h1 className="text-lg sm:text-black font-semibold ">
+                    E-mail:
+                  </h1>
                   <h2 className="text-lg sm:text-gray-900">mail@demo.com</h2>
                 </div>
               </div>

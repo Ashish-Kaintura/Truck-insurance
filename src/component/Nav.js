@@ -5,8 +5,8 @@ export default function Nav() {
     <nav className="bg-[white]">
       <ul className="flex justify-center py-6">
         <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
-          <div className="w-32">
-            <img src="./red-removebg-preview.png" alt="" />
+          <div className="w-48">
+            <img src="./WhatsApp Image 2023-12-26 at 9.40.24 PM.jpeg" alt="" />
           </div>
           <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
             <Link to={"/"}>
@@ -15,9 +15,12 @@ export default function Nav() {
             <Link to={"/Aboutus"}>
               <li>About Us</li>
             </Link>
-            <Link>
-              <li>Certificates</li>
+            <Link to={"/services"}>
+              <li>Services</li>
             </Link>
+            {/* <Link to={"/certificates"}>
+              <li>Certificates</li>
+            </Link> */}
             <Link to={"/contact"}>
               <li>Contact Us</li>
             </Link>

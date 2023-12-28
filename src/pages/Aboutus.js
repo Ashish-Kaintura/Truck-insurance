@@ -116,10 +116,10 @@ export default function Aboutus() {
                     quod incidunt maiores enim voluptas iusto perspiciatis,
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    <img
+                    {/* <img
                       src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -140,10 +140,10 @@ export default function Aboutus() {
                     quod incidunt maiores enim voluptas iusto perspiciatis,
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    <img
+                    {/* <img
                       src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -164,10 +164,10 @@ export default function Aboutus() {
                     quod incidunt maiores enim voluptas iusto perspiciatis,
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    <img
+                    {/* <img
                       src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -188,10 +188,10 @@ export default function Aboutus() {
                     quod incidunt maiores enim voluptas iusto perspiciatis,
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    <img
+                    {/* <img
                       src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -212,10 +212,10 @@ export default function Aboutus() {
                     quod incidunt maiores enim voluptas iusto perspiciatis,
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    <img
+                    {/* <img
                       src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -236,10 +236,10 @@ export default function Aboutus() {
                     quod incidunt maiores enim voluptas iusto perspiciatis,
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    <img
+                    {/* <img
                       src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
                       alt=""
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

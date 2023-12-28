@@ -14,7 +14,7 @@ export default function Signup() {
         >
           <div className="flex flex-col items-center justify-center p-8 sm:h-screen dark">
             <div
-              className="w-full max-w-md  rounded-lg shadow-md p-20 border-2"
+              className="w-full  rounded-lg shadow-md p-20 border-2"
               style={{
                 backdropFilter: " blur(4px)",
                 backgrounCcolor: "rgba(255, 255, 255, 0.071)",
@@ -24,27 +24,48 @@ export default function Signup() {
             >
               <h2 className="text-2xl font-bold text-gray-200 mb-4">Signup</h2>
               <form className="flex flex-col">
-                <input
-                  placeholder="Name"
-                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                  type="text"
-                />
-                <input
-                  placeholder="Email address"
-                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                  type="email"
-                />
-                <input
-                  placeholder="Password"
-                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                  type="password"
-                />
+                <div className="flex gap-5">
+                  <input
+                    placeholder="Name"
+                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    type="text"
+                  />
+                  <input
+                    placeholder="Email address"
+                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    type="email"
+                  />
+                </div>
+                <div className="flex gap-5">
+                  <input
+                    placeholder="Tax Id No"
+                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    type="text"
+                  />
+                  <input
+                    placeholder="Phone Number"
+                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    type="number"
+                  />
+                </div>
+                <div className="flex gap-5">
+                  <input
+                    placeholder="Company Name"
+                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    type="text"
+                  />
+                    <input
+                    placeholder="Password"
+                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    type="password"
+                  />
+                </div>
                 <div className="block items-center justify-between flex-wrap">
                   <p className="text-white mt-4">
                     Allready Have an Account ?{" "}
                     <Link
                       to={"/login"}
-                      className="text-sm text-blue-500 -200 hover:underline mt-4"
+                      className="text-sm text-black -200 hover:underline mt-4"
                     >
                       Login
                     </Link>
