@@ -11,6 +11,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Certificates from "./pages/Certificates";
 import Profile from "./pages/Profile";
+import DashBord from "./pages/DashBord";
+import Profile2 from "./pages/Profile2";
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
           <Route path="/contact" element={<Conatct />} />
           <Route path="/certificates" element={<Certificates/>} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/profile2" element={<Profile2/>} />
+          <Route path="/dashboard" element={<DashBord/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
         </Routes>

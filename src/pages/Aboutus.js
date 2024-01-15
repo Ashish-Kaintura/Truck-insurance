@@ -51,33 +51,40 @@ export default function Aboutus() {
             </div>
           </div>
         </section>
-        <div className="py-5">
+        {/* <div className="py-5">
           <img
             className="w-full"
             src={require("../images/Vehicle-Detail-Journey.png")}
             alt=""
           />
-        </div>
-        <section className="pb-20  bg-white">
+        </div> */}
+        <section className="pb-20  bg-white pt-5">
           <div
             className="block justify-center text-center py-8 text-white bg-cover bg-center object-cover"
             style={{ backgroundImage: `url(${image1})` }}
           >
             <h1 className="sm:text-5xl text-2xl uppercase font-cormorantgaramond">
-              Wellcome to J&A truck insurance
+              Wellcome to J & S Insurance
             </h1>
             <h2 className="pt-8 font-cormorantgaramond">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis hic
-              vitae totam voluptatem aperiam veniam adipisci perferendis autem.
-              unde deleniti consequatur.
+              Meet the Dedicated Team Behind J&S Insurance Agency At J&S
+              Insurance Agency, we’re not just about selling insurance policies
+              - we’re about building lasting relationships and protecting what
+              matters most.
             </h2>
             <h2 className="pt-2 font-cormorantgaramond">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis hic
-              vitae totam voluptatem aperiam veniam adipisci perferendis autem.
-              unde deleniti consequatur.
+              Founded in 2018 by Sandy Gill, J&S Insurance is rooted in a
+              passion for helping individuals and businesses secure customized
+              coverage. After nearly a decade working for top insurance
+              providers, Sandy pursued an entrepreneurial dream.
             </h2>
             <h2 className="pt-2 font-cormorantgaramond">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis hic
+              She obtained her agent license and dove headfirst into the
+              independent agency world. Now, with over 5 years of combined
+              industry expertise, the J&S team offers an array of trucking and
+              commercial insurance products across 10 states. But more
+              importantly, we provide genuine guidance to safeguard your assets
+              and prepare for the unexpected.
             </h2>
           </div>
           <div data-aos="fade-up" data-aos-duration="3000">
@@ -88,13 +95,19 @@ export default function Aboutus() {
               What we Offer
             </h1>
             <p className="text-center pt-6 font-robotoflex text-sm text=[#d7d7d7]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              molestias <br />
-              assumenda accusamus fugit, sapiente harum minima nulla totam{" "}
+              At J&S Insurance Agency, we are aware of the fact that no two
+              clients have precisely identical risk profile as well as coverage
+              needs. <br />
+              Being an individual agency serving the needs of rental service
+              trucks and commercial clients in 10 states for all its worth we
+              are proud to present customizable protection option. <br />
+              Be it a single delivery truck or an entire fleet, our advisors
+              will take the time to understand your specific concerns
+              individually so as to craft coverage that is truly tailored.
               <br />
-              adipisci perspiciatis tempora possimus dolor, quam fugiat
+              Browse our specialty insurance offerings below and discover the
+              J&S difference today.
               <br />
-              ratione! Deleniti adipisci magnam ad. <br />
             </p>
           </div>
           <div className="pt-5">
@@ -108,12 +121,13 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Card1
+                    Trucking Liability Insurance
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Lorem ipsum dolor sit amet consectetur adipQuo repellendus
-                    fugiat adipisci non! Officia re laboriosam quae nesciunt. Ut
-                    quod incidunt maiores enim voluptas iusto perspiciatis,
+                    Out on the open road each day, truckers face endless
+                    variables beyond their control. One distracted driver could
+                    endanger your vehicle, cargo, or worse - your own safety.
+                    Don’t take these risks lightly.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -132,12 +146,14 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Card1
+                    Motor Truck Cargo Coverage
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Lorem ipsum dolor sit amet consectetur adipQuo repellendus
-                    fugiat adipisci non! Officia re laboriosam quae nesciunt. Ut
-                    quod incidunt maiores enim voluptas iusto perspiciatis,
+                    For instance, expensive equipment or perishable goods
+                    transport? We have motor truck cargo insurance for you.
+                    Cover for liability of any cargo lost, damaged or destroyed
+                    en route — through road accidents involving your vehicles ,
+                    spills, adverse weather and theft.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -156,12 +172,14 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Card1
+                    Roadside Assistance
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Lorem ipsum dolor sit amet consectetur adipQuo repellendus
-                    fugiat adipisci non! Officia re laboriosam quae nesciunt. Ut
-                    quod incidunt maiores enim voluptas iusto perspiciatis,
+                    Unpredictably truckers on long trips can have mechanical
+                    problems or flat tires. A single breakdown, however, can
+                    ruin delivery timetables and your bottom line severely. Our
+                    customizable roadside assistance plans account for this by
+                    providing:
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -180,12 +198,13 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Card1
+                    General Liability Insurance
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Lorem ipsum dolor sit amet consectetur adipQuo repellendus
-                    fugiat adipisci non! Officia re laboriosam quae nesciunt. Ut
-                    quod incidunt maiores enim voluptas iusto perspiciatis,
+                    While slip-and-fall incidents or equipment damages requiring
+                    legal fees are rare, trucking and commercial ventures must
+                    prepare for the worst. Our customizable General Liability
+                    insurance provides coverage
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -204,12 +223,12 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Card1
+                    Trailer Interchange Coverage
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Lorem ipsum dolor sit amet consectetur adipQuo repellendus
-                    fugiat adipisci non! Officia re laboriosam quae nesciunt. Ut
-                    quod incidunt maiores enim voluptas iusto perspiciatis,
+                    For trucking companies frequently exchanging trailers within
+                    their network, our Trailer Interchange Insurance guarantees
+                    seamless operations.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -228,12 +247,14 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Card1
+                    Additional Offerings
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Lorem ipsum dolor sit amet consectetur adipQuo repellendus
-                    fugiat adipisci non! Officia re laboriosam quae nesciunt. Ut
-                    quod incidunt maiores enim voluptas iusto perspiciatis,
+                    Alongside the specialty coverage above, we also provide
+                    policies such as: Non-Owned Trailer Liability Auto Liability
+                    Comprehensive + Collision Truck Damage Commercial Property
+                    Insurance Business Income Insurance Commercial Umbrella
+                    Insurance Workers Compensation EPLI Plus More!
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -261,19 +282,22 @@ export default function Aboutus() {
                     Who We Are ?
                   </h1>
                   <p className="pt-4 font-sans">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    At J&S Insurance Agency, we aren’t simply here to sell
+                    policies and collect
                     <br />
-                    Doloribus, facilis nulla. Officia laboriosam quod alias{" "}
+                    payments. We’re family-owned protectors using industry
+                    know-how to <br />
                     <br />
+                    safeguard what matters most - your health, assets, and
+                    future livelihood.
                     <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Our origin traces back to founder Sandy Gill watching her
+                    parents' small
                     <br />
-                    Doloribus, facilis nulla. Officia laboriosam quod alias{" "}
+                    business crumble following an uninsured fire. After nearly
+                    losing everything,
                     <br />
-                    <br />
-                    exercitationem quasi recusandae rem, ratione veniam nam.
-                    <br />
-                    Sapiente expedita quasi velit eveniet facere saepe optio.
+                    she vowed to educate ventures on proper coverage.
                     <br />
                   </p>
                 </div>
@@ -321,23 +345,27 @@ export default function Aboutus() {
                   <p className="pt-4 font-sans">
                     <span className="text-black font-semibold">Fact 1</span>
                     <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Yes, our smaller size allows providing white-glove service
+                    lacking from
                     <br />
-                    Doloribus, facilis nulla. Officia laboriosam quod alias{" "}
-                    <br />
+                    mega-agencies. But our independent status also permits
+                    crafting superior coverage. <br />
                     <br />
                     <span className="text-black font-semibold">Fact 2</span>
                     <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    After getting to know hundreds of trucking and commercial
+                    clients intimately,
                     <br />
-                    Doloribus, facilis nulla. Officia laboriosam quod alias{" "}
-                    <br />
+                    we know no single provider meets every protection need
+                    perfectly. <br />
                     <br />
                     <span className="text-black font-semibold">Fact 3</span>
                     <br />
-                    exercitationem quasi recusandae rem, ratione veniam nam.
+                    At J&S Insurance Agency, we’re obsessed with preparing
+                    trucking and commercial clients for the
                     <br />
-                    Sapiente expedita quasi velit eveniet facere saepe optio.
+                    unexpected - combining compassion and choice for unmatched
+                    protection & peace of mind.
                     <br />
                   </p>
                 </div>

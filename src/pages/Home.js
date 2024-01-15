@@ -7,7 +7,6 @@ import image2 from "../gif/ezgif.com-crop5.gif";
 import image3 from "../gif/ezgif.com-crop6.gif";
 import image4 from "../gif/ezgif.com-crop7.gif";
 import image5 from "../gif/ezgif.com-crop8.gif";
-import videoSrc from "../video/bus 1.mp4";
 import TruckDamageSvg from "../images/truck-insurance_damage.svg";
 import TruckDamageSvg1 from "../images/truck-insurance_theft.svg";
 import TruckDamageSvg2 from "../images/truck-insurance_fire.svg";
@@ -30,7 +29,7 @@ const Home = () => {
           <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
             <div className="w-48">
               <img
-                src="./WhatsApp Image 2023-12-26 at 9.40.24 PM.jpeg"
+                src="./j&s logo black.png"
                 alt=""
               />
             </div>
@@ -101,13 +100,13 @@ const Home = () => {
             alt=""
           />
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <img
             className="w-full"
             src={require("../images/Vehicle-Detail-Journey.png")}
             alt=""
           />
-        </div>
+        </div> */}
         {/* <div>
           <video autoPlay muted loop src={videoSrc}></video>
         </div> */}
@@ -304,7 +303,7 @@ const Home = () => {
 
                       <button className="profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
                         <div className="w-full bg-white h-full flex items-center justify-center p-2 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500">
-                          <span className="w-20 h-20 inline-block">
+                          <span className="w-20 h-20 flex justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -361,9 +360,9 @@ const Home = () => {
             </div>
           </section>
         </section>
-        <div>
+        {/* <div>
           <video autoPlay muted loop src={videoSrc}></video>
-        </div>
+        </div> */}
         <section className="bg-cover bg-center bg-no-repeat pb-28 relative bg-[#FAFAFA] sm:px-0 px-4">
           <div className="sm:flex flex-wrap sm:justify-evenly justify-center px-2 sm:pt-28 pt-12 items-center">
             <div className="flex flex-col">

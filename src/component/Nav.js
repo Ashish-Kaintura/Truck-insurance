@@ -6,7 +6,7 @@ export default function Nav() {
       <ul className="flex justify-center py-6">
         <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
           <div className="w-48">
-            <img src="./WhatsApp Image 2023-12-26 at 9.40.24 PM.jpeg" alt="" />
+            <img src="./j&s logo final logo.png" alt="" />
           </div>
           <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
             <Link to={"/"}>

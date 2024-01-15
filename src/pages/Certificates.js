@@ -16,15 +16,28 @@ export default function Certificates() {
     <div>
       <Nav2 />
       <main>
-        <section className="block justify-center h-[100vh] p-12">
+        <section className="block justify-center  p-12">
           <div className=" w-full">
             <h1 className="text-center uppercase text-4xl">Fill the Form </h1>
           </div>
-          <div className="w-full bg-slate-300 h-96 rounded-3xl shadow-2xl shadow-inner-2xl p-8 mt-8 flex justify-center gap-6 items-center">
-            <div className="w-64 bg-slate-600 h-32">
-             
+          <div className="w-full bg-slate-300 rounded-3xl shadow-2xl shadow-inner-2xl p-8 mt-8 flex flex-col justify-center gap-6 items-center">
+            <div>
+              <img src={require("../images//certicate.jpeg")} alt="" />
             </div>
-            <button className=" font-sans text-lg px-4 py-2 bg-red-600 text-white rounded-xl">Submit</button>
+            <div className="text-center" >
+              You Only Need to Fill certificate Holder Name 
+              <br />
+              other Details Fill By Us
+            </div>
+            <div className="">
+            <form action="">
+                <label htmlFor="">Certificate Holder Name </label>
+              </form>
+              <input type="text" />
+            </div>
+            <button className=" font-sans text-lg px-4 py-2 bg-red-600 text-white rounded-xl">
+              Submit
+            </button>
           </div>
         </section>
       </main>

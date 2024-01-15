@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import Nav2 from "../component/Nav2";
 
-export default function Profile() {
+export default function Profile2() {
   const [selectedButton, setSelectedButton] = useState("insurance");
 
   const handleButtonClick = (buttonType) => {
@@ -76,7 +76,7 @@ export default function Profile() {
               <div className="flex flex-col items-center">
                 <div className="w-full flex gap-5">
                   <button
-                    className={`shadow-inner-2xl shadow-2xl py-2 font-robotoflex text-sm px-4 border-gray-600  rounded-lg uppercase ${
+                    className={`shadow-inner-2xl shadow-2xl py-2 font-robotoflex text-sm px-4  border-gray-600  rounded-lg uppercase ${
                       selectedButton === "insurance"
                         ? "bg-blue-600 text-white "
                         : ""
@@ -95,6 +95,16 @@ export default function Profile() {
                   >
                     ID Card
                   </button>
+                  <button
+                    className={` shadow-inner-2xl shadow-2xl py-2 font-robotoflex text-sm px-4 border-2 border-gray-600 rounded-lg uppercase ${
+                      selectedButton === "Upload"
+                        ? "bg-blue-600 text-white"
+                        : ""
+                    }`}
+                    onClick={() => handleButtonClick("Upload")}
+                  >
+                    Upload
+                  </button>
                 </div>
               </div>
             </div>
@@ -106,9 +116,12 @@ export default function Profile() {
                     {" "}
                     <p>Insurance Certificate Details</p>
                   </div>
-                  <div>
+                  <div className="flex gap-5">
                     <button className="font-sans px-4 py-2 rounded-xl bg-red-600 text-white">
                       Download
+                    </button>
+                    <button className="font-sans px-4 py-2 rounded-xl bg-gray-600 text-white">
+                      Delete
                     </button>
                   </div>
                 </div>
@@ -122,6 +135,19 @@ export default function Profile() {
                   <div>
                     <button className="font-sans px-4 py-2 rounded-xl bg-red-600 text-white">
                       Download
+                    </button>
+                  </div>
+                </div>
+              )}
+              {selectedButton === "Upload" && (
+                <div className="flex gap-4 items-center">
+                  {/* Render ID Card details here */}
+                  <div>
+                   <input type="file" name="" id="" />
+                  </div>
+                  <div>
+                    <button className="font-sans px-4 py-2 rounded-xl bg-red-600 text-white">
+                      Upload
                     </button>
                   </div>
                 </div>
