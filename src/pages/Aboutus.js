@@ -381,17 +381,17 @@ export default function Aboutus() {
                   Our Achivements
                 </h1>
                 <p className="pt-4 font-robotoflex pr-20">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                  ratione perspiciatis iure tempora recusandae, maiores deserunt
-                  totam eaque? Quia voluptas ex aliquid non obcaecati ut earum
-                  eos laboriosam perferendis mollitia!
+                  At J&S Insurance Agency, we’re obsessed with preparing
+                  trucking and commercial clients for the unexpected - combining
+                  compassion and choice for unmatched protection & peace of
+                  mind.
                 </p>
                 <br />
                 <p className="pt-4 font-robotoflex pr-20">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                  ratione perspiciatis iure tempora recusandae, maiores deserunt
-                  totam eaque? Quia voluptas ex aliquid non obcaecati ut earum
-                  eos laboriosam perferendis mollitia!
+                  Learn more about the J&S difference and get covered right
+                  today by calling +1 206-617-9034 now! Our advisors offer
+                  complimentary consultations to determine the optimal coverage
+                  guarding YOUR unique venture.
                 </p>
               </div>
             </div>
@@ -485,9 +485,12 @@ export default function Aboutus() {
             >
               <div class="flex text-[#1C7987] font-robotoflex">
                 <h1>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+                  Get in Touch with the J&S Insurance Team we don’t just see you
+                  as a customer
                   <br />
-                  repellat doloremque voluptates mollitia,
+                  we see you as a part of our family. And family looks out for
+                  one another.
+                  <br />
                 </h1>
               </div>
               <div>

@@ -23,9 +23,9 @@ export default function Services() {
               </h1>
               <h2 className="text-5xl font-semibold font-sans pt-4">Service</h2>
               <h3 className="text-lg font-cormorantgaramond pt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Customizable Coverage: The J&S Insurance Difference
                 <br />
-                Nunc odio in et, lectus sit lorem id integer.
+                Services We Provide: J&S Insurance Agency
               </h3>
               <br />
               <div>
@@ -49,13 +49,16 @@ export default function Services() {
               Services you get with us
             </h1>
             <h2 className="font-cormorantgaramond pt-3 text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque in
-              saepe reprehenderit, amet odio aliquam omnis vel aperiam dolor
-              esse soluta.
+              At J&S Insurance Agency, we are aware of the fact that no two
+              clients have precisely identical risk profile as well as coverage
+              needs. Being an individual agency serving the needs of rental
+              service trucks and commercial clients in 10 states for all its
+              worth we are proud to present customizable protection option.
             </h2>
             <h3 className="font-cormorantgaramond pt-1 text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque in
-              saepe reprehenderit,
+              Be it a single delivery truck or an entire fleet, our advisors
+              will take the time to understand your specific concerns
+              individually so as to craft coverage that is truly tailored.
             </h3>
           </div>
           <div className="flex flex-wrap sm:justify-evenly justify-center sm:pt-20 z-[10]">
@@ -74,13 +77,14 @@ export default function Services() {
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Trucking Liability Insurance
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  Out on the open road each day, truckers face endless variables
+                  beyond their control. One distracted driver could endanger
+                  your vehicle, cargo, or worse - your own safety. Don’t take
+                  these risks lightly.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -102,13 +106,15 @@ export default function Services() {
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card1</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Motor Truck Cargo Coverage
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  For instance, expensive equipment or perishable goods
+                  transport? We have motor truck cargo insurance for you. Cover
+                  for liability of any cargo lost, damaged or destroyed en route
+                  — through road accidents involving your vehicles , spills,
+                  adverse weather and theft.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -130,13 +136,13 @@ export default function Services() {
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card2</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Roadside Assistance
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  Unpredictably truckers on long trips can have mechanical
+                  problems or flat tires. A single breakdown, however, can ruin
+                  delivery timetables and your bottom line severely.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -160,13 +166,13 @@ export default function Services() {
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  General Liability Insurance{" "}
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  While slip-and-fall incidents or equipment damages requiring
+                  legal fees are rare, trucking and commercial ventures must
+                  prepare for the worst.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -188,13 +194,16 @@ export default function Services() {
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card1</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Trailer Interchange Coverage
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  For trucking companies frequently exchanging trailers within
+                  their network, our Trailer Interchange Insurance guarantees
+                  seamless operations. We offer physical damage coverage for any
+                  trailers being pulled under an interchange agreement. Rest
+                  assured your temporary trailers are protected against
+                  unexpected calamity.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -216,13 +225,15 @@ export default function Services() {
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card2</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Additional Offerings
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  Alongside the specialty coverage above, we also provide
+                  policies such as:
+                  <li>Non-Owned Trailer Liability</li>
+                  <li>Auto Liability </li>
+                  <li>Comprehensive + Collision Truck Damage</li>
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -244,7 +255,7 @@ export default function Services() {
               }}
             >
               <div className="sm:flex block sm:justify-evenly justify-center px-2 items-center">
-                <div>
+                <div className="sm:w-[50%]">
                   <div className="relative h-full w-full flex items-center justify-center">
                     <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
                       <button className="profile_item left-[45px] -top-[4px] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
@@ -318,7 +329,7 @@ export default function Services() {
 
                       <button className="profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
                         <div className="w-full bg-white h-full flex items-center justify-center p-2 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500">
-                          <span className="w-20 h-20 inline-block">
+                          <span className="w-20 h-20 flex  justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -334,7 +345,7 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:mt-0 mt-12">
+                <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%]">
                   <h1 className="uppercase text-4xl font-merriweather text-white">
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
                       Why
@@ -343,20 +354,20 @@ export default function Services() {
                   </h1>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
-                    Secured Over 1 Crore+ Smiles!
+                    Ready to Shore Up Coverage & Minimize Risk
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    Trust redefines relations at HDFC ERGO. We consistently
-                    strive to
+                    At J&S Insurance Agency, our risk management insight and
+                    dedication to finding clients the RIGHT coverage set us
                     <br />
-                    make insurance easier, more affordable and more dependable.
-                    Here
+                    apart. With over 15 top providers in our network, flexible
+                    pricing options, and unmatched support, let us keep your
                     <br />
-                    promises are kept, claims are fulfilled and lives are
-                    nurtured
+                    assets protected.Get covered right and safeguard the future
+                    of your trucking or commercial enterprise today.
                     <br />
-                    with utmost commitment
+                 
                   </h3>
                   <div className="sm:flex block gap-5 justify-start pt-8">
                     <Link to={""}>

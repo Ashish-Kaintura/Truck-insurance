@@ -28,10 +28,7 @@ const Home = () => {
         <ul className="flex justify-center py-6">
           <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
             <div className="w-48">
-              <img
-                src="./j&s logo black.png"
-                alt=""
-              />
+              <img src="./j&s logo black.png" alt="" />
             </div>
             <div className="sm:flex hidden gap-5 uppercase font-sans text-white text-sm">
               <Link to={"/"}>
@@ -229,7 +226,7 @@ const Home = () => {
               }}
             >
               <div className="sm:flex block sm:justify-evenly justify-center px-4 items-center">
-                <div>
+                <div className="w-[50%]">
                   <div className="relative h-full w-full flex items-center justify-center">
                     <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
                       <button className="profile_item left-[45px] -top-[4px] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
@@ -319,7 +316,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:mt-0 mt-12">
+                {/* <div className="flex flex-col sm:mt-0 mt-12">
                   <h1 className="uppercase text-4xl font-merriweather text-white">
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
                       Why
@@ -350,6 +347,42 @@ const Home = () => {
                       </button>
                     </Link>
                     <Link to={"/services"}>
+                      <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 bg-[#7888A1] rounded-lg">
+                        Know More
+                      </button>
+                    </Link>
+                  </div>
+                </div> */}
+                <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%]">
+                  <h1 className="uppercase text-4xl font-merriweather text-white">
+                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
+                      Why
+                    </span>
+                    Company Name
+                  </h1>
+                  <br />
+                  <h2 className="text-2xl font-merriweather uppercase">
+                    Ready to Shore Up Coverage & Minimize Risk
+                  </h2>
+                  <br />
+                  <h3 className="font-merriweather text-white">
+                    At J&S Insurance Agency, our risk management insight and
+                    dedication to finding clients the RIGHT coverage set us
+                    <br />
+                    apart. With over 15 top providers in our network, flexible
+                    pricing options, and unmatched support, let us keep your
+                    <br />
+                    assets protected.Get covered right and safeguard the future
+                    of your trucking or commercial enterprise today.
+                    <br />
+                  </h3>
+                  <div className="sm:flex block gap-5 justify-start pt-8">
+                    <Link to={""}>
+                      <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
+                        Contact Us
+                      </button>
+                    </Link>
+                    <Link to={""}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 bg-[#7888A1] rounded-lg">
                         Know More
                       </button>
@@ -837,9 +870,12 @@ const Home = () => {
             >
               <div className="flex text-[#1C7987] font-robotoflex">
                 <h1>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+                  Get in Touch with the J&S Insurance Team we don’t just see you
+                  as a customer
                   <br />
-                  repellat doloremque voluptates mollitia,
+                  we see you as a part of our family. And family looks out for
+                  one another.
+                  <br />
                 </h1>
               </div>
               <div>
