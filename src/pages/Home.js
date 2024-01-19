@@ -113,7 +113,6 @@ const Home = () => {
               Explore our Insurance Plans
             </h1>
           </div>
-
           <div className="flex flex-wrap sm:justify-evenly justify-center sm:pt-20 z-[10]">
             <div
               className="group flex flex-col justify-start items-start gap-2 sm:w-96 w-72 h-56 duration-500 relative rounded-lg p-4 bg-[whitesmoke] hover:-translate-y-2 hover:shadow-xl shadow-gray-300 sm:mt-0 mt-20 cardanimation"
@@ -126,21 +125,18 @@ const Home = () => {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200  overflow-hidden"
                 alt="image here"
               >
-                <img
-                  className=" object-cover "
-                  src={require("../images/download.jpg")}
-                  alt=""
-                />
+                <img src="truck3/image/download.jpg" alt="" />
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Trucking Liability Insurance
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  Out on the open road each day, truckers face endless variables
+                  beyond their control. One distracted driver could endanger
+                  your vehicle, cargo, or worse - your own safety. Don’t take
+                  these risks lightly.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -158,21 +154,19 @@ const Home = () => {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img
-                  className=" object-cover "
-                  src={require("../images/download.jpg")}
-                  alt=""
-                />
+                <img src="truck3/image/download.jpg" alt="" />
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card1</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Motor Truck Cargo Coverage
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  For instance, expensive equipment or perishable goods
+                  transport? We have motor truck cargo insurance for you. Cover
+                  for liability of any cargo lost, damaged or destroyed en route
+                  — through road accidents involving your vehicles , spills,
+                  adverse weather and theft.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
@@ -190,21 +184,17 @@ const Home = () => {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img
-                  className=" object-cover "
-                  src={require("../images/download.jpg")}
-                  alt=""
-                />
+                <img src="truck3/image/download.jpg" alt="" />
               </div>
 
               <div className="">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">Card2</h2>
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Roadside Assistance
+                </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean convallis magna quis lectus fermentum, quis scelerisque
-                  orci pellentesque. Duis id porta justo. Sed ac enim id justo
-                  tincidunt hendrerit id ac lectus. Pellentesque maximus posuere
-                  tortor vitae consequat.
+                  Unpredictably truckers on long trips can have mechanical
+                  problems or flat tires. A single breakdown, however, can ruin
+                  delivery timetables and your bottom line severely.
                 </p>
               </div>
               <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">

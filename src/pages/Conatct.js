@@ -15,7 +15,7 @@ export default function Conatct() {
         <div
           className="sm:h-[100vh] h-[115vh] bg-center bg-cover object-cover relative"
           style={{
-            backgroundImage: `url(${require("../images/JS-Trucking-Insurance-Agency-White-Truck-with-a-Trailer-Driving-on-a-Scenic-Road-with-Colorful-Fall-Foliage-and-Snow-Capped-Mountains-in-the-Background-on-a-Sunny-Day.webp")})`,
+            backgroundImage: `url(${require("../images/rhys-moult-7eaFIKeo1MQ-unsplash.jpg")})`,
           }}
         >
           <div
