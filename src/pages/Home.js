@@ -15,12 +15,49 @@ import TruckDamageSvg4 from "../images/leg-cast.svg";
 import TruckDamageSvg5 from "../images/truck-insurance_third party accident.svg";
 import TruckDamageSvg6 from "../images/truck-insurance_towing.svg";
 import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
+import maintruck from "../images/Untitled-1.png";
 import backgroundImage from "../images/dimitar-donovski-yrjB4dYWUZU-unsplash.jpg";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
 import { FaWhatsapp } from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { EaselPlugin } from "gsap/EaselPlugin";
+
+gsap.registerPlugin(
+  ScrollTrigger,
+  ScrollToPlugin,
+  MotionPathPlugin,
+  EaselPlugin
+);
+
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#banner",
+        // toggleActions: "restart pause reverse pause",
+        // pin: true, // pin the trigger element while active
+        markers: true,
+        start: "top 50px",
+        end: "+=500",
+        scrub: 4,
+      },
+    });
+    console.log(tl);
+    tl.from("#banner .truckimage", {
+      y: -90,
+      scale: 0.4,
+      delay: 1,
+      ease: "back",
+      duration: 12,
+      // stagger: 0.2,
+    });
   }, []);
   return (
     <div>
@@ -65,7 +102,7 @@ const Home = () => {
       <main>
         <div
           id="banner"
-          className="h-[700px] relative items-center justify-center"
+          className="sm:h-[700px] h-[500px] relative items-center justify-center"
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundPosition: "center",
@@ -91,22 +128,14 @@ const Home = () => {
               </h4>
             </div>
           </div>
+
           <img
-            className="z-10 absolute top-[80%] left-[38%] inset-0 truackimage"
-            src="images/b313922828636b5f62d27991f30222ce-removebg-preview.png"
+            className="z-10 absolute sm:top-[60%] top-[50%] sm:left-[38%] inset-0 left-[10%] truckimage"
+            src={maintruck}
             alt=""
           />
         </div>
-        {/* <div className="w-full">
-          <img
-            className="w-full"
-            src={require("../images/Vehicle-Detail-Journey.png")}
-            alt=""
-          />
-        </div> */}
-        {/* <div>
-          <video autoPlay muted loop src={videoSrc}></video>
-        </div> */}
+
         <section className="bg-[#FAFAFA] pb-32 bg-[100vh] relative">
           <div className="flex justify-center pt-12">
             <h1 className=" font-cormorantgaramond text-4xl py-5">
@@ -125,7 +154,7 @@ const Home = () => {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200  overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                <img src={require("../images/services/libility.jpg")} alt="" />
               </div>
 
               <div className="">
@@ -151,10 +180,13 @@ const Home = () => {
               }}
             >
               <div
-                className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
+                className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden o "
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                <img
+                  src={require("../images/services/Additional Offerings.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -184,7 +216,10 @@ const Home = () => {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                <img
+                  src={require("../images/services/Additional Offeringss.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -383,9 +418,7 @@ const Home = () => {
             </div>
           </section>
         </section>
-        {/* <div>
-          <video autoPlay muted loop src={videoSrc}></video>
-        </div> */}
+
         <section className="bg-cover bg-center bg-no-repeat pb-28 relative bg-[#FAFAFA] sm:px-0 px-4">
           <div className="sm:flex flex-wrap sm:justify-evenly justify-center px-2 sm:pt-28 pt-12 items-center">
             <div className="flex flex-col">

@@ -13,6 +13,7 @@ import Certificates from "./pages/Certificates";
 import Profile from "./pages/Profile";
 import DashBord from "./pages/DashBord";
 import Profile2 from "./pages/Profile2";
+import Practice from "./pages/practice";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/dashboard" element={<DashBord/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
+          <Route path="/practice" element={<Practice/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -328,6 +328,7 @@ export default function Aboutus() {
               >
                 <img
                   width="500px"
+                  // height="400px"
                   src={require("../gif/ezgif.com-crop8.gif")}
                   alt=""
                 />

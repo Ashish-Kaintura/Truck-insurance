@@ -5,7 +5,7 @@ export default function Nav2() {
     <nav className="bg-[white]">
       <ul className="flex justify-center py-6">
         <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
-          <div className="w-32">
+          <div className="w-48">
             <img src="./j&s logo final logo.png" alt="" />
           </div>
           <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
