@@ -7,6 +7,11 @@ export default function Nav2() {
         <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
           <div className="w-48">
             <img src="./j&s logo final logo.png" alt="" />
+            <div>
+              <h className=" text-sm font-semibold ps-2">
+                DBA Jay S Insurance Agency
+              </h>
+            </div>
           </div>
           <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
             <Link to={"/"}>
@@ -19,7 +24,7 @@ export default function Nav2() {
               <li>Certificates</li>
             </Link>
             <Link to={"/profile"}>
-              <li >Profile</li>
+              <li>Profile</li>
             </Link>
             <Link to={"/contact"}>
               <li>Contact Us</li>

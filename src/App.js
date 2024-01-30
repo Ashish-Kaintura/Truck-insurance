@@ -14,23 +14,27 @@ import Profile from "./pages/Profile";
 import DashBord from "./pages/DashBord";
 import Profile2 from "./pages/Profile2";
 import Practice from "./pages/practice";
+import Privatecomponent from "./component/Privatecomponent";
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route element={<Privatecomponent />}>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile2" element={<Profile2 />} />
+            <Route path="/dashboard" element={<DashBord />} />
+          </Route>
+          
           <Route path="/" element={<Home />} />
           <Route path="/Aboutus" element={<Aboutus />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/contact" element={<Conatct />} />
-          <Route path="/certificates" element={<Certificates/>} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/profile2" element={<Profile2/>} />
-          <Route path="/dashboard" element={<DashBord/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/practice" element={<Practice/>} />
+          <Route path="/certificates" element={<Certificates />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/practice" element={<Practice />} />
         </Routes>
         <Footer />
       </BrowserRouter>

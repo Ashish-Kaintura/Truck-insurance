@@ -2,11 +2,11 @@
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
 import image from "../gif/ezgif.com-crop2.gif";
-import image1 from "../gif/ezgif.com-cro4.gif";
-import image2 from "../gif/ezgif.com-crop5.gif";
-import image3 from "../gif/ezgif.com-crop6.gif";
-import image4 from "../gif/ezgif.com-crop7.gif";
-import image5 from "../gif/ezgif.com-crop8.gif";
+import image1 from "../images/AboutUs.png";
+import image2 from "../images/services/Industries.jpg";
+import image3 from "../images/services/PersonalTruck.jpg";
+import image4 from "../images/services/BUSINESS.jpg";
+import image5 from "../images/services/Benifits.jpg";
 import TruckDamageSvg from "../images/truck-insurance_damage.svg";
 import TruckDamageSvg1 from "../images/truck-insurance_theft.svg";
 import TruckDamageSvg2 from "../images/truck-insurance_fire.svg";
@@ -24,6 +24,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { EaselPlugin } from "gsap/EaselPlugin";
+// import { useNavigate } from "react-router-dom";
+import HomeNav from "../component/HomeNav";
 
 gsap.registerPlugin(
   ScrollTrigger,
@@ -33,9 +35,18 @@ gsap.registerPlugin(
 );
 
 const Home = () => {
+  // const auth = localStorage.getItem("user");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // const navigate = useNavigate();
+
+  // const Logout = () => {
+  //   // console.warn("apple");
+  //   localStorage.clear();
+  //   navigate("/signup");
+  // };
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -43,13 +54,13 @@ const Home = () => {
         trigger: "#banner",
         // toggleActions: "restart pause reverse pause",
         // pin: true, // pin the trigger element while active
-        markers: true,
+        // markers: true,
         start: "top 50px",
         end: "+=500",
         scrub: 4,
       },
     });
-    console.log(tl);
+    // console.log(tl);
     tl.from("#banner .truckimage", {
       y: -90,
       scale: 0.4,
@@ -61,7 +72,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <nav className="bg-[#515659]">
+      {/* <nav className="bg-[#515659]">
         <ul className="flex justify-center py-6">
           <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
             <div className="w-48">
@@ -77,28 +88,39 @@ const Home = () => {
               <Link to={"/services"}>
                 <li>Services</li>
               </Link>
-              {/* <Link to={"/certificates"}>
-                <li>Certificates</li>
-              </Link> */}
               <Link to={"/contact"}>
                 <li>Contact Us</li>
               </Link>
             </div>
             <div className="sm:flex hidden justify-center gap-8 font-sans">
               <div className="flex justify-center">
-                <Link to={"/login"}>
-                  <button>Login</button>
-                </Link>
-              </div>
-              <div className="flex justify-center">
-                <Link to={"/signup"}>
-                  <button>Signup</button>
-                </Link>
+                {auth ? (
+                  <li>
+                    <Link onClick={Logout} to={"/signup"}>
+                      <button>Logout</button>
+                    </Link>
+                  </li>
+                ) : (
+                  <>
+                    <li>
+                      <Link to={"/login"}>
+                        <button>Login</button>
+                      </Link>
+                    </li>
+                    <li>
+                      {" "}
+                      <Link to={"/signup"}>
+                        <button>Signup</button>
+                      </Link>
+                    </li>
+                  </>
+                )}
               </div>
             </div>
           </div>
         </ul>
-      </nav>
+      </nav> */}
+      <HomeNav/>
       <main>
         <div
           id="banner"
@@ -460,7 +482,7 @@ const Home = () => {
         <section>
           <div>
             <div
-              className="pt-8 block justify-center bg-center bg-cover bg-no-repeat text-[white] pb-20 relative px-2 h-64"
+              className="pt-8 block justify-center bg-center bg-cover bg-no-repeat text-[white] pb-20 relative px-2 h-64 "
               style={{ backgroundImage: `url(${image1})` }}
             >
               <h1 className="text-3xl pt-5 text-center font-merriweather">

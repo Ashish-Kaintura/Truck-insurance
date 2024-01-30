@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import Nav2 from "../component/Nav2";
+import Nav from "../component/Nav";
 
 export default function Profile() {
   const [selectedButton, setSelectedButton] = useState("insurance");
@@ -10,7 +10,7 @@ export default function Profile() {
   };
   return (
     <div>
-      <Nav2 />
+      <Nav />
       <main>
         <section className="flex justify-center h-[100vh] p-12">
           <div className="w-full bg-gray-300 rounded-xl overflow-hidden">

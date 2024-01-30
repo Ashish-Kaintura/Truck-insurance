@@ -7,7 +7,7 @@ import image1 from "../gif/ezgif.com-cro4.gif";
 // import backgroundImage from "../images/dimitar-donovski-yrjB4dYWUZU-unsplash.jpg";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
 import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
-import reportCardImage from "../images/report-card.svg";
+import reportCardImage from "../images/achievement.png";
 export default function Aboutus() {
   return (
     <div>
@@ -310,7 +310,7 @@ export default function Aboutus() {
               >
                 <img
                   width="100%"
-                  src={require("../gif/ezgif.com-crop5.gif")}
+                  src={require("../images/Why choose us.png")}
                   alt=""
                 />
               </div>
@@ -328,8 +328,7 @@ export default function Aboutus() {
               >
                 <img
                   width="500px"
-                  // height="400px"
-                  src={require("../gif/ezgif.com-crop8.gif")}
+                  src={require("../images/Why choose us.png")}
                   alt=""
                 />
               </div>
@@ -341,7 +340,7 @@ export default function Aboutus() {
               >
                 <div>
                   <h1 className="text-3xl pt-2 font-robotoflex font-semibold text-[#0066A4]">
-                    Why Choose Comapany Name
+                    Why Choose J&S
                   </h1>
                   <p className="pt-4 font-sans">
                     <span className="text-black font-semibold">Fact 1</span>

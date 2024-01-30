@@ -74,7 +74,7 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src={"truck3/image/download.jpg"} alt="" />
+                <img src={require("../images/services/1.jpg")} alt="" />
               </div>
 
               <div className="">
@@ -104,7 +104,7 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                <img src={require("../images/services/Additional Offerings.jpg")} alt="" />
               </div>
 
               <div className="">
@@ -134,7 +134,7 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                      <img src={require("../images/services/RoadsideAssistane.jpg")} alt="" />
               </div>
 
               <div className="">
@@ -164,12 +164,12 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200  overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                  <img src={require("../images/services/General Liability Insurance.jpg")} alt="" />
               </div>
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  General Liability Insurance{" "}
+                  General Liability Insurance
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
                   While slip-and-fall incidents or equipment damages requiring
@@ -192,7 +192,7 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+                  <img src={require("../images/services/Trailer Interchange Coverage.jpg")} alt="" />
               </div>
 
               <div className="">
@@ -223,7 +223,7 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src="truck3/image/download.jpg" alt="" />
+               <img src={require("../images/services/Additional Offeringss.jpg")} alt="" />
               </div>
 
               <div className="">
@@ -395,7 +395,10 @@ export default function Services() {
                   <h1 className="font-cormorantgaramond sm:text-6xl text-xl pb-5 text-white uppercase">
                     Where are We
                   </h1>
-                  <p className="font-cormorantgaramond  text-white ">
+                  <p className="font-cormorantgaramond  text-white ps-2 text-4xl ">
+                  Located Fresno CA
+                  </p>
+                  {/* <p className="font-cormorantgaramond  text-white ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nun
                     orem id integer jjdnfelfn.
                   </p>
@@ -406,11 +409,7 @@ export default function Services() {
                   <p className="font-cormorantgaramond  text-white ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nun
                     orem id integer jjdnfelfn.
-                  </p>
-                  <p className="font-cormorantgaramond  text-white ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nun
-                    orem id integer jjdnfelfn.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
@@ -6,13 +6,21 @@ import { useNavigate } from "react-router-dom";
 export default function Signup() {
   //for navigate after signup
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const auth = localStorage.getItem("user");
+    if (auth) {
+      navigate("/");
+    }
+  });
+
   const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    TaxId: "",
-    PhoneNumber: "",
-    CompanyName: "",
-    Password: "",
+    username: "",
+    password: "",
+    email: "",
+    tax_id: "",
+    company_name: "",
+    phone_number: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -30,13 +38,13 @@ export default function Signup() {
       });
 
       if (response.ok) {
-        // Redirect or show success message
+        const result = await response.json();
+        console.log("Server response:", result);
+        localStorage.setItem("user", JSON.stringify(result));
         console.log("User signed up successfully");
-        // Redirect to the home page
         navigate("/");
       } else {
         console.error("Failed to sign up");
-        // Handle error, show error message, etc.
       }
     } catch (error) {
       console.error("Error during signup:", error);
@@ -45,39 +53,10 @@ export default function Signup() {
     }
     console.log(formData);
   };
-  // const handleSubmit = async () => {
-  //   try {
-  //     const response = await fetch("http://localhost:5000/signup", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
 
-  //     if (response.ok) {
-  //       const result = await response.json();
-  //       // Save user information in local storage
-  //       localStorage.setItem("user", JSON.stringify(result));
-  //       // Navigate to the homepage using useNavigate
-  //       navigate("/");
-  //     } else {
-  //       console.error("Error signing up:", response.statusText);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-
   return (
     <div>
       <Nav />
@@ -101,14 +80,14 @@ export default function Signup() {
               <h2 className="text-2xl font-bold text-gray-200 mb-4">Sign up</h2>
               <form className="flex flex-col" onSubmit={handleSubmit}>
                 <div className="flex gap-5">
-                 
                   <input
                     required={true}
                     placeholder="Enter Name"
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
+                    // value={formData.Name}
                     onChange={handleChange}
-                    id="Name"
+                    id="username"
                   />
                   <input
                     required={true}
@@ -116,7 +95,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="email"
                     onChange={handleChange}
-                    id="Email"
+                    id="email"
                   />
                 </div>
                 <div className="flex gap-5">
@@ -126,14 +105,14 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
                     onChange={handleChange}
-                    id="TaxId"
+                    id="tax_id"
                   />
                   <input
                     required={true}
                     placeholder="Phone Number"
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="number"
-                    id="PhoneNumber"
+                    id="phone_number"
                     onChange={handleChange}
                   />
                 </div>
@@ -144,7 +123,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
                     onChange={handleChange}
-                    id="CompanyName"
+                    id="company_name"
                   />
                   <input
                     required={true}
@@ -152,7 +131,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="password"
                     onChange={handleChange}
-                    id="Password"
+                    id="password"
                   />
                 </div>
                 <div className="block items-center justify-between flex-wrap">

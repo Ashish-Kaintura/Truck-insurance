@@ -66,13 +66,13 @@ export default function DashBord() {
           {data.map((item, id) => (
             <div key={id} className="w-full bg-slate-300 p-2 flex shadow-inner gap-5 justify-between ">
               <div className="w-32 flex flex-wrap">
-                <h1 className=" font-robotoflex text-sm">{item.Name}</h1>
+                <h1 className=" font-robotoflex text-sm">{item.username}</h1>
               </div>
               <div className="w-32 flex flex-wrap">
-                <h1 className=" font-robotoflex text-sm">{item.Email}</h1>
+                <h1 className=" font-robotoflex text-sm">{item.email}</h1>
               </div>
               <div className="w-32 flex flex-wrap">
-                <h1 className=" font-robotoflex text-sm">{item.Date}</h1>
+                <h1 className=" font-robotoflex text-sm">{item.date}</h1>
               </div>
               <div className="w-32 flex flex-wrap">
                 <Link to={"/profile2"}>

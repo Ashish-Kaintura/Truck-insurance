@@ -1,5 +1,5 @@
 import React from "react";
-import Nav2 from "../component/Nav2";
+import Nav from "../component/Nav";
 // import commercialPdf from "../Pdf/Commercial Auto QQR-0002.pdf"; // Update the path to your PDF file
 
 export default function Certificates() {
@@ -14,7 +14,7 @@ export default function Certificates() {
   // };
   return (
     <div>
-      <Nav2 />
+      <Nav />
       <main>
         <section className="block justify-center  p-12">
           <div className=" w-full">
@@ -22,7 +22,7 @@ export default function Certificates() {
           </div>
           <div className="w-full bg-slate-300 rounded-3xl shadow-2xl shadow-inner-2xl p-8 mt-8 flex flex-col justify-center gap-6 items-center">
             <div>
-              <img src={require("../images//certicate.jpeg")} alt="" />
+              <img src={require("../images/certificate.png")} alt="" />
             </div>
             <div className="text-center" >
               You Only Need to Fill certificate Holder Name 
