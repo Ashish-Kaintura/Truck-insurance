@@ -1,16 +1,51 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
-import Nav2 from "../component/Nav2";
-
+import Nav from "../component/Nav";
+import { useParams } from "react-router-dom";
 export default function Profile2() {
   const [selectedButton, setSelectedButton] = useState("insurance");
 
   const handleButtonClick = (buttonType) => {
     setSelectedButton(buttonType);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // const { userId } = useParams();
+  // const [userDetails, setUserDetails] = useState("");
+
+  // useEffect(() => {
+  //   // Fetch user details based on the userId
+  //   fetch(`http://localhost:5000/user/${userId}`)
+  //     .then((response) => response.json())
+  //     .then((result) => setUserDetails(result));
+  // }, [userId]);
+
+  // if (!userDetails) {
+  //   return <div>Loading...</div>;
+  // }
+
+  const [user, setUser] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/users/${id}`);
+        const data = await response.json();
+        setUser(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [id]);
   return (
     <div>
-      <Nav2 />
+      <Nav />
       <main>
         <section className="flex justify-center h-[100vh] p-12">
           <div className="w-full bg-gray-300 rounded-xl overflow-hidden">
@@ -29,7 +64,7 @@ export default function Profile2() {
                     Name :
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    Ashish Kaintura
+                    {user.username}
                   </h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
@@ -37,7 +72,7 @@ export default function Profile2() {
                     Email ID:
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    Ashish@123gmail.com
+                    {user.email}
                   </h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
@@ -45,7 +80,7 @@ export default function Profile2() {
                     Phone No:
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    8569794538
+                    {user.phone_number}
                   </h1>
                 </div>
               </div>
@@ -54,21 +89,40 @@ export default function Profile2() {
                   <h1 className=" fon-sans font-semibold text-lg uppercase">
                     Address :
                   </h1>
-                  <h1 className=" fon-sans font-semibold text-lg">
-                    RZR_5889 Hiliowwns Town Red Gardwenn 1236
-                  </h1>
+                  {user ? (
+                    <>
+                       <h1 className=" fon-sans font-semibold text-lg">
+                        {user.address}
+                      </h1>
+                      {/* ... other properties */}
+                    </>
+                  ) : (
+                    <>
+                      <h1 className=" fon-sans font-semibold text-lg">
+                        {user.address}
+                      </h1>
+
+                      {/* ... other properties */}
+                    </>
+                  )}
                 </div>
                 <div className="flex gap-3 pt-2 ">
                   <h1 className=" fon-sans font-semibold text-lg uppercase">
                     TAX ID NO:
                   </h1>
-                  <h1 className=" fon-sans font-semibold text-lg">N/A</h1>
+                  <h1 className=" fon-sans font-semibold text-lg">
+                    {" "}
+                    {user.tax_id}
+                  </h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
                   <h1 className=" fon-sans font-semibold text-lg uppercase">
                     Company Name :
                   </h1>
-                  <h1 className=" fon-sans font-semibold text-lg">N/A</h1>
+                  <h1 className=" fon-sans font-semibold text-lg">
+                    {" "}
+                    {user.company_name}
+                  </h1>
                 </div>
               </div>
             </div>
@@ -120,9 +174,9 @@ export default function Profile2() {
                     <button className="font-sans px-4 py-2 rounded-xl bg-red-600 text-white">
                       Download
                     </button>
-                    <button className="font-sans px-4 py-2 rounded-xl bg-gray-600 text-white">
+                    {/* <button className="font-sans px-4 py-2 rounded-xl bg-gray-600 text-white">
                       Delete
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               )}
@@ -143,7 +197,7 @@ export default function Profile2() {
                 <div className="flex gap-4 items-center">
                   {/* Render ID Card details here */}
                   <div>
-                   <input type="file" name="" id="" />
+                    <input type="file" name="" id="" />
                   </div>
                   <div>
                     <button className="font-sans px-4 py-2 rounded-xl bg-red-600 text-white">

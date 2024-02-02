@@ -3,62 +3,78 @@ import { useState } from "react";
 import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-export default function Signup() {
+import { useParams } from "react-router-dom";
+export default function Update() {
   //for navigate after signup
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const auth = localStorage.getItem("user");
-    if (auth) {
-      navigate("/");
-    }
-  });
+  // useEffect(() => {
+  //   const auth = localStorage.getItem("user");
+  //   if (auth) {
+  //     navigate("/");
+  //   }
+  // });
 
-  const [formData, setFormData] = useState({
+  const { id } = useParams();
+  const [userDetails, setUserDetails] = useState({
     username: "",
-    password: "",
     email: "",
     tax_id: "",
-    company_name: "",
     phone_number: "",
+    company_name: "",
+    password: "",
     address: "",
-    img:""
+    img: "",
   });
 
-  const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e) => {
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/users/${id}`);
+        const userData = await response.json();
+        setUserDetails(userData);
+      } catch (error) {
+        console.error("Error fetching user details:", error);
+      }
+    };
+
+    fetchUserDetails();
+  }, [id]);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setUserDetails((prevDetails) => ({
+      ...prevDetails,
+      [id]: value,
+    }));
+  };
+
+  const handleUpdate = async (e) => {
     e.preventDefault();
 
     try {
-      setLoading(true);
-      const response = await fetch("http://localhost:5000/signup", {
-        method: "POST",
+      const response = await fetch(`http://localhost:5000/users/${id}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(userDetails),
       });
 
       if (response.ok) {
-        const result = await response.json();
-        console.log("Server response:", result);
-        localStorage.setItem("user", JSON.stringify(result));
-        console.log("User signed up successfully");
-        navigate("/profile");
+        // Handle successful update
+        // navigate(`/users/${id}`);
+        navigate(`/dashboard`);
+
+        console.log("User updated successfully");
       } else {
-        console.error("Failed to sign up");
+        console.error("Failed to update user");
       }
     } catch (error) {
-      console.error("Error during signup:", error);
-    } finally {
-      setLoading(false);
+      console.error("Error updating user:", error);
     }
-    console.log(formData);
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
   return (
     <div>
       <Nav />
@@ -80,15 +96,15 @@ export default function Signup() {
               }}
             >
               <h2 className="text-2xl font-bold text-gray-200 mb-4">Sign up</h2>
-              <form className="flex flex-col" onSubmit={handleSubmit}>
+              <form className="flex flex-col" onSubmit={handleUpdate}>
                 <div className="flex gap-5">
                   <input
                     required={true}
                     placeholder="Enter Name"
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
-                    // value={formData.Name}
                     onChange={handleChange}
+                    value={userDetails.username}
                     id="username"
                   />
                   <input
@@ -97,6 +113,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="email"
                     onChange={handleChange}
+                    value={userDetails.email}
                     id="email"
                   />
                 </div>
@@ -107,6 +124,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
                     onChange={handleChange}
+                    value={userDetails.tax_id}
                     id="tax_id"
                   />
                   <input
@@ -115,6 +133,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="number"
                     id="phone_number"
+                    value={userDetails.phone_number}
                     onChange={handleChange}
                   />
                 </div>
@@ -125,6 +144,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
                     onChange={handleChange}
+                    value={userDetails.company_name}
                     id="company_name"
                   />
                   <input
@@ -133,6 +153,7 @@ export default function Signup() {
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="password"
                     onChange={handleChange}
+                    value={userDetails.password}
                     id="password"
                   />
                 </div>
@@ -143,25 +164,25 @@ export default function Signup() {
                   className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                   type="text"
                   onChange={handleChange}
+                  value={userDetails.address}
                   id="address"
                 />
+                <input
+                  required={true}
+                  placeholder="Enter You img"
+                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  type="text"
+                  // onChange={handleChange}
+                  value={userDetails.img}
+                  id="img"
+                />
 
-                <div className="block items-center justify-between flex-wrap">
-                  <p className="text-white mt-4">
-                    Allready Have an Account ?{" "}
-                    <Link
-                      to={"/login"}
-                      className="text-xl font-semibold text-black -200 hover:underline mt-4"
-                    >
-                      Login
-                    </Link>
-                  </p>
-                </div>
                 <button
                   className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
                   type="submit"
                 >
-                  {loading ? "Signing Up..." : "Sign Up"}
+                  {/* {loading ? "Signing Up..." : "Sign Up"} */}
+                  Update
                 </button>
               </form>
             </div>

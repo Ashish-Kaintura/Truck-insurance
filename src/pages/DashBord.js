@@ -5,14 +5,43 @@ import { Link } from "react-router-dom";
 // import pdffile from "../Pdf/Commercial Auto QQR-0002.pdf";
 // import { Document, Page } from "react-pdf";
 export default function DashBord() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/")
-      .then((response) => response.json())
-      .then((result) => setData(result));
-    console.log(data);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/users/");
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:5000/users/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        // If deletion is successful, update the data state
+        setData((prevData) => prevData.filter((user) => user.id !== id));
+        window.location.reload();
+      } else {
+        console.error("Failed to delete user");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div>
       <Nav2 />
@@ -45,7 +74,7 @@ export default function DashBord() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-slate-400  mt-4 h-[100vh] overflow-x-auto ">
+        <div className="w-full bg-slate-400  mt-4 h-[70vh] overflow-x-auto ">
           <div className="w-full bg-slate-300 p-2 flex shadow-inner gap-5 justify-between ">
             <div className="w-32 flex flex-wrap">
               <h1 className=" font-robotoflex text-sm">Name</h1>
@@ -63,8 +92,11 @@ export default function DashBord() {
               <button className="font-robotoflex text-sm"></button>{" "}
             </div>
           </div>
-          {data.map((item, id) => (
-            <div key={id} className="w-full bg-slate-300 p-2 flex shadow-inner gap-5 justify-between ">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className="w-full bg-slate-300 p-2 flex shadow-inner gap-5 justify-between "
+            >
               <div className="w-32 flex flex-wrap">
                 <h1 className=" font-robotoflex text-sm">{item.username}</h1>
               </div>
@@ -75,14 +107,22 @@ export default function DashBord() {
                 <h1 className=" font-robotoflex text-sm">{item.date}</h1>
               </div>
               <div className="w-32 flex flex-wrap">
-                <Link to={"/profile2"}>
-                  {" "}
+                <Link to={`/users/${item.id}`}>
                   <button className="font-robotoflex text-sm">View</button>{" "}
                 </Link>
               </div>
               <div className="w-32 flex flex-wrap">
-                {" "}
-                <button className="font-robotoflex text-sm">Delete</button>{" "}
+                <button
+                  onClick={() => handleDelete(item.id)}
+                  className="font-robotoflex text-sm px-4 py-2 bg-red-700 text-white rounded-lg"
+                >
+                  Delete
+                </button>
+              </div>
+              <div className="w-32 flex flex-wrap">
+                <button className="font-robotoflex text-sm px-4 py-2 bg-sky-600 text-white rounded-lg">
+                  <Link to={`/update/${item.id}`}  > Update</Link>
+                </button>
               </div>
             </div>
           ))}

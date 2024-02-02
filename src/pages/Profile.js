@@ -3,6 +3,9 @@ import React from "react";
 import Nav from "../component/Nav";
 
 export default function Profile() {
+  // const auth = localStorage.getItem("user");
+  const auth = JSON.parse(localStorage.getItem("user"));
+
   const [selectedButton, setSelectedButton] = useState("insurance");
 
   const handleButtonClick = (buttonType) => {
@@ -29,7 +32,7 @@ export default function Profile() {
                     Name :
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    Ashish Kaintura
+                    {auth.username}
                   </h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
@@ -37,7 +40,7 @@ export default function Profile() {
                     Email ID:
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    Ashish@123gmail.com
+                   {auth.email}
                   </h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
@@ -45,7 +48,7 @@ export default function Profile() {
                     Phone No:
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    8569794538
+                  {auth.phone_number}
                   </h1>
                 </div>
               </div>
@@ -55,20 +58,20 @@ export default function Profile() {
                     Address :
                   </h1>
                   <h1 className=" fon-sans font-semibold text-lg">
-                    RZR_5889 Hiliowwns Town Red Gardwenn 1236
+                    {auth.address}
                   </h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
                   <h1 className=" fon-sans font-semibold text-lg uppercase">
                     TAX ID NO:
                   </h1>
-                  <h1 className=" fon-sans font-semibold text-lg">N/A</h1>
+                  <h1 className=" fon-sans font-semibold text-lg">{auth.tax_id}</h1>
                 </div>
                 <div className="flex gap-3 pt-2 ">
                   <h1 className=" fon-sans font-semibold text-lg uppercase">
                     Company Name :
                   </h1>
-                  <h1 className=" fon-sans font-semibold text-lg">N/A</h1>
+                  <h1 className=" fon-sans font-semibold text-lg">{auth.tax_id}</h1>
                 </div>
               </div>
             </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 export default function HomeNav() {
-  const auth = localStorage.getItem("user");
+  //   const auth = localStorage.getItem("user");
+  const auth = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
   const Logout = () => {
@@ -42,7 +43,7 @@ export default function HomeNav() {
               <div className="flex justify-center">
                 <li>
                   <Link onClick={Logout} to={"/signup"}>
-                    <button>Logout</button>
+                    Logout ({auth.username})
                   </Link>
                 </li>
               </div>

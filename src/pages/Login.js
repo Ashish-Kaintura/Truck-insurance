@@ -42,7 +42,7 @@ export default function Login() {
         console.log("Server response:", result);
         localStorage.setItem("user", JSON.stringify(result));
         console.log("User login up successfully");
-        // navigate("/");
+        navigate("/profile");
       } else {
         console.error("Failed to sign up");
       }

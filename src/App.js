@@ -15,6 +15,7 @@ import DashBord from "./pages/DashBord";
 import Profile2 from "./pages/Profile2";
 import Practice from "./pages/practice";
 import Privatecomponent from "./component/Privatecomponent";
+import Update from "./pages/Update";
 
 export default function App() {
   return (
@@ -23,8 +24,9 @@ export default function App() {
         <Routes>
           <Route element={<Privatecomponent />}>
             <Route path="/profile" element={<Profile />} />
-            <Route path="/profile2" element={<Profile2 />} />
+            <Route path="/users/:id" element={<Profile2 />} />
             <Route path="/dashboard" element={<DashBord />} />
+            <Route path="/update/:id" element={<Update/>} />
           </Route>
           
           <Route path="/" element={<Home />} />
