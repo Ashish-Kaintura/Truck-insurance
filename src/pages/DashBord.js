@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav2 from "../component/Nav2";
 import "../Css/Dashboard.css";
+import moment from "moment"
 import { Link } from "react-router-dom";
 // import pdffile from "../Pdf/Commercial Auto QQR-0002.pdf";
 // import { Document, Page } from "react-pdf";
@@ -100,11 +101,12 @@ export default function DashBord() {
               <div className="w-32 flex flex-wrap">
                 <h1 className=" font-robotoflex text-sm">{item.username}</h1>
               </div>
+
               <div className="w-32 flex flex-wrap">
                 <h1 className=" font-robotoflex text-sm">{item.email}</h1>
               </div>
               <div className="w-32 flex flex-wrap">
-                <h1 className=" font-robotoflex text-sm">{item.date}</h1>
+                <h1 className=" font-robotoflex text-sm">{moment(item.date).format("DD-MM-YYYY-HH:mm:ss")}</h1>
               </div>
               <div className="w-32 flex flex-wrap">
                 <Link to={`/users/${item.id}`}>
@@ -121,7 +123,7 @@ export default function DashBord() {
               </div>
               <div className="w-32 flex flex-wrap">
                 <button className="font-robotoflex text-sm px-4 py-2 bg-sky-600 text-white rounded-lg">
-                  <Link to={`/update/${item.id}`}  > Update</Link>
+                  <Link to={`/update/${item.id}`}> Update</Link>
                 </button>
               </div>
             </div>

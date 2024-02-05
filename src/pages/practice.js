@@ -1,61 +1,35 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import moment from "moment"
 const Practice = () => {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    email: "",
-  });
+  const [userdetails, setUserDetails] = useState([]);
 
-  const { username, password, email } = formData;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/users/");
+        const result = await response.json();
+        setUserDetails(result);
+        console.log(result); // Use 'result' instead of 'userdetails' here
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async () => {
-    console.warn(formData);
-    let response = await fetch("http://localhost:5000/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    // response = await response.json();
-    console.warn(await response.json());
-  };
+    fetchData();
+  }, []);
 
   return (
-    <div className="signup">
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          value={username}
-          onChange={handleChange}
-          placeholder="Username"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          placeholder="Password"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <button type="submit">Sign Up</button>
-      </form>
+    <div>
+      {userdetails.map((item) => (
+        <div key={item.id}>
+          <h1>{item.username}</h1>
+          <img
+            src={`http://localhost:5000/uploads/${item.profileImg}`}
+            alt={`Profile of ${item.profileImg}`}
+          />
+          <h1> Date Added : {moment(item.date).format("DD-MM-YYYY")}</h1>
+        </div>
+      ))}
     </div>
   );
 };

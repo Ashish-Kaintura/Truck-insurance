@@ -45,9 +45,11 @@ export default function Login() {
         navigate("/profile");
       } else {
         console.error("Failed to sign up");
+        alert.error("Wrong Id Password")
       }
     } catch (error) {
       console.error("Error during signup:", error);
+      alert("Wrong id Password")
     } finally {
       setLoading(false);
     }

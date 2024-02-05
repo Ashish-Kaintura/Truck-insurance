@@ -10,6 +10,11 @@
     scroll-behavior: smooth;
 }
 
+input::placeholder {
+    color: rgb(43, 42, 42);
+    /* Change this to your desired color */
+}
+
 /* whatsapp .icon  start */
 .whats-app {
     position: fixed;

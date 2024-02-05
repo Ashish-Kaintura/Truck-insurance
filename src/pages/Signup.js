@@ -22,7 +22,6 @@ export default function Signup() {
     company_name: "",
     phone_number: "",
     address: "",
-    img:""
   });
 
   const [loading, setLoading] = useState(false);
