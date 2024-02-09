@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import moment from "moment"
+import moment from "moment";
 const Practice = () => {
   const [userdetails, setUserDetails] = useState([]);
 
@@ -17,6 +17,7 @@ const Practice = () => {
 
     fetchData();
   }, []);
+
 
   return (
     <div>

@@ -34,15 +34,12 @@ export default function Nav() {
               <Link to={"/services"}>
                 <li>Services</li>
               </Link>
-              <Link to={"/certificates"}>
+              {/* <Link to={"/certificates"}>
                 <li>Certificates</li>
-              </Link>
+              </Link> */}
               <Link to={"/profile"}>
                 <li>Profile</li>
               </Link>
-              {/* <Link to={"/certificates"}>
-              <li>Certificates</li>
-            </Link> */}
               <Link to={"/contact"}>
                 <li>Contact Us</li>
               </Link>
@@ -79,9 +76,9 @@ export default function Nav() {
               <Link to={"/services"}>
                 <li>Services</li>
               </Link>
-              <Link to={"/certificates"}>
+              {/* <Link to={"/certificates"}>
                 <li>Certificates</li>
-              </Link>
+              </Link> */}
               <Link to={"/contact"}>
                 <li>Contact Us</li>
               </Link>

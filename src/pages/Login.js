@@ -15,12 +15,9 @@ export default function Login() {
   });
 
   const [formData, setFormData] = useState({
-    // username: "",
     password: "",
     email: "",
-    // tax_id: "",
-    // company_name: "",
-    // phone_number: "",
+ 
   });
 
   const [loading, setLoading] = useState(false);
@@ -101,12 +98,12 @@ export default function Login() {
 
                 <div className="block items-center justify-between flex-wrap">
                   <p className="text-white mt-4">
-                    Allready Have an Account ?{" "}
+                    Dont have a Account{" "}
                     <Link
                       to={"/signup"}
                       className="text-xl font-semibold text-black -200 hover:underline mt-4"
                     >
-                      Login
+                      Signup
                     </Link>
                   </p>
                 </div>

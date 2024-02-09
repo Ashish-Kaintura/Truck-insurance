@@ -1,6 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function Nav2() {
+  const isAdmin = JSON.parse(localStorage.getItem("masteruser"));
+  const navigate = useNavigate();
+  const Logout = () => {
+    // console.warn("apple");
+    localStorage.clear();
+    navigate("/");
+  };
   return (
     <nav className="bg-[white]">
       <ul className="flex justify-center py-6">
@@ -20,20 +27,20 @@ export default function Nav2() {
             <Link to={"/Aboutus"}>
               <li>About Us</li>
             </Link>
-            <Link to={"/certificates"}>
+            {/* <Link to={"/certificates"}>
               <li>Certificates</li>
-            </Link>
-            <Link to={"/profile"}>
+            </Link> */}
+            {/* <Link to={"/profile"}>
               <li>Profile</li>
-            </Link>
+            </Link> */}
             <Link to={"/contact"}>
               <li>Contact Us</li>
             </Link>
           </div>
           <div className="sm:flex hidden justify-center gap-8 font-sans">
             <div className="flex justify-center">
-              <Link to={"/login"}>
-                <button>Logout</button>
+              <Link onClick={Logout} to={"/signup"}>
+                Logout ({isAdmin.username})
               </Link>
             </div>
           </div>

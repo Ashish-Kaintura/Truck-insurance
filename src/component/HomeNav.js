@@ -28,9 +28,6 @@ export default function HomeNav() {
               <Link to={"/services"}>
                 <li>Services</li>
               </Link>
-              <Link to={"/certificates"}>
-                <li>Certificates</li>
-              </Link>
               <Link to={"/profile"}>
                 <li>Profile</li>
               </Link>
