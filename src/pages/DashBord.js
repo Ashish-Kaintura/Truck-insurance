@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import Nav2 from "../component/Nav2";
 import "../Css/Dashboard.css";
 import moment from "moment";
 import { Link } from "react-router-dom";
@@ -12,11 +11,20 @@ export default function DashBord() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // State variable for loading indicator
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users/");
+        const response = await fetch("http://localhost:5000/users/", {
+          headers: {
+            authorization: `bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+        });
         const result = await response.json();
+        setLoading(false); // Set loading to false after fetching data
         setData(result);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -30,12 +38,13 @@ export default function DashBord() {
     try {
       const response = await fetch(`http://localhost:5000/users/${id}`, {
         method: "DELETE",
+        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       });
 
       if (response.ok) {
         // If deletion is successful, update the data state
         setData((prevData) => prevData.filter((user) => user.id !== id));
-        window.location.reload();
+        // window.location.reload();
       } else {
         console.error("Failed to delete user");
       }
@@ -53,7 +62,11 @@ export default function DashBord() {
         return;
       }
 
-      const response = await fetch(`http://localhost:5000/search?q=${value}`);
+      const response = await fetch(`http://localhost:5000/search?q=${value}`, {
+        headers: {
+          authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+        },
+      });
       const data = await response.json();
       setData(data);
     } catch (error) {
@@ -63,7 +76,6 @@ export default function DashBord() {
   };
   return (
     <div>
-      {/* <Nav2 /> */}
       <section className=" p-5">
         <div className="w-full ">
           <div className="flex items-center">
@@ -121,54 +133,69 @@ export default function DashBord() {
               </button>{" "}
             </div>
           </div>
-          {data.length > 0 ? (
-            data.map((item) => (
-              <div
-                key={item.id}
-                className="w-full bg-slate-300 p-2 flex shadow-inner gap-5 justify-between "
-              >
-                <div className="sm:w-32 flex flex-wrap">
-                  <h1 className=" font-robotoflex sm:text-sm text-xs ">
-                    {item.username}
-                  </h1>
-                </div>
-
-                <div className="sm:w-32 flex flex-wrap">
-                  <h1 className=" font-robotoflex sm:text-sm text-xs ">
-                    {item.email}
-                  </h1>
-                </div>
-                <div className="sm:w-32 flex flex-wrap ">
-                  <h1 className=" font-robotoflex sm:text-sm text-xs ">
-                    {moment(item.date).format("DD-MM-YYYY-HH:mm:ss")}
-                  </h1>
-                </div>
-                <div className="sm:w-32 flex flex-wrap">
-                  <Link to={`/users/${item.id}`}>
-                    <button className="font-robotoflex sm:text-sm text-xs sm:px-4 sm:py-2 py-1 px-2 bg-sky-600 text-white rounded-lg">
-                      View
-                    </button>{" "}
-                  </Link>
-                </div>
-                <div className="sm:w-32 flex flex-wrap">
-                  <button
-                    onClick={() => handleDelete(item.id)}
-                    className="font-robotoflex sm:text-sm text-xs  sm:px-4 sm:py-2 py-1 px-2 bg-red-700 text-white rounded-lg"
-                  >
-                    Delete
-                  </button>
-                </div>
-                <div className="sm:w-32 flex flex-wrap">
-                  <button className="font-robotoflex sm:text-sm text-xs  sm:px-4 sm:py-2 py-1 px-2 bg-sky-600 text-white rounded-lg">
-                    <Link to={`/update/${item.id}`}> Update</Link>
-                  </button>
-                </div>
+          {loading ? ( // Render loading indicator while loading is true
+            <div class="flex flex-row gap-2 justify-center items-center h-[60vh]">
+              <div>
+                <h1 className="text-center pb-6 font-semibold text-4xl  animate-bounce [animation-delay:-.3s]">
+                  Loding
+                </h1>
               </div>
-            ))
+              <div class="w-4 h-4 rounded-full bg-blue-700 animate-bounce"></div>
+              <div class="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:-.3s]"></div>
+              <div class="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:-.5s]"></div>
+            </div>
           ) : (
-            <h1 className="text-center pt-20 font-semibold text-4xl">
-              No Result Found
-            </h1>
+            <>
+              {data.length > 0 ? (
+                data.map((item) => (
+                  <div
+                    key={item.id}
+                    className="w-full bg-slate-300 p-2 flex shadow-inner gap-5 justify-between "
+                  >
+                    <div className="sm:w-32 flex flex-wrap">
+                      <h1 className=" font-robotoflex sm:text-sm text-xs ">
+                        {item.username}
+                      </h1>
+                    </div>
+
+                    <div className="sm:w-32 flex flex-wrap">
+                      <h1 className=" font-robotoflex sm:text-sm text-xs ">
+                        {item.email}
+                      </h1>
+                    </div>
+                    <div className="sm:w-32 flex flex-wrap ">
+                      <h1 className=" font-robotoflex sm:text-sm text-xs ">
+                        {moment(item.date).format("DD-MM-YYYY-HH:mm:ss")}
+                      </h1>
+                    </div>
+                    <div className="sm:w-32 flex flex-wrap">
+                      <Link to={`/users/${item.id}`}>
+                        <button className="font-robotoflex sm:text-sm text-xs sm:px-4 sm:py-2 py-1 px-2 bg-sky-600 text-white rounded-lg">
+                          View
+                        </button>{" "}
+                      </Link>
+                    </div>
+                    <div className="sm:w-32 flex flex-wrap">
+                      <button
+                        onClick={() => handleDelete(item.id)}
+                        className="font-robotoflex sm:text-sm text-xs  sm:px-4 sm:py-2 py-1 px-2 bg-red-700 text-white rounded-lg"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                    <div className="sm:w-32 flex flex-wrap">
+                      <button className="font-robotoflex sm:text-sm text-xs  sm:px-4 sm:py-2 py-1 px-2 bg-sky-600 text-white rounded-lg">
+                        <Link to={`/update/${item.id}`}> Update</Link>
+                      </button>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <h1 className="text-center pt-20 font-semibold text-4xl">
+                  No Result Found
+                </h1>
+              )}
+            </>
           )}
         </div>
       </section>

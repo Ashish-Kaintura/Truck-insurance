@@ -3,10 +3,11 @@ import React from "react";
 import Nav2 from "../component/Nav2";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Trackinggmail from "../component/Trackingmail";
+// import Trackinggmail from "../component/Trackingmail";
 import UploadCertificate from "../component/UploadCertificate";
 import Mastermail from "../component/MasterMail";
 import GetInsuranceCertificate from "../component/GetInsuranceCertificate";
+import DeleteInsurance from "../component/DeleteInsurance";
 export default function Profile2() {
   const [selectedButton, setSelectedButton] = useState("insurance");
 
@@ -38,7 +39,14 @@ export default function Profile2() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/users/${id}`);
+        // const response = await fetch(`http://localhost:5000/users/${id}`);
+        const response = await fetch(`http://localhost:5000/users/${id}`, {
+          headers: {
+            authorization: `bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+        });
         const data = await response.json();
         setUser(data);
       } catch (error) {
@@ -171,6 +179,16 @@ export default function Profile2() {
                     onClick={() => handleButtonClick("Download")}
                   >
                     Download
+                  </button>
+                  <button
+                    className={` shadow-inner-2xl shadow-2xl py-2 font-robotoflex text-sm px-4 border-2 border-gray-600 rounded-lg uppercase ${
+                      selectedButton === "Delete"
+                        ? "bg-blue-600 text-white"
+                        : ""
+                    }`}
+                    onClick={() => handleButtonClick("Delete")}
+                  >
+                    Delete
                   </button>
                 </div>
               </div>
@@ -452,6 +470,11 @@ export default function Profile2() {
               {selectedButton === "Download" && (
                 <div>
                   <GetInsuranceCertificate />
+                </div>
+              )}
+              {selectedButton === "Delete" && (
+                <div>
+                  <DeleteInsurance />
                 </div>
               )}
             </div>

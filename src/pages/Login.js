@@ -17,7 +17,6 @@ export default function Login() {
   const [formData, setFormData] = useState({
     password: "",
     email: "",
- 
   });
 
   const [loading, setLoading] = useState(false);
@@ -36,21 +35,22 @@ export default function Login() {
 
       if (response.ok) {
         const result = await response.json();
-        console.log("Server response:", result);
-        localStorage.setItem("user", JSON.stringify(result));
+        // console.log("Server response:", result);
+        localStorage.setItem("user", JSON.stringify(result.user));
+        localStorage.setItem("token", JSON.stringify(result.auth));
         console.log("User login up successfully");
         navigate("/profile");
       } else {
         console.error("Failed to sign up");
-        alert.error("Wrong Id Password")
+        alert.error("Wrong Id Password");
       }
     } catch (error) {
       console.error("Error during signup:", error);
-      alert("Wrong id Password")
+      alert("Wrong id Password");
     } finally {
       setLoading(false);
     }
-    console.log(formData);
+    // console.log(formData);
   };
 
   const handleChange = (e) => {
@@ -59,7 +59,7 @@ export default function Login() {
   return (
     <div>
       <Nav />
-      <section className="p-8">
+      <section className="sm:p-8 pt-28 ">
         <div
           className=" flex justify-center items-center bg-center bg-cover object-cover"
           style={{
@@ -68,7 +68,7 @@ export default function Login() {
         >
           <div className="flex flex-col items-center justify-center p-8 sm:h-screen dark">
             <div
-              className="w-full  rounded-lg shadow-md p-20 border-2"
+              className="w-full  rounded-lg shadow-md sm:p-20 p-5 border-2"
               style={{
                 backdropFilter: " blur(4px)",
                 backgrounCcolor: "rgba(255, 255, 255, 0.071)",

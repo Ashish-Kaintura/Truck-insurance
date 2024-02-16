@@ -4,6 +4,7 @@ import Nav from "../component/Nav";
 // import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+
 export default function Update() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,7 +37,13 @@ export default function Update() {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/users/${id}`);
+        const response = await fetch(`http://localhost:5000/users/${id}`, {
+          headers: {
+            authorization: `bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+        });
         if (!response.ok) {
           throw new Error("Failed to fetch user details");
         }
@@ -99,10 +106,11 @@ export default function Update() {
       const response = await fetch(`http://localhost:5000/users/${id}`, {
         method: "PUT",
         body: formData,
+        authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
       });
 
       if (response.ok) {
-        navigate(`/dashboard`);
+        navigate(`/masterprofile`);
         console.log("User updated successfully");
       } else {
         console.error("Failed to update user");

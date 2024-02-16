@@ -19,26 +19,26 @@ export default function Footer() {
         <div className="container">
           <div className="row flex justify-evenly">
             <div className="footer-col">
-              <h4>company</h4>
+              <h4>Links</h4>
               <ul>
                 <li>
-                  <Link className="a" to={""}>
-                    about us
+                  <Link className="a" to={"/home"}>
+                    Home
                   </Link>
                 </li>
                 <li>
-                  <Link className="a" to={""}>
-                    our services
+                  <Link className="a" to={"/Aboutus"}>
+                    About Us
                   </Link>
                 </li>
                 <li>
-                  <Link className="a" to={""}>
-                    privacy policy
+                  <Link className="a" to={"/services"}>
+                    Services
                   </Link>
                 </li>
                 <li>
-                  <Link className="a" to={""}>
-                    affiliate program
+                  <Link className="a" to={"/contact"}>
+                    Contact Us
                   </Link>
                 </li>
               </ul>
@@ -47,61 +47,21 @@ export default function Footer() {
               <h4>get help</h4>
               <ul>
                 <li>
-                  <Link className="a" to={""}>
-                    FAQ
+                  <Link className="a" to={"/privacy"}>
+                    Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link className="a" to={""}>
-                    shipping
-                  </Link>
-                </li>
-                <li>
-                  <Link className="a" to={""}>
-                    returns
-                  </Link>
-                </li>
-                <li>
-                  <Link className="a" to={""}>
-                    order status
-                  </Link>
-                </li>
-                <li>
-                  <Link className="a" to={""}>
-                    payment options
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>online shop</h4>
-              <ul>
-                <li>
-                  <Link className="a" to={""}>
-                    watch
-                  </Link>
-                </li>
-                <li>
-                  <Link className="a" to={""}>
-                    bag
-                  </Link>
-                </li>
-                <li>
-                  <Link className="a" to={""}>
-                    shoes
-                  </Link>
-                </li>
-                <li>
-                  <Link className="a" to={""}>
-                    dress
+                  <Link className="a" to={"/terms"}>
+                    Terms & Conditions
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="footer-col">
               <h4>follow us</h4>
-              <div className=" flex  justify-center gap-3">
-                <div className="social-links">
+              <div className=" flex flex-col  justify-center gap-3">
+                <div className="social-links flex flex-col">
                   <a href="#" className="flex justify-center overflow-hidden  ">
                     <div className="flex justify-center pt-2">
                       <FaFacebookF className="text-2xl" />

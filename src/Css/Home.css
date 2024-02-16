@@ -1,0 +1,41 @@
+.sidenav {
+    width: 65vw;
+    transition: 0.3s;
+    padding-top: 20px;
+    animation: widthExpand 2s ease-in-out;
+}
+
+.sidenav .homeLink {
+    transition: 0.3s;
+    padding-left: 30px;
+    font-size: 25px;
+    animation: side 1s ease-in-out;
+}
+
+.homeLink {
+    padding-left: 30px;
+}
+
+@keyframes side {
+
+    0%,
+    100% {
+        transform: translatex(-0px);
+    }
+
+    50% {
+        transform: translatex(20px);
+    }
+}
+
+@keyframes widthExpand {
+    0% {
+        width: 0; /* Starting width */
+    }
+    50% {
+        width: 65vw; /* Expand to 60vw at 50% */
+    }
+    100% {
+        width: 65vw; /* Final width */
+    }
+}

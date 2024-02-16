@@ -7,7 +7,7 @@ const ClintMail = () => {
   // eslint-disable-next-line no-unused-vars
   const [sender, setSender] = useState("ashu88793@gmail.com");
   const [recipient, setRecipient] = useState("");
-  const [subject, setSubject] = useState("");
+  const [subject, setSubject] = useState("Submitting Insurance Certificate");
   const [content, setContent] = useState(
     [auth.username] + " Hello Just Sending mail to get attention "
   );
@@ -86,7 +86,7 @@ const ClintMail = () => {
           placeholder="Subject"
           value={subject}
           id="subject"
-          onChange={(e) => setSubject(e.target.value)}
+          // onChange={(e) => setSubject(e.target.value)}
           required
         />
         <br />

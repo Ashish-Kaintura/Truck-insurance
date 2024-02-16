@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import Nav2 from "../component/Nav2";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Trackinggmail from "../component/Trackingmail";
-import UploadCertificate from "../component/UploadCertificate";
+// import UploadCertificate from "../component/UploadCertificate";
 import Mastermail from "../component/MasterMail";
 import DashBord from "./DashBord";
 export default function MasterProfile() {
@@ -85,7 +85,12 @@ export default function MasterProfile() {
               )}
               {selectedButton === "tracker" && (
                 <div>
-                  <Trackinggmail />
+                  <h2 className="py-8 font-semibold text-2xl uppercase text-center">
+                    Mail Tracker
+                  </h2>
+                  <div className="h-[60vh] overflow-auto dashboardscroll">
+                    <Trackinggmail />
+                  </div>
                 </div>
               )}
             </div>

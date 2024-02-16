@@ -11,7 +11,7 @@ export default function Conatct() {
   return (
     <div>
       <Nav />
-      <section className="sm:p-8 p-2">
+      <section className="sm:p-8 p-2 sm:pt-0 pt-28">
         <div
           className="sm:h-[100vh] h-[115vh] bg-center bg-cover object-cover relative"
           style={{

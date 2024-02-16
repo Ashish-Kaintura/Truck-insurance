@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
 import { useParams } from "react-router-dom";
-import DeleteInsurance from "./DeleteInsurance";
 
 export default function GetInsuranceCertificate() {
   const { id } = useParams();
@@ -10,7 +9,13 @@ export default function GetInsuranceCertificate() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/users/${id}`);
+        const response = await fetch(`http://localhost:5000/users/${id}`, {
+          headers: {
+            authorization: `bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+        });
         const data = await response.json();
         setFiles(data);
       } catch (error) {
@@ -74,7 +79,6 @@ export default function GetInsuranceCertificate() {
           Download PDF
         </button>
       </center> */}
-      <div><DeleteInsurance/></div>
     </div>
   );
 }

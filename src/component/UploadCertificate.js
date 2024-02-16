@@ -23,6 +23,7 @@ export default function UploadCertificate() {
 
       if (response.status === 200) {
         alert("File sent successfully");
+        window.location.reload();
       } else {
         throw new Error("Failed to send file");
       }

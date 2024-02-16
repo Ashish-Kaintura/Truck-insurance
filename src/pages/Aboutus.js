@@ -26,8 +26,8 @@ export default function Aboutus() {
           >
             <div className="block flex-wrap justify-between px-8 items-center pt-8 ">
               <div className="flex flex-col mySlides">
-                <h1 className="text-6xl font-merriweather pt-3 text-white">
-                  Your One Stop Shope
+                <h1 className="sm:text-6xl text-4xl font-merriweather pt-3 text-white">
+                  Your One Stop Shop
                 </h1>
                 <h2 className="text-4xl font-merriweather pt-6 text-white">
                   J&S Truck Insurance Agency has provided
@@ -36,12 +36,12 @@ export default function Aboutus() {
                   insurance services since 2004.
                 </h2>
                 <div className="flex  justify-start gap-5 pt-8">
-                  <Link to={"/"}>
+                  <Link to={"/contact"}>
                     <button className="border-2 py-2 px-4 sm:text-2xl text-white font-robotoflex mt-2 rounded-lg">
                       Contact Us
                     </button>
                   </Link>
-                  <Link to={""}>
+                  <Link to={"/services"}>
                     <button className="border-2 py-2 px-4 sm:text-2xl text-white font-robotoflex mt-2 bg-[#816C54] rounded-lg">
                       Know More
                     </button>
@@ -51,15 +51,83 @@ export default function Aboutus() {
             </div>
           </div>
         </section>
-        {/* <div className="py-5">
-          <img
-            className="w-full"
-            src={require("../images/Vehicle-Detail-Journey.png")}
-            alt=""
-          />
-        </div> */}
-        <section className="pb-20  bg-white pt-5">
+        <section>
+          <div className="p-5 py-8">
+            <div className="py-5">
+              <h1 className="text-black text-3xl  uppercase text-center font-merriweather">
+                About Owner
+              </h1>
+            </div>
+            <div className="p-2 sm:px-5">
+              <p className="text-center font-merriweather">
+                Sandy Gill founded J&S Insurance Agency in 2018, driven by a
+                passion for serving the community to the fullest extent. She
+                spent nearly eight months working for an insurance company in
+                the USA before deciding to open this business and obtain her own
+                agent license. Though she valued that front desk role, her
+                entrepreneurial spirit inspired her to obtain her insurance
+                agent license and eventually open her own agency.
+              </p>
+              <br />
+              <p className="text-center font-merriweather">
+                After learning the nuances of the business for a few months as a
+                business agent, Sandy realized her dream in October 2018 when
+                she founded J&S Insurance. She has dedicated herself to
+                educating people and organizations about the basics of insurance
+                over the last two years, including what it is, how much it
+                costs, and what it includes. We still have several milestones to
+                reach as a young small business, but our main goal will always
+                be to be there in the community to help people with their
+                insurance requirements at every turn. Sandy's commitment to
+                helping people is the cornerstone of J&S Insurance Agency's
+                mission.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
           <div
+            className="p-5 py-8 relative bg-cover bg-center object-cover "
+            style={{ backgroundImage: `url(${image1}) ` }}
+          >
+            <div className="py-5">
+              <h1 className="text-white text-4xl font-merriweather  uppercase text-center">
+                About Company
+              </h1>
+            </div>
+            <div className="p-2 sm:px-5 text-white">
+              <p className="text-center font-merriweather">
+                Established in 2018 by Sandy Gill on the tenet of 'serving the
+                community to the fullest extent,' J&S Insurance Agency upholds
+                that principle. We are devoted to doing right by our clients and
+                providing optimal insurance guidance. Over the past two years,
+                our team has leveraged industry knowledge and experience to
+                deliver top-tier insurance policies to individuals and
+                businesses in 11 states: Arizona, California, Indiana, New
+                Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia and
+                Washington.
+              </p>
+              <br />
+              <p className="text-center font-merriweather">
+                Our insurance professionals collectively boast years of
+                expertise drafting customized truck and commercial plans
+                tailored to our clients’ needs. We take a boutique approach -
+                our amiable staff work with each client one-on-one not only to
+                craft the ideal policy, but foster an enduring, supportive
+                relationship over the years ahead. The attentive, thorough
+                service you’ll receive from our independent agency is
+                unparalleled. At J&S Insurance, our commitment to the
+                communities we serve comes first. When you opt our services,
+                you'll experience the quality service and attention to detail
+                that you can only find with an independent Best Truck And
+                Trucking Insurance Agency like J&S Insurance Agency.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="pb-20  bg-white pt-5">
+          {/* <div
             className="block justify-center text-center py-8 text-white bg-cover bg-center object-cover"
             style={{ backgroundImage: `url(${image1})` }}
           >
@@ -86,7 +154,7 @@ export default function Aboutus() {
               importantly, we provide genuine guidance to safeguard your assets
               and prepare for the unexpected.
             </h2>
-          </div>
+          </div> */}
           <div data-aos="fade-up" data-aos-duration="3000">
             <h1 className="text-center pt-20 pb-5 font-robotoflex text-[#0066A4]">
               Our services
@@ -129,12 +197,7 @@ export default function Aboutus() {
                     endanger your vehicle, cargo, or worse - your own safety.
                     Don’t take these risks lightly.
                   </h2>
-                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    {/* <img
-                      src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
-                      alt=""
-                    /> */}
-                  </div>
+                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center"></div>
                 </div>
               </div>
               <div
@@ -155,12 +218,7 @@ export default function Aboutus() {
                     en route — through road accidents involving your vehicles ,
                     spills, adverse weather and theft.
                   </h2>
-                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
-                    {/* <img
-                      src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
-                      alt=""
-                    /> */}
-                  </div>
+                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center"></div>
                 </div>
               </div>
               <div
@@ -310,7 +368,7 @@ export default function Aboutus() {
               >
                 <img
                   width="100%"
-                  src={require("../images/Why choose us.png")}
+                  src={require("../images/whoweare2.jpg")}
                   alt=""
                 />
               </div>
@@ -475,15 +533,15 @@ export default function Aboutus() {
           </div>
         </section>
         <section>
-          <div class="flex justify-center div1 py-12 px-2">
+          <div className="flex justify-center div1 py-12 px-2">
             <div
-              class="flex w-[850px] h-48 bg-[white] items-center px-5 py-8 px-5 justify-between rounded-3xl"
+              className="flex flex-wrap sm:w-[850px] sm:h-48 bg-[white] items-center py-8 px-5 sm:justify-between justify-center rounded-3xl"
               style={{
                 boxShadow:
                   "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
               }}
             >
-              <div class="flex text-[#1C7987] font-robotoflex">
+              <div className="flex text-[#1C7987] font-robotoflex">
                 <h1>
                   Get in Touch with the J&S Insurance Team we don’t just see you
                   as a customer
@@ -493,14 +551,16 @@ export default function Aboutus() {
                   <br />
                 </h1>
               </div>
-              <div>
-                <button class="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50 overflow-hidden h-14 w-56 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">
-                  <div class="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-900 delay-150 group-hover:delay-75"></div>
-                  <div class="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-800 delay-150 group-hover:delay-100"></div>
-                  <div class="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-700 delay-150 group-hover:delay-150"></div>
-                  <div class="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-600 delay-150 group-hover:delay-200"></div>
-                  <div class="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-500 delay-150 group-hover:delay-300"></div>
-                  <p class="z-10">Contact Us</p>
+              <div className=" mt-2 sm:mt-0">
+                <button className="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50 overflow-hidden h-14 w-56 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">
+                  <div className="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-900 delay-150 group-hover:delay-75"></div>
+                  <div className="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-800 delay-150 group-hover:delay-100"></div>
+                  <div className="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-700 delay-150 group-hover:delay-150"></div>
+                  <div className="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-600 delay-150 group-hover:delay-200"></div>
+                  <div className="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-500 delay-150 group-hover:delay-300"></div>
+                  <Link to={"/contact"} className="z-10">
+                    Contact Us
+                  </Link>
                 </button>
               </div>
             </div>

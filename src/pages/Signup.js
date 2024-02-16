@@ -41,7 +41,8 @@ export default function Signup() {
       if (response.ok) {
         const result = await response.json();
         console.log("Server response:", result);
-        localStorage.setItem("user", JSON.stringify(result));
+        localStorage.setItem("user", JSON.stringify(result.userData));
+        localStorage.setItem("token", JSON.stringify(result.auth));
         console.log("User signed up successfully");
         navigate("/profile");
       } else {
@@ -61,7 +62,7 @@ export default function Signup() {
   return (
     <div>
       <Nav />
-      <section className="p-8">
+      <section className="sm:p-8 pt-28">
         <div
           className=" flex justify-center items-center bg-center bg-cover object-cover"
           style={{
@@ -70,7 +71,7 @@ export default function Signup() {
         >
           <div className="flex flex-col items-center justify-center p-8 sm:h-screen dark">
             <div
-              className="w-full  rounded-lg shadow-md p-20 border-2"
+              className="w-full  rounded-lg shadow-md sm:p-20 p-5 border-2"
               style={{
                 backdropFilter: " blur(4px)",
                 backgrounCcolor: "rgba(255, 255, 255, 0.071)",
@@ -80,71 +81,83 @@ export default function Signup() {
             >
               <h2 className="text-2xl font-bold text-gray-200 mb-4">Sign up</h2>
               <form className="flex flex-col" onSubmit={handleSubmit}>
-                <div className="flex gap-5">
+                <div className="sm:flex flex-wrap gap-5">
+                  <div className="flex justify-center">
+                    <input
+                      required={true}
+                      placeholder="Enter Name"
+                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      type="text"
+                      // value={formData.Name}
+                      onChange={handleChange}
+                      id="username"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <input
+                      required={true}
+                      placeholder="Email address"
+                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      type="email"
+                      onChange={handleChange}
+                      id="email"
+                    />
+                  </div>
+                </div>
+                <div className="sm:flex flex-wrap gap-5">
+                  <div className="flex justify-center">
+                    <input
+                      required={true}
+                      placeholder="Tax Id No"
+                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      type="text"
+                      onChange={handleChange}
+                      id="tax_id"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <input
+                      required={true}
+                      placeholder="Phone Number"
+                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      type="number"
+                      id="phone_number"
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+                <div className="sm:flex flex-wrap gap-5">
+                  <div className="flex justify-center">
+                    <input
+                      required={true}
+                      placeholder="Company Name"
+                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      type="text"
+                      onChange={handleChange}
+                      id="company_name"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <input
+                      required={true}
+                      placeholder="Password"
+                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      type="password"
+                      onChange={handleChange}
+                      id="password"
+                    />
+                  </div>
+                </div>
+                <div className="flex sm:justify-start justify-center">
                   <input
                     required={true}
-                    placeholder="Enter Name"
+                    placeholder="Enter Your Address"
                     className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
-                    // value={formData.Name}
                     onChange={handleChange}
-                    id="username"
-                  />
-                  <input
-                    required={true}
-                    placeholder="Email address"
-                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                    type="email"
-                    onChange={handleChange}
-                    id="email"
+                    id="address"
                   />
                 </div>
-                <div className="flex gap-5">
-                  <input
-                    required={true}
-                    placeholder="Tax Id No"
-                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                    type="text"
-                    onChange={handleChange}
-                    id="tax_id"
-                  />
-                  <input
-                    required={true}
-                    placeholder="Phone Number"
-                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                    type="number"
-                    id="phone_number"
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="flex gap-5">
-                  <input
-                    required={true}
-                    placeholder="Company Name"
-                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                    type="text"
-                    onChange={handleChange}
-                    id="company_name"
-                  />
-                  <input
-                    required={true}
-                    placeholder="Password"
-                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                    type="password"
-                    onChange={handleChange}
-                    id="password"
-                  />
-                </div>
-
-                <input
-                  required={true}
-                  placeholder="Enter Your Address"
-                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-                  type="text"
-                  onChange={handleChange}
-                  id="address"
-                />
-
                 <div className="block items-center justify-between flex-wrap">
                   <p className="text-white mt-4">
                     Allready Have an Account ?{" "}

@@ -1,53 +1,64 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-export default function DeleteInsurance() {
-  const [deleted, setDeleted] = useState(false);
-  const [data, setData] = useState([]);
+const DeleteInsurance = () => {
+  const [deletionMessage, setDeletionMessage] = useState("");
+  const [user, setUser] = useState({});
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/users/");
+        const response = await fetch(`http://localhost:5000/users/${id}`, {
+          headers: {
+            authorization: `bearer ${JSON.parse(
+              localStorage.getItem("token")
+            )}`,
+          },
+        });
         const result = await response.json();
-        setData(result);
+        setUser(result);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/users_insurance_certificate/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `http://localhost:5000/users/${id}/insurance_certificate`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (response.ok) {
-        // If deletion is successful, update the data state
-        setData((prevData) => prevData.filter((user) => user.id !== id));
-        alert("delete user");
+        setDeletionMessage("Insurance certificate deleted successfully");
+        alert("Insurance certificate deleted successfully");
+        // Optionally, you can update the user state here if needed
         window.location.reload();
       } else {
-        console.error("Failed to delete user");
+        console.error("Failed to delete insurance certificate");
       }
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.error("Error deleting insurance certificate:", error);
     }
   };
 
   return (
     <div>
-      <div>
-        {deleted ? (
-          <p>Insurance certificate value deleted successfully</p>
-        ) : (
-          <button onClick={() => handleDelete(data.id)}>
-            Delete Insurance Certificate
-          </button>
-        )}
-      </div>
+      <button
+        className="text-white px-3 py-1 rounded-lg bg-blue-700  shadow-inner"
+        onClick={handleDelete}
+      >
+        Delete Insurance Certificate
+      </button>
+      {deletionMessage && <p>{deletionMessage}</p>}
     </div>
   );
-}
+};
+
+export default DeleteInsurance;

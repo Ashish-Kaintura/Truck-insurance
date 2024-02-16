@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
@@ -6,17 +6,44 @@ import "../Css/Services.css";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../gif/ezgif.com-crop2.gif";
 
+// Modal Component
+const Modal = ({ closeModal, title, content }) => {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-8 max-w-md w-full">
+        <h2 className="text-2xl font-bold mb-2 text-gray-800">{title}</h2>
+        <p className="text-gray-700 ">{content}</p>
+        <button
+          onClick={closeModal}
+          className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
 export default function Services() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [modalContent, setModalContent] = useState(null);
+
+  const openModal = (title, content) => {
+    setModalContent({ title, content });
+  };
+
+  const closeModal = () => {
+    setModalContent(null);
+  };
   return (
     <div>
       <Nav />
       {/* // */}
       <main>
-        <section className="py-12">
+        <section className="py-12 sm:pt-0 pt-28 ">
           <div className="sm:flex flex-wrap sm:justify-between justify-center items-center sm:ps-12 px-4">
             <div className="flex flex-col uppercase ">
               <h1 className="text-5xl font-bold font-sans">
@@ -30,9 +57,11 @@ export default function Services() {
               </h3>
               <br />
               <div>
-                <button className="px-4 py-2 bg-sky-600 text-white text-xl rounded-lg">
-                  Contact Us
-                </button>
+                <Link to={"/contact"}>
+                  <button className="px-4 py-2 bg-sky-600 text-white text-xl rounded-lg">
+                    Contact Us
+                  </button>
+                </Link>
               </div>
             </div>
             <div>
@@ -44,6 +73,40 @@ export default function Services() {
             </div>
           </div>
         </section>
+        <section className="border-t-2 border-gray-300">
+          <div className="p-5 py-8">
+            <div className="py-5">
+              <h1 className="text-black text-3xl  uppercase text-center font-merriweather">
+                Products & Services
+              </h1>
+            </div>
+            <div className="p-2 sm:px-5 text-gray-700">
+              <p className="text-center font-merriweather">
+                At J&S Insurance Agency, we strive to provide excellent
+                insurance coverage to clients in Arizona, California, Indiana,
+                New Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia and
+                Washington. Our wide range of policies safeguards individuals,
+                trucks, and businesses such as hotels, motels, gas stations, and
+                more.We offer policies including physical damage, general
+                liability, truck cargo, roadside assistance, auto liability, and
+                other options. If you are interested in coverage that is not
+                listed, please email sandy@jsinsur.com or call +1 206-617-9034
+                during business hours. We are happy to discuss your insurance
+                needs and explain all available protections.
+              </p>
+              <br />
+              <p className="text-center font-merriweather">
+                Trucking Liability Protect your business with policies covering
+                bodily injury, property damage, and more. Our plans shield you
+                from legal and financial risks. Motor Truck Cargo Safeguard your
+                truck's contents with robust coverage for theft, collisions,
+                weather events, and additional incidents. We offer adaptable
+                limits.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 bg-[#F2f2f2f2]">
           <div className=" justify-center text-center">
             <h1 className="font-cormorantgaramond text-5xl uppercase">
@@ -87,12 +150,19 @@ export default function Services() {
                   your vehicle, cargo, or worse - your own safety. Don’t take
                   these risks lightly.
                 </p>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "Trucking Liability Insurance",
+                      "Out on the open road each day, truckers face endless variables beyond their control. One distracted driver could endanger your vehicle, cargo, or worse - your own safety. Don’t take these risks lightly. Our commercial trucking liability insurance covers damages to other drivers/vehicles involved and any public property destruction resulting from an accident. Receive complete peace of mind knowing you’re protected when the unexpected occurs."
+                    )
+                  }
+                  className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Explore
+                </button>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
-                Explore
-              </button>
             </div>
-
             <div
               className="group flex flex-col justify-start items-start gap-2 sm:w-96 w-72 h-56 duration-500 relative rounded-lg p-4 bg-[whitesmoke] hover:-translate-y-2 hover:shadow-xl shadow-gray-300 sm:mt-0 mt-20 cardanimation"
               style={{
@@ -104,7 +174,10 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                <img src={require("../images/services/Additional Offerings.jpg")} alt="" />
+                <img
+                  src={require("../images/services/Additional Offerings.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -119,7 +192,15 @@ export default function Services() {
                   adverse weather and theft.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Motor Truck Cargo Coverage",
+                    " For instance, expensive equipment or perishable goodstransport? We have motor truck cargo insurance for you. Coverfor liability of any cargo lost, damaged or destroyed en route — through road accidents involving your vehicles , spills, adverse weather and theft."
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
@@ -134,7 +215,10 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                      <img src={require("../images/services/RoadsideAssistane.jpg")} alt="" />
+                <img
+                  src={require("../images/services/RoadsideAssistane.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -147,7 +231,15 @@ export default function Services() {
                   delivery timetables and your bottom line severely.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Roadside Assistance",
+                    "Unpredictably truckers on long trips can have mechanical problems or flat tires. A single breakdown, however, can ruin delivery timetables and your bottom line severely. Our customizable roadside assistance plans account for this by providing:Towing services On-site repairs Tire changes Fuel/fluid delivery Locksmith services And more!"
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
@@ -164,7 +256,10 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200  overflow-hidden"
                 alt="image here"
               >
-                  <img src={require("../images/services/General Liability Insurance.jpg")} alt="" />
+                <img
+                  src={require("../images/services/General Liability Insurance.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -177,7 +272,15 @@ export default function Services() {
                   prepare for the worst.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    " General Liability Insurance",
+                    "While slip-and-fall incidents or equipment damages requiring legal fees are rare, trucking and commercial ventures must prepare for the worst. Our customizable General Liability insurance provides coverage for:Bodily injury/property damage occurring on your actual business propertyCase expenses should a lawsuit arise against your companyMedical payments for minor guest injuries not requiring lengthy litigationAnd additional costs crushing small business owners following an accident"
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
@@ -192,7 +295,10 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-                  <img src={require("../images/services/Trailer Interchange Coverage.jpg")} alt="" />
+                <img
+                  src={require("../images/services/Trailer Interchange Coverage.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -208,7 +314,15 @@ export default function Services() {
                   unexpected calamity.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Trailer Interchange Coverage",
+                    "For trucking companies frequently exchanging trailers within their network, our Trailer Interchange Insurance guarantees seamless operations. We offer physical damage coverage for any trailers being pulled under an interchange agreement. Rest assured your temporary trailers are protected against unexpected calamity. "
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
@@ -223,7 +337,10 @@ export default function Services() {
                 className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
                 alt="image here"
               >
-               <img src={require("../images/services/Additional Offeringss.jpg")} alt="" />
+                <img
+                  src={require("../images/services/Additional Offeringss.jpg")}
+                  alt=""
+                />
               </div>
 
               <div className="">
@@ -238,15 +355,30 @@ export default function Services() {
                   <li>Comprehensive + Collision Truck Damage</li>
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Additional Offerings",
+                    "Alongside the specialty coverage above, we also provide policies such as: Non-Owned Trailer Liability Auto Liability   Comprehensive + Collision Truck Damage Commercial Property Insurance Business Income Insurance Commercial Umbrella Insurance Workers Compensation   EPLI Commercial Auto Professional Liability Cyber Liability Equipment Insurance   Inventory Insurance ...Plus More! Unsure if you need a particular coverage line? Our licensed advisors educate clients for optimal asset protection specific to their venture’s challenges. We then customize the ideal policy blend to shield your finances. "
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
           </div>
+          {modalContent && (
+            <Modal
+              closeModal={closeModal}
+              title={modalContent.title}
+              content={modalContent.content}
+            />
+          )}
         </section>
         <section className="py-12">
           <section
-            className="sm:h-[70vh] h-[120vh] bg-cover bg-center bg-no-repeat relative"
+            className="sm:h-[70vh] h-[100vh] bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: `url(${image})` }}
           >
             <div
@@ -256,7 +388,7 @@ export default function Services() {
                 backgroundColor: "rgba(86, 145, 235, 0.336)",
               }}
             >
-              <div className="sm:flex block sm:justify-evenly justify-center px-2 items-center">
+              <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 items-center">
                 <div className="sm:w-[50%]">
                   <div className="relative h-full w-full flex items-center justify-center">
                     <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
@@ -264,7 +396,7 @@ export default function Services() {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -274,7 +406,7 @@ export default function Services() {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -284,7 +416,7 @@ export default function Services() {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -294,7 +426,7 @@ export default function Services() {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -304,7 +436,7 @@ export default function Services() {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -314,24 +446,24 @@ export default function Services() {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
+                            alt=""
+                          />
+                        </span>
+                      </button>
+                      <button className="profile_item -bottom-6 right-[39%] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
+                        <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
+                          <img
+                            className="object-cover"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
                       </button>
 
-                      <button className="profile_item right-[40%] -bottom-4 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
-                        <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden"></span>
-                        <img
-                          className="object-cover"
-                          src="truck3/image/why1.jpg"
-                          alt=""
-                        />
-                      </button>
-
                       <button className="profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
                         <div className="w-full bg-white h-full flex items-center justify-center p-2 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500">
-                          <span className="w-20 h-20 flex  justify-center">
+                          <span className="w-28 h-28 flex justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -347,12 +479,13 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%]">
+
+                <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
                   <h1 className="uppercase text-4xl font-merriweather text-white">
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
                       Why
                     </span>
-                    Company Name
+                    J&S Insurance
                   </h1>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
@@ -370,13 +503,13 @@ export default function Services() {
                     of your trucking or commercial enterprise today.
                     <br />
                   </h3>
-                  <div className="sm:flex block gap-5 justify-start pt-8">
-                    <Link to={""}>
+                  <div className="sm:flex block gap-5 sm:justify-start justify-center pt-8">
+                    <Link to={"contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
                       </button>
                     </Link>
-                    <Link to={""}>
+                    <Link to={"/Aboutus"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 bg-[#7888A1] rounded-lg">
                         Know More
                       </button>
@@ -390,26 +523,108 @@ export default function Services() {
         <section className="py-12">
           <div className="sm:flex flex-wrap justify-between items-center bg-sky-600">
             <div className=" flex justify-center sm:h-96 items-center sm:w-[50%] sm:py-0 py-5">
-              <div className="flex justify-center px-10">
+              <div className=" justify-center px-10">
                 <div>
                   <h1 className="font-cormorantgaramond sm:text-6xl text-xl pb-5 text-white uppercase">
                     Where are We
                   </h1>
                   <p className="font-cormorantgaramond  text-white ps-2 text-4xl ">
-                  Located Fresno CA
+                    Located Fresno
                   </p>
-                  {/* <p className="font-cormorantgaramond  text-white ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nun
-                    orem id integer jjdnfelfn.
+                  <p className="font-cormorantgaramond  text-white text-3xl ">
+                    {/* CA Ca Wa Az Nv Tx IL OH */}
                   </p>
-                  <p className="font-cormorantgaramond  text-white ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nun
-                    orem id integer jjdnfelfn.
+                  <p className="font-cormorantgaramond  text-white  text-3xl ">
+                    {/* IN NJ Va Ks Mi Wi Ga FL */}
                   </p>
-                  <p className="font-cormorantgaramond  text-white ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nun
-                    orem id integer jjdnfelfn.
-                  </p> */}
+                </div>
+                <div className="mt-4">
+                  <h1 className="text-5xl font-cormorantgaramond text-white ">
+                    Also In
+                  </h1>
+                  <div className="flex gap-x-8">
+                    <div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          CA
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          WA
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          AZ
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          NV
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          Ga
+                        </h1>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          TX
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          IL
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          OH
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          In
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          Fl
+                        </h1>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          NJ
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          VA
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          KS
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          MI
+                        </h1>
+                      </div>
+                      <div>
+                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                          Fl
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -528,7 +743,7 @@ export default function Services() {
 
                   <button
                     type="submit"
-                    className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded text-white text-lg font-merriweather"
+                    className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded  text-lg "
                   >
                     Submit
                   </button>

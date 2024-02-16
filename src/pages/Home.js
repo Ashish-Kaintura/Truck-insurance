@@ -1,6 +1,6 @@
 // import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../images/AboutUs.png";
 import image2 from "../images/services/Industries.jpg";
@@ -15,8 +15,8 @@ import TruckDamageSvg4 from "../images/leg-cast.svg";
 import TruckDamageSvg5 from "../images/truck-insurance_third party accident.svg";
 import TruckDamageSvg6 from "../images/truck-insurance_towing.svg";
 import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
-import maintruck from "../images/Untitled-1.png";
-import backgroundImage from "../images/dimitar-donovski-yrjB4dYWUZU-unsplash.jpg";
+// import maintruck from "../images/Untitled-1.png";
+import backgroundImage from "../images/truck8.jpg";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 import { gsap } from "gsap";
@@ -26,6 +26,23 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { EaselPlugin } from "gsap/EaselPlugin";
 // import { useNavigate } from "react-router-dom";
 import HomeNav from "../component/HomeNav";
+// Modal Component
+const Modal = ({ closeModal, title, content }) => {
+  return (
+    <div className="fixed inset-0 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-8 max-w-md w-full">
+        <h2 className="text-2xl font-bold mb-2 text-gray-800">{title}</h2>
+        <p className="text-gray-700 ">{content}</p>
+        <button
+          onClick={closeModal}
+          className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
 
 gsap.registerPlugin(
   ScrollTrigger,
@@ -40,21 +57,10 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // const navigate = useNavigate();
-
-  // const Logout = () => {
-  //   // console.warn("apple");
-  //   localStorage.clear();
-  //   navigate("/signup");
-  // };
-
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#banner",
-        // toggleActions: "restart pause reverse pause",
-        // pin: true, // pin the trigger element while active
-        // markers: true,
         start: "top 50px",
         end: "+=500",
         scrub: 4,
@@ -70,6 +76,16 @@ const Home = () => {
       // stagger: 0.2,
     });
   }, []);
+
+  const [modalContent, setModalContent] = useState(null);
+
+  const openModal = (title, content) => {
+    setModalContent({ title, content });
+  };
+
+  const closeModal = () => {
+    setModalContent(null);
+  };
   return (
     <div>
       {/* <nav className="bg-[#515659]">
@@ -120,11 +136,11 @@ const Home = () => {
           </div>
         </ul>
       </nav> */}
-      <HomeNav/>
+      <HomeNav />
       <main>
         <div
           id="banner"
-          className="sm:h-[700px] h-[500px] relative items-center justify-center"
+          className="sm:h-[700px] h-[500px] relative items-center justify-center "
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundPosition: "center",
@@ -132,7 +148,7 @@ const Home = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="flex flex-col absolute top-[12%] inset-0">
+          <div className="flex flex-col absolute sm:top-[20%] top-[28%] inset-0">
             <div className="flex justify-center text-center items-center gap-5">
               <span className="bg-yellow-600 w-28 h-[2px] span1"></span>
               <h1 className="uppercase text-2xl font-robotoflex text-yellow-600 italic exp">
@@ -142,20 +158,20 @@ const Home = () => {
             </div>
             <br />
             <div>
-              <h3 className="text-center text-5xl text-white font-robotoflex pt-5">
-                Connecting People
+              <h3 className="text-center sm:text-5xl text-4xl text-white font-robotoflex pt-5">
+                We Offer Customized Commercial
               </h3>
               <h4 className="text-center text-5xl text-white font-robotoflex pt-5">
-                Improve Lives
+                Truck Insurance Coverage
               </h4>
             </div>
           </div>
 
-          <img
+          {/* <img
             className="z-10 absolute sm:top-[60%] top-[50%] sm:left-[38%] inset-0 left-[10%] truckimage"
-            src={maintruck}
+            src="maintruck"
             alt=""
-          />
+          /> */}
         </div>
 
         <section className="bg-[#FAFAFA] pb-32 bg-[100vh] relative">
@@ -190,7 +206,15 @@ const Home = () => {
                   these risks lightly.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Trucking Liability Insurance",
+                    "Out on the open road each day, truckers face endless variables beyond their control. One distracted driver could endanger your vehicle, cargo, or worse - your own safety. Don’t take these risks lightly. Our commercial trucking liability insurance covers damages to other drivers/vehicles involved and any public property destruction resulting from an accident. Receive complete peace of mind knowing you’re protected when the unexpected occurs."
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
@@ -223,7 +247,15 @@ const Home = () => {
                   adverse weather and theft.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Motor Truck Cargo Coverage",
+                    " For instance, expensive equipment or perishable goodstransport? We have motor truck cargo insurance for you. Coverfor liability of any cargo lost, damaged or destroyed en route — through road accidents involving your vehicles , spills, adverse weather and theft."
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
@@ -254,15 +286,30 @@ const Home = () => {
                   delivery timetables and your bottom line severely.
                 </p>
               </div>
-              <button className="hover:bg-gray-300 bg-gray-200 text-gray-800 mt-6 rounded p-2 px-6">
+              <button
+                onClick={() =>
+                  openModal(
+                    "Roadside Assistance",
+                    "Unpredictably truckers on long trips can have mechanical problems or flat tires. A single breakdown, however, can ruin delivery timetables and your bottom line severely. Our customizable roadside assistance plans account for this by providing:Towing services On-site repairs Tire changes Fuel/fluid delivery Locksmith services And more!"
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
                 Explore
               </button>
             </div>
           </div>
+          {modalContent && (
+            <Modal
+              closeModal={closeModal}
+              title={modalContent.title}
+              content={modalContent.content}
+            />
+          )}
         </section>
         <section className="py-12">
           <section
-            className="sm:h-[70vh] h-[95vh] bg-cover bg-center bg-no-repeat relative"
+            className="sm:h-[70vh] h-[100vh] bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: `url(${image})` }}
           >
             <div
@@ -272,15 +319,15 @@ const Home = () => {
                 backgroundColor: "rgba(86, 145, 235, 0.336)",
               }}
             >
-              <div className="sm:flex block sm:justify-evenly justify-center px-4 items-center">
-                <div className="w-[50%]">
+              <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 items-center">
+                <div className="sm:w-[50%]">
                   <div className="relative h-full w-full flex items-center justify-center">
                     <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
                       <button className="profile_item left-[45px] -top-[4px] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -290,7 +337,7 @@ const Home = () => {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -300,7 +347,7 @@ const Home = () => {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -310,7 +357,7 @@ const Home = () => {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -320,7 +367,7 @@ const Home = () => {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
@@ -330,24 +377,24 @@ const Home = () => {
                         <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
                           <img
                             className="object-cover"
-                            src="truck3/image/why1.jpg"
+                            src={require("../images/4659373.png")}
+                            alt=""
+                          />
+                        </span>
+                      </button>
+                      <button className="profile_item -bottom-6 right-[39%] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
+                        <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden">
+                          <img
+                            className="object-cover"
+                            src={require("../images/4659373.png")}
                             alt=""
                           />
                         </span>
                       </button>
 
-                      <button className="profile_item right-[40%] -bottom-4 absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
-                        <span className="block w-[40px] h-[40px] transition-all duration-500 rounded-full z-[2] bg-white p-1 overflow-hidden"></span>
-                        <img
-                          className="object-cover"
-                          src="truck3/image/why1.jpg"
-                          alt=""
-                        />
-                      </button>
-
                       <button className="profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
                         <div className="w-full bg-white h-full flex items-center justify-center p-2 rounded-full active:scale-95 hover:scale-95 object-cover transition-all duration-500">
-                          <span className="w-20 h-20 flex justify-center">
+                          <span className="w-28 h-28 flex justify-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -363,49 +410,13 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="flex flex-col sm:mt-0 mt-12">
+
+                <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
                   <h1 className="uppercase text-4xl font-merriweather text-white">
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
                       Why
                     </span>
-                    Company Name
-                  </h1>
-                  <br />
-                  <h2 className="text-2xl font-merriweather uppercase">
-                    Secured Over 1 Crore+ Smiles!
-                  </h2>
-                  <br />
-                  <h3 className="font-merriweather text-white">
-                    Trust redefines relations at HDFC ERGO. We consistently
-                    strive to
-                    <br />
-                    make insurance easier, more affordable and more dependable.
-                    Here
-                    <br />
-                    promises are kept, claims are fulfilled and lives are
-                    nurtured
-                    <br />
-                    with utmost commitment
-                  </h3>
-                  <div className="flex gap-5 justify-start  pt-8">
-                    <Link to={"/contact"}>
-                      <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
-                        Contact Us
-                      </button>
-                    </Link>
-                    <Link to={"/services"}>
-                      <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 bg-[#7888A1] rounded-lg">
-                        Know More
-                      </button>
-                    </Link>
-                  </div>
-                </div> */}
-                <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%]">
-                  <h1 className="uppercase text-4xl font-merriweather text-white">
-                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
-                      Why
-                    </span>
-                    Company Name
+                    J&S Insurance
                   </h1>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
@@ -423,13 +434,13 @@ const Home = () => {
                     of your trucking or commercial enterprise today.
                     <br />
                   </h3>
-                  <div className="sm:flex block gap-5 justify-start pt-8">
-                    <Link to={""}>
+                  <div className="sm:flex block gap-5 sm:justify-start justify-center pt-8">
+                    <Link to={"contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
                       </button>
                     </Link>
-                    <Link to={""}>
+                    <Link to={"/Aboutus"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 bg-[#7888A1] rounded-lg">
                         Know More
                       </button>
@@ -772,14 +783,15 @@ const Home = () => {
                     </div>
                   </div>
                   <h1 className="text-center text-white font-merriweather text-[18px]">
-                    " Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Labore
+                    "As a small business owner, I rely on my truck to make
+                    deliveries every day. J&S Insurance
                     <br />
-                    ducimus necessitatibus sed est assumenda, vitae hic ipsam{" "}
+                    found a policy that keeps me protected at a price I can
+                    afford. I'd
                     <br />
-                    doloribus! Quas, laudantium."
+                    recommend them to any trucker looking for coverage.
                   </h1>
-                  <h1 className="text-white font-merriweather pt-3">Jomyy-</h1>
+                  <h1 className="text-white font-merriweather pt-3"> John S</h1>
                   <br />
                   <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -791,6 +803,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+
         <section className=" pt-20">
           <div
             className="sm:flex block sm:justify-between justify-center items-center sm:py-0 py-5 bg-center bg-cover bg-no-repeat"
@@ -907,7 +920,7 @@ const Home = () => {
         <section>
           <div className="flex justify-center div1 py-12 px-2">
             <div
-              className="flex w-[850px] h-48 bg-[white] items-center px-5 py-8 px-5 justify-between rounded-3xl"
+              className="flex flex-wrap sm:w-[850px] sm:h-48 bg-[white] items-center py-8 px-5 sm:justify-between justify-center rounded-3xl"
               style={{
                 boxShadow:
                   "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -923,7 +936,7 @@ const Home = () => {
                   <br />
                 </h1>
               </div>
-              <div>
+              <div className=" mt-2 sm:mt-0">
                 <button className="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50 overflow-hidden h-14 w-56 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">
                   <div className="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-900 delay-150 group-hover:delay-75"></div>
                   <div className="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all duration-500 ease-in-out bg-sky-800 delay-150 group-hover:delay-100"></div>

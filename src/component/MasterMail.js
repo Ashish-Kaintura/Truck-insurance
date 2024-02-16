@@ -1,36 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+// import { useParams } from "react-router-dom";
 import axios from "axios";
-
 const Mastermail = () => {
-    const isAdmin = JSON.parse(localStorage.getItem("masteruser"));
+  const isAdmin = JSON.parse(localStorage.getItem("masteruser"));
   // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState({});
   // eslint-disable-next-line no-unused-vars
   const [sender, setSender] = useState("ashu88793@gmail.com");
   const [recipient, setRecipient] = useState("");
-  const [subject, setSubject] = useState("");
-  const [content, setContent] = useState(  [isAdmin.username] +
-    " Hello Just Sending mail to get your attention"
+  const [subject, setSubject] = useState("Submitting Insurance Certificate");
+  const [content, setContent] = useState(
+    [isAdmin.username] + " Hello Just Sending mail to get your attention"
   );
   const [file, setFile] = useState(null); // State to store the selected file
   const [loading, setLoading] = useState(false); // State to track loading state
 
-  const { id } = useParams();
+  // const { id } = useParams();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:5000/users/${id}`);
-        const data = await response.json();
-        setUser(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(`http://localhost:5000/users/${id}`);
+  //       const data = await response.json();
+  //       setUser(data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, [id]);
+  //   fetchData();
+  // }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,6 +53,7 @@ const Mastermail = () => {
       setLoading(false); // Set loading state to false when email sending process is finished
     }
   };
+
   return (
     <>
       <div>
@@ -98,7 +98,7 @@ const Mastermail = () => {
           id="content"
           className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
           value={content}
-            onChange={(e) => setContent(e.target.value)}
+          onChange={(e) => setContent(e.target.value)}
           required
         ></textarea>
 
@@ -109,6 +109,7 @@ const Mastermail = () => {
         />
 
         <br />
+
         {}
         <button
           className=" px-3 py-3 mt-2 text-white bg-blue-500 rounded-3xl focus:bg-indigo-600 focus:outline-none"
