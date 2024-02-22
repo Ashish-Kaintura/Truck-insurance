@@ -4,6 +4,7 @@ import Nav from "../component/Nav";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ClicntMail from "../component/ClicntMail";
+import GetInsuranceCertificate from "../component/GetInsuranceCertificate";
 export default function Profile() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -653,6 +654,10 @@ export default function Profile() {
                     </div>
                   </div>
                 </div>
+                
+                //   <div>
+                //   <GetInsuranceCertificate />
+                // </div>
               )}
               {selectedButton === "id_card" && (
                 // <div className="flex gap-4 items-center">

@@ -22,7 +22,7 @@ export default function Footer() {
               <h4>Links</h4>
               <ul>
                 <li>
-                  <Link className="a" to={"/home"}>
+                  <Link className="a" to={"/"}>
                     Home
                   </Link>
                 </li>
@@ -87,6 +87,19 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+      </footer>
+      <footer className="bg-gray-500 text-white font-robotoflex">
+        <div>
+          <h1 className="py-2 text-center">
+            Developed And Design By{" "}
+            <a
+              className="hover:text-semibold"
+              href="https://www.risezonic.com/"
+            >
+              @Risezonic
+            </a>
+          </h1>
         </div>
       </footer>
     </div>

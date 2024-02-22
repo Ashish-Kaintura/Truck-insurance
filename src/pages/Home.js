@@ -24,6 +24,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { EaselPlugin } from "gsap/EaselPlugin";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
+
 // import { useNavigate } from "react-router-dom";
 import HomeNav from "../component/HomeNav";
 // Modal Component
@@ -86,6 +96,7 @@ const Home = () => {
   const closeModal = () => {
     setModalContent(null);
   };
+
   return (
     <div>
       {/* <nav className="bg-[#515659]">
@@ -197,20 +208,19 @@ const Home = () => {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Trucking Liability Insurance
+                  Trucking Liability
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Out on the open road each day, truckers face endless variables
-                  beyond their control. One distracted driver could endanger
-                  your vehicle, cargo, or worse - your own safety. Don’t take
-                  these risks lightly.
+                  Protect your business with policies covering bodily injury,
+                  property damage, and more. Our plans shield you from legal and
+                  financial risks.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
-                    "Trucking Liability Insurance",
-                    "Out on the open road each day, truckers face endless variables beyond their control. One distracted driver could endanger your vehicle, cargo, or worse - your own safety. Don’t take these risks lightly. Our commercial trucking liability insurance covers damages to other drivers/vehicles involved and any public property destruction resulting from an accident. Receive complete peace of mind knowing you’re protected when the unexpected occurs."
+                    "Trucking Liability ",
+                    "Protect your business with policies covering bodily injury, property damage, and more. Our plans shield you from legal and financial risks."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -237,21 +247,19 @@ const Home = () => {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Motor Truck Cargo Coverage
+                  Motor Truck Cargo
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  For instance, expensive equipment or perishable goods
-                  transport? We have motor truck cargo insurance for you. Cover
-                  for liability of any cargo lost, damaged or destroyed en route
-                  — through road accidents involving your vehicles , spills,
-                  adverse weather and theft.
+                  Safeguard your truck's contents with robust coverage for
+                  theft, collisions, weather events, and additional incidents.
+                  We offer adaptable limits.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
-                    "Motor Truck Cargo Coverage",
-                    " For instance, expensive equipment or perishable goodstransport? We have motor truck cargo insurance for you. Coverfor liability of any cargo lost, damaged or destroyed en route — through road accidents involving your vehicles , spills, adverse weather and theft."
+                    "Motor Truck Cargo",
+                    " Safeguard your truck's contents with robust coverage for theft, collisions, weather events, and additional incidents. We offer adaptable limits.  "
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -281,16 +289,16 @@ const Home = () => {
                   Roadside Assistance
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Unpredictably truckers on long trips can have mechanical
-                  problems or flat tires. A single breakdown, however, can ruin
-                  delivery timetables and your bottom line severely.
+                  Stranded drivers stay safe with our roadside assistance. We
+                  promptly dispatch services for minor mechanical issues,
+                  towing, tire changes, jump starts, and fuel delivery.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
                     "Roadside Assistance",
-                    "Unpredictably truckers on long trips can have mechanical problems or flat tires. A single breakdown, however, can ruin delivery timetables and your bottom line severely. Our customizable roadside assistance plans account for this by providing:Towing services On-site repairs Tire changes Fuel/fluid delivery Locksmith services And more!"
+                    "Stranded drivers stay safe with our roadside assistance. We promptly dispatch services for minor mechanical issues, towing, tire changes, jump starts, and fuel delivery."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -413,28 +421,26 @@ const Home = () => {
 
                 <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
                   <h1 className="uppercase text-4xl font-merriweather text-white">
-                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
-                      Why
+                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
+                      About
                     </span>
                     J&S Insurance
                   </h1>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
-                    Ready to Shore Up Coverage & Minimize Risk
+                    Customizable Coverage: The J&S Insurance Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At J&S Insurance Agency, our risk management insight and
-                    dedication to finding clients the RIGHT coverage set us
-                    <br />
-                    apart. With over 15 top providers in our network, flexible
-                    pricing options, and unmatched support, let us keep your
-                    <br />
-                    assets protected.Get covered right and safeguard the future
-                    of your trucking or commercial enterprise today.
-                    <br />
+                    At J&S Insurance Agency, we are aware of the fact that no
+                    two clients have precisely <br />
+                    identical risk profiles as well as coverage needs. Being an
+                    individual agency serving <br /> the needs of rental service
+                    trucks and commercial clients in 11 states for all its worth{" "}
+                    <br /> we are proud to present a customizable protection
+                    option.
                   </h3>
-                  <div className="sm:flex block gap-5 sm:justify-start justify-center pt-8">
+                  <div className="flex gap-5 sm:justify-start justify-evenly  pt-8">
                     <Link to={"contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
@@ -462,8 +468,8 @@ const Home = () => {
               <h2 className="font-merriweather text-xl border-b-2 pb-8 border-red-600">
                 From our office in Fresno, CA, we serve trucking, personal, and
                 <br />
-                business insurance clients throughout California and in over
-                thirty
+                business insurance clients throughout California and is over
+                fifteen
                 <br />
                 other states.
               </h2>
@@ -473,8 +479,7 @@ const Home = () => {
                 </h1>
                 <br />
                 <h1 className="font-merriweather text-xl pb-8">
-                  We proudly represent AmTrust, Progressive, Travelers, and
-                  more!
+                  We proudly represent the road warriors.
                 </h1>
               </div>
               <div className="sm:flex block gap-5 justify-start">
@@ -610,7 +615,7 @@ const Home = () => {
                 <div className="flex flex-col justify-center text-center">
                   <h1 className="font-robotoflex pt-2">Accidents</h1>
                   <p className="pt-2 font-robotoflex">
-                    Damages caused to the truck in case off
+                    Damages caused to the truck in case of
                   </p>
                   <p className="font-robotoflex">an accident</p>
                 </div>
@@ -683,7 +688,7 @@ const Home = () => {
                     If there is an accident of your truck, leading
                   </p>
                   <p className="font-robotoflex">
-                    to an injury or death of the drivert
+                    to an injury or death of the driver
                   </p>
                 </div>
               </div>
@@ -703,7 +708,7 @@ const Home = () => {
                     Any damages caused by your truck to a
                   </p>
                   <p className="font-robotoflex">
-                    third-party person, vehicle or propertyf
+                    third-party person, vehicle or property
                   </p>
                 </div>
               </div>
@@ -776,29 +781,113 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex justify-center text-center sm:mt-0 mt-5">
-                <div>
-                  <div className="flex justify-center pb-2">
-                    <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center">
-                      <img src={CommercialVehTruck} alt="" />
+                <Swiper
+                  spaceBetween={30}
+                  modules={[Pagination, Autoplay]} // Add Autoplay to the modules array
+                  className="mySwiper"
+                  pagination={{
+                    clickable: true,
+                  }}
+                  autoplay={{
+                    delay: 2000, // Delay in ms before transitioning to the next slide
+                    disableOnInteraction: false, // Continue auto-play after user interaction
+                  }}
+                  loop={true} // Optional: Adds loop functionality
+                >
+                  <SwiperSlide>
+                    <div>
+                      <div className="flex justify-center pb-2">
+                        <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center overflow-hidden">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAg8h1v-nY1ZeOGEJ3AjWPoQsSK0MDwxPLQ&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                        "As a small business owner, I rely on my truck to make
+                        deliveries every day. J&S Insurance
+                        <br />
+                        found a policy that keeps me protected at a price I can
+                        afford. I'd
+                        <br />
+                        recommend them to any trucker looking for coverage.
+                      </h1>
+                      <h1 className="text-white font-merriweather pt-3">
+                        {" "}
+                        - John S., Chicago, IL
+                      </h1>
+                      <br />
+                      {/* <div className="flex justify-center gap-5">
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                  </div> */}
                     </div>
-                  </div>
-                  <h1 className="text-center text-white font-merriweather text-[18px]">
-                    "As a small business owner, I rely on my truck to make
-                    deliveries every day. J&S Insurance
-                    <br />
-                    found a policy that keeps me protected at a price I can
-                    afford. I'd
-                    <br />
-                    recommend them to any trucker looking for coverage.
-                  </h1>
-                  <h1 className="text-white font-merriweather pt-3"> John S</h1>
-                  <br />
-                  <div className="flex justify-center gap-5">
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <div className="flex justify-center pb-2">
+                        <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center overflow-hidden">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAg8h1v-nY1ZeOGEJ3AjWPoQsSK0MDwxPLQ&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                        "When I was in an accident 100 miles from home, J&S{" "}
+                        <br />
+                        immediately had a tow truck bring my rig to a repair{" "}
+                        <br />
+                        shop they work with. They handled the claims process{" "}
+                        <br />
+                        quickly and I was back on the road in no time." <br />
+                      </h1>
+                      <h1 className="text-white font-merriweather pt-3">
+                        {" "}
+                        Michael R., Dallas, TX
+                      </h1>
+                      <br />
+                      {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                  </div>
-                </div>
+                  </div> */}
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <div className="flex justify-center pb-2">
+                        <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center overflow-hidden">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAg8h1v-nY1ZeOGEJ3AjWPoQsSK0MDwxPLQ&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                        "J&S has insured my 3 truck fleet for over 5 years. They{" "}
+                        <br />
+                        make sure I have the coverage I need at competitive{" "}
+                        <br />
+                        rates. Their customer service goes above and beyond when{" "}
+                        <br />
+                        I have questions or claims." <br />
+                      </h1>
+                      <h1 className="text-white font-merriweather pt-3">
+                        {" "}
+                        Susan P., Denver, CO
+                      </h1>
+                      <br />
+                      {/* <div className="flex justify-center gap-5">
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                  </div> */}
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
             </div>
           </div>
@@ -857,10 +946,10 @@ const Home = () => {
             <div className="sm:w-[50%] flex justify-center mt-6 sm:mt-0">
               <div className="max-w-md relative flex flex-col p-4 rounded-md text-black bg-sky-600">
                 <div className="text-4xl font-bold mb-2 text-white text-center">
-                  Lets get <span className="text-white">Conencted</span>
+                  Lets get <span className="text-white">Connected</span>
                 </div>
                 <div className="text-sm font-merriweathermb-4 text-center text-white font-merriweather">
-                  We try to Conenct with you ASP
+                  We try to Conenct with you ASAP
                 </div>
                 <form className="flex flex-col gap-3">
                   <div className="block relative">

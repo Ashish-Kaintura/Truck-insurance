@@ -123,7 +123,7 @@ export default function Conatct() {
                     Address :
                   </h1>
                   <h2 className="text-lg sm:text-gray-900">
-                    123 Streate 23 gsutubyy hsiybju
+                   Fresno California
                   </h2>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function Conatct() {
                   <h1 className="text-lg sm:text-black font-semibold ">
                     Phone :
                   </h1>
-                  <h2 className="text-lg sm:text-gray-900">91+ 256586689489</h2>
+                  <h2 className="text-lg sm:text-gray-900">2066179034</h2>
                 </div>
               </div>
               <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
@@ -155,7 +155,7 @@ export default function Conatct() {
                   <h1 className="text-lg sm:text-black font-semibold ">
                     E-mail:
                   </h1>
-                  <h2 className="text-lg sm:text-gray-900">mail@demo.com</h2>
+                  <h2 className="text-lg sm:text-gray-900">sandy@jsinsur.com</h2>
                 </div>
               </div>
             </div>

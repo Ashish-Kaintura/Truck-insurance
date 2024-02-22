@@ -53,7 +53,8 @@ export default function Services() {
               <h3 className="text-lg font-cormorantgaramond pt-4">
                 Customizable Coverage: The J&S Insurance Difference
                 <br />
-                Services We Provide: J&S Insurance Agency
+                {/* Services We Provide: */}
+                 {/* J&S Insurance Agency */}
               </h3>
               <br />
               <div>
@@ -113,16 +114,20 @@ export default function Services() {
               Services you get with us
             </h1>
             <h2 className="font-cormorantgaramond pt-3 text-lg">
-              At J&S Insurance Agency, we are aware of the fact that no two
-              clients have precisely identical risk profile as well as coverage
-              needs. Being an individual agency serving the needs of rental
-              service trucks and commercial clients in 10 states for all its
-              worth we are proud to present customizable protection option.
+              At J&S Insurance Agency, we strive to provide excellent insurance
+              coverage to clients in Arizona, California, Indiana, New Jersey,
+              New York, Ohio, Oregon, Texas, Utah, Virginia and Washington. Our
+              wide range of policies safeguards individuals, trucks, and
+              businesses such as hotels, motels, gas stations, and more.
             </h2>
             <h3 className="font-cormorantgaramond pt-1 text-lg">
-              Be it a single delivery truck or an entire fleet, our advisors
-              will take the time to understand your specific concerns
-              individually so as to craft coverage that is truly tailored.
+              We offer policies including physical damage, general liability,
+              truck cargo, roadside assistance, auto liability, and other
+              options. If you are interested in coverage that is not listed,
+              <br />
+              please email sandy@jsinsur.com or call +1 206-617-9034 during
+              business hours. We are happy to discuss your insurance needs and
+              explain all available protections.
             </h3>
           </div>
           <div className="flex flex-wrap sm:justify-evenly justify-center sm:pt-20 z-[10]">
@@ -142,19 +147,18 @@ export default function Services() {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Trucking Liability Insurance
+                  Trucking Liability
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Out on the open road each day, truckers face endless variables
-                  beyond their control. One distracted driver could endanger
-                  your vehicle, cargo, or worse - your own safety. Don’t take
-                  these risks lightly.
+                  Protect your business with policies covering bodily injury,
+                  property damage, and more. Our plans shield you from legal and
+                  financial risks.
                 </p>
                 <button
                   onClick={() =>
                     openModal(
-                      "Trucking Liability Insurance",
-                      "Out on the open road each day, truckers face endless variables beyond their control. One distracted driver could endanger your vehicle, cargo, or worse - your own safety. Don’t take these risks lightly. Our commercial trucking liability insurance covers damages to other drivers/vehicles involved and any public property destruction resulting from an accident. Receive complete peace of mind knowing you’re protected when the unexpected occurs."
+                      "Trucking Liability ",
+                      "Protect your business with policies covering bodily injury, property damage, and more. Our plans shield you from legal and financial risks."
                     )
                   }
                   className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -182,21 +186,19 @@ export default function Services() {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Motor Truck Cargo Coverage
+                  Motor Truck Cargo
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  For instance, expensive equipment or perishable goods
-                  transport? We have motor truck cargo insurance for you. Cover
-                  for liability of any cargo lost, damaged or destroyed en route
-                  — through road accidents involving your vehicles , spills,
-                  adverse weather and theft.
+                  Safeguard your truck's contents with robust coverage for
+                  theft, collisions, weather events, and additional incidents.
+                  We offer adaptable limits.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
-                    "Motor Truck Cargo Coverage",
-                    " For instance, expensive equipment or perishable goodstransport? We have motor truck cargo insurance for you. Coverfor liability of any cargo lost, damaged or destroyed en route — through road accidents involving your vehicles , spills, adverse weather and theft."
+                    "Motor Truck Cargo",
+                    "Safeguard your truck's contents with robust coverage for theft, collisions, weather events, and additional incidents. We offer adaptable limits."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -235,7 +237,7 @@ export default function Services() {
                 onClick={() =>
                   openModal(
                     "Roadside Assistance",
-                    "Unpredictably truckers on long trips can have mechanical problems or flat tires. A single breakdown, however, can ruin delivery timetables and your bottom line severely. Our customizable roadside assistance plans account for this by providing:Towing services On-site repairs Tire changes Fuel/fluid delivery Locksmith services And more!"
+                    "Stranded drivers stay safe with our roadside assistance. We promptly dispatch services for minor mechanical issues, towing, tire changes, jump starts, and fuel delivery."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -264,19 +266,19 @@ export default function Services() {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  General Liability Insurance
+                  General Liability
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  While slip-and-fall incidents or equipment damages requiring
-                  legal fees are rare, trucking and commercial ventures must
-                  prepare for the worst.
+                  Our general liability solutions shield your business from
+                  legal expenses and claims. We cover costs associated with
+                  bodily injury, property damage, personal injury and more.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
-                    " General Liability Insurance",
-                    "While slip-and-fall incidents or equipment damages requiring legal fees are rare, trucking and commercial ventures must prepare for the worst. Our customizable General Liability insurance provides coverage for:Bodily injury/property damage occurring on your actual business propertyCase expenses should a lawsuit arise against your companyMedical payments for minor guest injuries not requiring lengthy litigationAnd additional costs crushing small business owners following an accident"
+                    " General Liability ",
+                    "Our general liability solutions shield your business from legal expenses and claims. We cover costs associated with bodily injury, property damage, personal injury and more."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -303,22 +305,19 @@ export default function Services() {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Trailer Interchange Coverage
+                  Trailer Interchange
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  For trucking companies frequently exchanging trailers within
-                  their network, our Trailer Interchange Insurance guarantees
-                  seamless operations. We offer physical damage coverage for any
-                  trailers being pulled under an interchange agreement. Rest
-                  assured your temporary trailers are protected against
-                  unexpected calamity.
+                  Prevent financial loss when swapping trailers. Our coverage
+                  handles physical damage along with liability arising from
+                  trailer interchange agreements.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
-                    "Trailer Interchange Coverage",
-                    "For trucking companies frequently exchanging trailers within their network, our Trailer Interchange Insurance guarantees seamless operations. We offer physical damage coverage for any trailers being pulled under an interchange agreement. Rest assured your temporary trailers are protected against unexpected calamity. "
+                    "Trailer Interchange ",
+                    "Prevent financial loss when swapping trailers. Our coverage handles physical damage along with liability arising from trailer interchange agreements."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -345,21 +344,138 @@ export default function Services() {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Additional Offerings
+                  Non-Owned Trailer
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
-                  Alongside the specialty coverage above, we also provide
-                  policies such as:
-                  <li>Non-Owned Trailer Liability</li>
-                  <li>Auto Liability </li>
-                  <li>Comprehensive + Collision Truck Damage</li>
+                  Supplement your policies with protection for non-owned
+                  trailers. We cover rented and borrowed equipment so you can
+                  transport cargo stress-free.
                 </p>
               </div>
               <button
                 onClick={() =>
                   openModal(
-                    "Additional Offerings",
-                    "Alongside the specialty coverage above, we also provide policies such as: Non-Owned Trailer Liability Auto Liability   Comprehensive + Collision Truck Damage Commercial Property Insurance Business Income Insurance Commercial Umbrella Insurance Workers Compensation   EPLI Commercial Auto Professional Liability Cyber Liability Equipment Insurance   Inventory Insurance ...Plus More! Unsure if you need a particular coverage line? Our licensed advisors educate clients for optimal asset protection specific to their venture’s challenges. We then customize the ideal policy blend to shield your finances. "
+                    "Non-Owned Trailer",
+                    "Supplement your policies with protection for non-owned trailers. We cover rented and borrowed equipment so you can transport cargo stress-free."
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-wrap sm:justify-evenly justify-center sm:pt-20 pt-5 z-[10]">
+            <div
+              className="group flex flex-col justify-start items-start gap-2 sm:w-96 w-72 h-56 duration-500 relative rounded-lg p-4 bg-[whitesmoke] hover:-translate-y-2 hover:shadow-xl shadow-gray-300 sm:mt-0 mt-20 cardanimation"
+              style={{
+                boxShadow:
+                  "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+              }}
+            >
+              <div
+                className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200  overflow-hidden"
+                alt="image here"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhelkjc8DEgH3F-KGowAnrqFkb_l_H-BjOuTY7tPLLi4C3qGT5zjC_AUrqzZufANHCk5A&usqp=CAU"
+                  alt=""
+                />
+              </div>
+
+              <div className="">
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Auto Liability
+                </h2>
+                <p className="text-gray-700 line-clamp-3">
+                  Safeguard your business autos with liability solutions
+                  covering bodily injury, property damage, uninsured motorists
+                  and personal injury protection.
+                </p>
+              </div>
+              <button
+                onClick={() =>
+                  openModal(
+                    "Auto Liability",
+                    "Safeguard your business autos with liability solutions covering bodily injury, property damage, uninsured motorists and personal injury protection."
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Explore
+              </button>
+            </div>
+            <div
+              className="group flex flex-col justify-start items-start gap-2 sm:w-96 w-72 h-56 duration-500 relative rounded-lg p-4 bg-[whitesmoke] hover:-translate-y-2 hover:shadow-xl shadow-gray-300 sm:mt-0 mt-20 cardanimation"
+              style={{
+                boxShadow:
+                  "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+              }}
+            >
+              <div
+                className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
+                alt="image here"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6VVQyCG6gLqcQj03RenHAGa-j9HG-KAa4jb5JYL0jSg&s"
+                  alt=""
+                />
+              </div>
+
+              <div className="">
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Truck Physical Damage
+                </h2>
+                <p className="text-gray-700 line-clamp-3">
+                  Comprehensive coverage for truck repairs and replacement due
+                  to collisions, vandalism, natural disasters and more. We offer
+                  market value terms.
+                </p>
+              </div>
+              <button
+                onClick={() =>
+                  openModal(
+                    "Truck Physical Damage",
+                    "Comprehensive coverage for truck repairs and replacement due to collisions, vandalism, natural disasters and more. We offer market value terms."
+                  )
+                }
+                className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Explore
+              </button>
+            </div>
+            <div
+              className="group flex flex-col justify-start items-start gap-2 sm:w-96 w-72 h-56 duration-500 relative rounded-lg p-4 bg-[whitesmoke] hover:-translate-y-2 hover:shadow-xl shadow-gray-300 sm:mt-0 mt-20 cardanimation"
+              style={{
+                boxShadow:
+                  "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+              }}
+            >
+              <div
+                className="absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-200 overflow-hidden"
+                alt="image here"
+              >
+                <img
+                  src="https://media.istockphoto.com/id/1386575156/photo/big-red-semi-truck-at-fueling-station-truck-stop.jpg?s=612x612&w=0&k=20&c=SgVUMbHC_3Nk3MAeLHkCeqUSax9UgFJ8r0JradZXg4E="
+                  alt=""
+                />
+              </div>
+
+              <div className="">
+                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                  Gas Station
+                </h2>
+                <p className="text-gray-700 line-clamp-3">
+                  Our gas station insurance suite preserves your business. Fuel
+                  spill liability, testing costs and personal injury on premises
+                  are some areas covered.
+                </p>
+              </div>
+              <button
+                onClick={() =>
+                  openModal(
+                    "Gas Station",
+                    "Our gas station insurance suite preserves your business. Fuel spill liability, testing costs and personal injury on premises are some areas covered."
                   )
                 }
                 className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -482,28 +598,26 @@ export default function Services() {
 
                 <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
                   <h1 className="uppercase text-4xl font-merriweather text-white">
-                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2">
-                      Why
+                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
+                      About
                     </span>
                     J&S Insurance
                   </h1>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
-                    Ready to Shore Up Coverage & Minimize Risk
+                    Customizable Coverage: The J&S Insurance Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At J&S Insurance Agency, our risk management insight and
-                    dedication to finding clients the RIGHT coverage set us
-                    <br />
-                    apart. With over 15 top providers in our network, flexible
-                    pricing options, and unmatched support, let us keep your
-                    <br />
-                    assets protected.Get covered right and safeguard the future
-                    of your trucking or commercial enterprise today.
-                    <br />
+                    At J&S Insurance Agency, we are aware of the fact that no
+                    two clients have precisely <br />
+                    identical risk profiles as well as coverage needs. Being an
+                    individual agency serving <br /> the needs of rental service
+                    trucks and commercial clients in 11 states for all its worth{" "}
+                    <br /> we are proud to present a customizable protection
+                    option.
                   </h3>
-                  <div className="sm:flex block gap-5 sm:justify-start justify-center pt-8">
+                  <div className="flex gap-5 sm:justify-start justify-evenly  pt-8">
                     <Link to={"contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
@@ -692,10 +806,10 @@ export default function Services() {
             <div className="sm:w-[50%] flex justify-center mt-6 sm:mt-0">
               <div className="max-w-md relative flex flex-col p-4 rounded-md text-black bg-sky-600">
                 <div className="text-4xl font-bold mb-2 text-white text-center">
-                  Lets get <span className="text-white">Conencted</span>
+                  Lets get <span className="text-white">Connected</span>
                 </div>
                 <div className="text-sm font-merriweathermb-4 text-center text-white font-merriweather">
-                  We try to Conenct with you ASP
+                  We try to Conenct with you ASAP
                 </div>
                 <form className="flex flex-col gap-3">
                   <div className="block relative">

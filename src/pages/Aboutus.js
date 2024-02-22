@@ -8,6 +8,15 @@ import image1 from "../gif/ezgif.com-cro4.gif";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
 import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
 import reportCardImage from "../images/achievement.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 export default function Aboutus() {
   return (
     <div>
@@ -33,7 +42,7 @@ export default function Aboutus() {
                   J&S Truck Insurance Agency has provided
                 </h2>
                 <h2 className="text-4xl font-merriweather pt-3 text-white">
-                  insurance services since 2004.
+                  insurance services since 2018.
                 </h2>
                 <div className="flex  justify-start gap-5 pt-8">
                   <Link to={"/contact"}>
@@ -163,25 +172,27 @@ export default function Aboutus() {
               What we Offer
             </h1>
             <p className="text-center pt-6 font-robotoflex text-sm text=[#d7d7d7]">
-              At J&S Insurance Agency, we are aware of the fact that no two
-              clients have precisely identical risk profile as well as coverage
-              needs. <br />
-              Being an individual agency serving the needs of rental service
-              trucks and commercial clients in 10 states for all its worth we
-              are proud to present customizable protection option. <br />
-              Be it a single delivery truck or an entire fleet, our advisors
-              will take the time to understand your specific concerns
-              individually so as to craft coverage that is truly tailored.
+              At J&S Insurance Agency, we strive to provide excellent insurance
+              coverage to clients in Arizona, California, Indiana, New Jersey,
+              New York, Ohio, Oregon, Texas, Utah, Virginia and Washington. Our{" "}
               <br />
-              Browse our specialty insurance offerings below and discover the
-              J&S difference today.
+              wide range of policies safeguards individuals, trucks, and
+              businesses such as hotels, motels, gas stations, and more. We
+              offer policies including physical damage, general liability, truck
+              <br />
+              cargo, roadside assistance, auto liability, and other options. If
+              br you are interested in coverage that is not listed, please email
+              <br />
+              sandy@jsinsur.com or call +1 206-617-9034 during business hours.
+              We are happy to discuss your insurance needs and explain all
+              available protections.
               <br />
             </p>
           </div>
           <div className="pt-5">
             <div className="flex flex-wrap justify-evenly px-2">
               <div
-                className="w-96 h-64 bg-[#f4f6fa] rounded-2xl relative mt-7"
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative mt-7"
                 style={{
                   boxShadow:
                     "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -189,19 +200,18 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Trucking Liability Insurance
+                    Trucking Liability
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Out on the open road each day, truckers face endless
-                    variables beyond their control. One distracted driver could
-                    endanger your vehicle, cargo, or worse - your own safety.
-                    Don’t take these risks lightly.
+                    Protect your business with policies covering bodily injury,
+                    property damage, and more. Our plans shield you from legal
+                    and financial risks.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center"></div>
                 </div>
               </div>
               <div
-                className="w-96 h-64 bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
                 style={{
                   boxShadow:
                     "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -209,20 +219,18 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Motor Truck Cargo Coverage
+                    Motor Truck Cargo
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    For instance, expensive equipment or perishable goods
-                    transport? We have motor truck cargo insurance for you.
-                    Cover for liability of any cargo lost, damaged or destroyed
-                    en route — through road accidents involving your vehicles ,
-                    spills, adverse weather and theft.
+                    Safeguard your truck's contents with robust coverage for
+                    theft, collisions, weather events, and additional incidents.
+                    We offer adaptable limits.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center"></div>
                 </div>
               </div>
               <div
-                className="w-96 h-64 bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
                 style={{
                   boxShadow:
                     "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -233,11 +241,9 @@ export default function Aboutus() {
                     Roadside Assistance
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Unpredictably truckers on long trips can have mechanical
-                    problems or flat tires. A single breakdown, however, can
-                    ruin delivery timetables and your bottom line severely. Our
-                    customizable roadside assistance plans account for this by
-                    providing:
+                    Stranded drivers stay safe with our roadside assistance. We
+                    promptly dispatch services for minor mechanical issues,
+                    towing, tire changes, jump starts, and fuel delivery.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -248,7 +254,7 @@ export default function Aboutus() {
                 </div>
               </div>
               <div
-                className="w-96 h-64 bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
                 style={{
                   boxShadow:
                     "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -256,13 +262,12 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    General Liability Insurance
+                    General Liability
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    While slip-and-fall incidents or equipment damages requiring
-                    legal fees are rare, trucking and commercial ventures must
-                    prepare for the worst. Our customizable General Liability
-                    insurance provides coverage
+                    Our general liability solutions shield your business from
+                    legal expenses and claims. We cover costs associated with
+                    bodily injury, property damage, personal injury and more.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -273,7 +278,7 @@ export default function Aboutus() {
                 </div>
               </div>
               <div
-                className="w-96 h-64 bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
                 style={{
                   boxShadow:
                     "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -281,12 +286,12 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Trailer Interchange Coverage
+                    Trailer Interchange
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    For trucking companies frequently exchanging trailers within
-                    their network, our Trailer Interchange Insurance guarantees
-                    seamless operations.
+                    Prevent financial loss when swapping trailers. Our coverage
+                    handles physical damage along with liability arising from
+                    trailer interchange agreements.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -297,7 +302,7 @@ export default function Aboutus() {
                 </div>
               </div>
               <div
-                className="w-96 h-64 bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
                 style={{
                   boxShadow:
                     "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -305,14 +310,84 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Additional Offerings
+                    Non-Owned Trailer
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
-                    Alongside the specialty coverage above, we also provide
-                    policies such as: Non-Owned Trailer Liability Auto Liability
-                    Comprehensive + Collision Truck Damage Commercial Property
-                    Insurance Business Income Insurance Commercial Umbrella
-                    Insurance Workers Compensation EPLI Plus More!
+                    Supplement your policies with protection for non-owned
+                    trailers. We cover rented and borrowed equipment so you can
+                    transport cargo stress-free.
+                  </h2>
+                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
+                    {/* <img
+                      src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
+                      alt=""
+                    /> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                style={{
+                  boxShadow:
+                    "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+                }}
+              >
+                <div className=" pt-5 ps-4 ">
+                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                    Auto Liability
+                  </h1>
+                  <h2 className=" font-cormorantgaramond pt-2 ">
+                    Safeguard your business autos with liability solutions
+                    covering bodily injury, property damage, uninsured motorists
+                    and personal injury protection.
+                  </h2>
+                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
+                    {/* <img
+                      src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
+                      alt=""
+                    /> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                style={{
+                  boxShadow:
+                    "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+                }}
+              >
+                <div className=" pt-5 ps-4 ">
+                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                    Truck Physical Damage
+                  </h1>
+                  <h2 className=" font-cormorantgaramond pt-2 ">
+                    Comprehensive coverage for truck repairs and replacement due
+                    to collisions, vandalism, natural disasters and more. We
+                    offer market value terms.
+                  </h2>
+                  <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
+                    {/* <img
+                      src={require("../images/Lovepik_com-401744084-car-washing 1.png")}
+                      alt=""
+                    /> */}
+                  </div>
+                </div>
+              </div>
+              <div
+                className="w-96 h-[200px] bg-[#f4f6fa] rounded-2xl relative sm:mt-7 mt-4"
+                style={{
+                  boxShadow:
+                    "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
+                }}
+              >
+                <div className=" pt-5 ps-4 ">
+                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                    Gas Station
+                  </h1>
+                  <h2 className=" font-cormorantgaramond pt-2 ">
+                    Our gas station insurance suite preserves your business.
+                    Fuel spill liability, testing costs and personal injury on
+                    premises are some areas covered.
                   </h2>
                   <div className=" absolute bottom-[-0%] right-[1%] w-48  flex justify-center">
                     {/* <img
@@ -325,7 +400,7 @@ export default function Aboutus() {
             </div>
           </div>
         </section>
-        <section>
+        {/* <section>
           <div className="relative bg-[#E6EDF7] py-10 sm:px-0 px-4">
             <div className="flex flex-wrap justify-evenly items-center">
               <div
@@ -430,7 +505,7 @@ export default function Aboutus() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section>
           <div className="sm:flex block sm:justify-between justify-center relative py-10">
             <div className="sm:w-[50%] h-96 bg-[#E6EDF7]">
@@ -493,12 +568,12 @@ export default function Aboutus() {
                   Insurance Agency.
                 </h3>
                 <div className="flex justify-center gap-5 pt-8">
-                  <Link to={""}>
+                  <Link to={"/contact"}>
                     <button className="border-2 py-2 px-4 text-2xl text-white font-sans mt-2 rounded-lg">
                       Contact Us
                     </button>
                   </Link>
-                  <Link to={""}>
+                  <Link to={"/Services"}>
                     <button className="border-2 py-2 px-4 text-2xl text-white font-sans mt-2 bg-[#816C54] rounded-lg">
                       Know More
                     </button>
@@ -506,28 +581,113 @@ export default function Aboutus() {
                 </div>
               </div>
               <div className="flex justify-center text-center sm:mt-0 mt-5">
-                <div>
-                  <div className="flex justify-center pb-2">
-                    <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center">
-                      <img src={CommercialVehTruck} alt="" />
+                <Swiper
+                  spaceBetween={30}
+                  modules={[Pagination, Autoplay]} // Add Autoplay to the modules array
+                  className="mySwiper"
+                  pagination={{
+                    clickable: true,
+                  }}
+                  autoplay={{
+                    delay: 2000, // Delay in ms before transitioning to the next slide
+                    disableOnInteraction: false, // Continue auto-play after user interaction
+                  }}
+                  loop={true} // Optional: Adds loop functionality
+                >
+                  <SwiperSlide>
+                    <div>
+                      <div className="flex justify-center pb-2">
+                        <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center overflow-hidden">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAg8h1v-nY1ZeOGEJ3AjWPoQsSK0MDwxPLQ&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                        "As a small business owner, I rely on my truck to make
+                        deliveries every day. J&S Insurance
+                        <br />
+                        found a policy that keeps me protected at a price I can
+                        afford. I'd
+                        <br />
+                        recommend them to any trucker looking for coverage.
+                      </h1>
+                      <h1 className="text-white font-merriweather pt-3">
+                        {" "}
+                        - John S., Chicago, IL
+                      </h1>
+                      <br />
+                      {/* <div className="flex justify-center gap-5">
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                  </div> */}
                     </div>
-                  </div>
-                  <h1 className="text-center text-white font-merriweather text-[18px]">
-                    " Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Labore
-                    <br />
-                    ducimus necessitatibus sed est assumenda, vitae hic ipsam{" "}
-                    <br />
-                    doloribus! Quas, laudantium."
-                  </h1>
-                  <h1 className="text-white font-merriweather pt-3">Jomyy-</h1>
-                  <br />
-                  <div className="flex justify-center gap-5">
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <div className="flex justify-center pb-2">
+                        <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center overflow-hidden">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAg8h1v-nY1ZeOGEJ3AjWPoQsSK0MDwxPLQ&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                        "When I was in an accident 100 miles from home, J&S{" "}
+                        <br />
+                        immediately had a tow truck bring my rig to a repair{" "}
+                        <br />
+                        shop they work with. They handled the claims process{" "}
+                        <br />
+                        quickly and I was back on the road in no time." <br />
+                      </h1>
+                      <h1 className="text-white font-merriweather pt-3">
+                        {" "}
+                        Michael R., Dallas, TX
+                      </h1>
+                      <br />
+                      {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                  </div>
-                </div>
+                  </div> */}
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <div className="flex justify-center pb-2">
+                        <div className="w-28 h-28 rounded-full bg-gray-200 flex justify-center overflow-hidden">
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAg8h1v-nY1ZeOGEJ3AjWPoQsSK0MDwxPLQ&usqp=CAU"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                        "J&S has insured my 3 truck fleet for over 5 years. They{" "}
+                        <br />
+                        make sure I have the coverage I need at competitive{" "}
+                        <br />
+                        rates. Their customer service goes above and beyond when{" "}
+                        <br />
+                        I have questions or claims." <br />
+                      </h1>
+                      <h1 className="text-white font-merriweather pt-3">
+                        {" "}
+                        Susan P., Denver, CO
+                      </h1>
+                      <br />
+                      {/* <div className="flex justify-center gap-5">
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                  </div> */}
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
             </div>
           </div>
