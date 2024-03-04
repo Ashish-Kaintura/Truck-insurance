@@ -28,10 +28,13 @@ export default function HomeNav() {
             <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
               <div className="w-48">
                 <img src="./j&s logo black.png" alt="" />
-                <div>
-                  <h1 className=" text-sm font-semibold ps-2 text-white">
+                <div className="block text-white gap-1">
+                  {/* <h1 className=" text-sm font-semibold ps-2">
                     DBA Jay S Insurance Agency
                   </h1>
+                  <h2 className="text-[14px] ps-2 font-semibold">
+                    Lic #6011255
+                  </h2> */}
                 </div>
               </div>
               <div className="sm:flex hidden gap-5 uppercase font-sans text-white text-sm">
@@ -68,10 +71,13 @@ export default function HomeNav() {
             <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
               <div className="w-48">
                 <img src="./j&s logo black.png" alt="" />
-                <div>
-                  <h1 className=" text-sm font-semibold ps-2 text-white">
+                <div className="block text-white gap-1">
+                  {/* <h1 className=" text-sm font-semibold ps-2">
                     DBA Jay S Insurance Agency
                   </h1>
+                  <h2 className="text-[14px] ps-2 font-semibold">
+                    Lic #6011255
+                  </h2> */}
                 </div>
               </div>
               <div className="sm:flex hidden gap-5 uppercase font-sans text-white text-sm">
@@ -102,7 +108,7 @@ export default function HomeNav() {
           </ul>
         )}
       </nav>
-      <nav className="bg-[#515659] sm:hidden flex justify-between z-10 fixed w-full">
+      <nav className="bg-[#445F6B] sm:hidden flex justify-between z-10 fixed w-full">
         {auth ? (
           <ul className="flex justify-between px-3 py-6 w-full items-center relative">
             {isSidebarOpen && (
@@ -110,7 +116,7 @@ export default function HomeNav() {
                 className="sidenav absolute text-white flex flex-col gap-y-5 ps-2 mt-4 "
                 style={{
                   position: "absolute",
-                  backgroundColor: "#515659",
+                  backgroundColor: "#445F6B",
                   height: "100vh",
                   top: 95,
                   left: 0,
@@ -154,11 +160,14 @@ export default function HomeNav() {
             )}
             <div>
               <img className="w-32" src="./j&s logo black.png" alt="" />
-              <div>
-                <h1 className=" text-[13px] font-semibold ps-2 text-white">
-                  DBA Jay S Insurance Agency
-                </h1>
-              </div>
+              <div className="block g text-white p-1">
+                  {/* <h1 className=" text-sm font-semibold ps-2">
+                    DBA Jay S Insurance Agency
+                  </h1>
+                  <h2 className="text-[14px] ps-2 font-semibold">
+                    Lic #6011255
+                  </h2> */}
+                </div>
             </div>
             <div>
               {isSidebarOpen ? (
@@ -225,11 +234,14 @@ export default function HomeNav() {
             )}
             <div>
               <img className="w-32" src="./j&s logo black.png" alt="" />
-              <div>
-                <h1 className=" text-[13px] font-semibold ps-2 text-white">
-                  DBA Jay S Insurance Agency
-                </h1>
-              </div>
+              <div className="block g text-white p-1">
+                  {/* <h1 className=" text-sm font-semibold ps-2">
+                    DBA Jay S Insurance Agency
+                  </h1>
+                  <h2 className="text-[14px] ps-2 font-semibold">
+                    Lic #6011255
+                  </h2> */}
+                </div>
             </div>
             <div>
               {isSidebarOpen ? (

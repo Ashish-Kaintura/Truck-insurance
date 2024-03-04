@@ -238,7 +238,7 @@ export default function Aboutus() {
               >
                 <div className=" pt-5 ps-4 ">
                   <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
-                    Roadside Assistance
+                    Physical Damage
                   </h1>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Stranded drivers stay safe with our roadside assistance. We

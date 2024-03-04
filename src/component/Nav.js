@@ -28,10 +28,13 @@ export default function Nav() {
             <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
               <div className="w-48">
                 <img src={navlogo} alt="" />
-                <div>
-                  <h1 className=" text-sm font-semibold ps-2">
+                <div className="block gap-1">
+                  {/* <h1 className=" text-sm font-semibold ps-2">
                     DBA Jay S Insurance Agency
                   </h1>
+                  <h2 className="text-[14px] ps-2 font-semibold">
+                    Lic #6011255
+                  </h2> */}
                 </div>
               </div>
               <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
@@ -67,10 +70,13 @@ export default function Nav() {
             <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
               <div className="w-48">
                 <img src="./j&s logo final logo.png" alt="" />
-                <div>
-                  <h1 className=" text-sm font-semibold ps-2">
+                <div className="block gap-1">
+                  {/* <h1 className=" text-sm font-semibold ps-2">
                     DBA Jay S Insurance Agency
                   </h1>
+                  <h2 className="text-[14px] ps-2 font-semibold">
+                    Lic #6011255
+                  </h2> */}
                 </div>
               </div>
               <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
@@ -156,10 +162,13 @@ export default function Nav() {
             )}
             <div>
               <img className="w-32" src={navlogo} alt="" />
-              <div>
-                <h1 className=" text-[13px] font-semibold ps-2 text-black">
+              <div className="block gap-1">
+                {/* <h1 className=" text-[13px] font-semibold ps-2 text-black">
                   DBA Jay S Insurance Agency
                 </h1>
+                <h2 className="text-[14px] ps-2 font-semibold">
+                  Lic #6011255
+                </h2> */}
               </div>
             </div>
             <div>
@@ -227,10 +236,13 @@ export default function Nav() {
             )}
             <div>
               <img className="w-32" src={navlogo} alt="" />
-              <div>
-                <h1 className=" text-[13px] font-semibold ps-2 text-black">
+              <div className="block gap-1">
+                {/* <h1 className=" text-[13px] font-semibold ps-2 text-black">
                   DBA Jay S Insurance Agency
                 </h1>
+                <h2 className="text-[14px] ps-2 font-semibold">
+                  Lic #6011255
+                </h2> */}
               </div>
             </div>
             <div>

@@ -1,6 +1,6 @@
 // import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../images/AboutUs.png";
 import image2 from "../images/services/Industries.jpg";
@@ -14,22 +14,16 @@ import TruckDamageSvg3 from "../images/truck-insurance_flood.svg";
 import TruckDamageSvg4 from "../images/leg-cast.svg";
 import TruckDamageSvg5 from "../images/truck-insurance_third party accident.svg";
 import TruckDamageSvg6 from "../images/truck-insurance_towing.svg";
-import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
-// import maintruck from "../images/Untitled-1.png";
 import backgroundImage from "../images/truck8.jpg";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
-import { FaWhatsapp } from "react-icons/fa";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import { EaselPlugin } from "gsap/EaselPlugin";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import emailjs from "@emailjs/browser";
 
 // import required modules
 import { Pagination, Autoplay } from "swiper/modules";
@@ -54,37 +48,10 @@ const Modal = ({ closeModal, title, content }) => {
   );
 };
 
-gsap.registerPlugin(
-  ScrollTrigger,
-  ScrollToPlugin,
-  MotionPathPlugin,
-  EaselPlugin
-);
-
 const Home = () => {
   // const auth = localStorage.getItem("user");
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#banner",
-        start: "top 50px",
-        end: "+=500",
-        scrub: 4,
-      },
-    });
-    // console.log(tl);
-    tl.from("#banner .truckimage", {
-      y: -90,
-      scale: 0.4,
-      delay: 1,
-      ease: "back",
-      duration: 12,
-      // stagger: 0.2,
-    });
   }, []);
 
   const [modalContent, setModalContent] = useState(null);
@@ -95,8 +62,26 @@ const Home = () => {
 
   const closeModal = () => {
     setModalContent(null);
-  };
+  };  
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_uvinq6d", "template_3bw1ulh", form.current, {
+        publicKey: "GyTexIxYXbqYdHlS5",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <div>
       {/* <nav className="bg-[#515659]">
@@ -286,7 +271,7 @@ const Home = () => {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Roadside Assistance
+                  Physical Damage
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
                   Stranded drivers stay safe with our roadside assistance. We
@@ -297,7 +282,7 @@ const Home = () => {
               <button
                 onClick={() =>
                   openModal(
-                    "Roadside Assistance",
+                    "Physical Damage",
                     "Stranded drivers stay safe with our roadside assistance. We promptly dispatch services for minor mechanical issues, towing, tire changes, jump starts, and fuel delivery."
                   )
                 }
@@ -951,7 +936,11 @@ const Home = () => {
                 <div className="text-sm font-merriweathermb-4 text-center text-white font-merriweather">
                   We try to Conenct with you ASAP
                 </div>
-                <form className="flex flex-col gap-3">
+                <form
+                  className="flex flex-col gap-3"
+                  ref={form}
+                  onSubmit={sendEmail}
+                >
                   <div className="block relative">
                     <label
                       for="name"
@@ -963,7 +952,9 @@ const Home = () => {
                       type="text"
                       placeholder="Enter Name"
                       id="name"
+                      name="name"
                       className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                      required
                     />
                   </div>
                   <div className="block relative">
@@ -977,7 +968,9 @@ const Home = () => {
                       type="text"
                       placeholder="Enter Mail"
                       id="email"
+                      name="email"
                       className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                      required
                     />
                   </div>
                   <div className="block relative">
@@ -990,8 +983,10 @@ const Home = () => {
                     <textarea
                       placeholder="Enter your Message"
                       type="text"
-                      id="password"
+                      id="message"
+                      name="message"
                       className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                      required
                     ></textarea>
                   </div>
 
@@ -1040,16 +1035,16 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* <!-- whats app icon  --> */}
+        {/* <!-- whats app icon  -->
         <Link
           className="whats-app"
-          to="https://wa.me/7827110079"
+          to="https://wa.me/+12066179034"
           target="_blank" // Optional: If you want to open the link in a new tab
         >
           <i className="fab fa-whatsapp icon animate-bounce my-float flex justify-center">
             <FaWhatsapp />
           </i>
-        </Link>
+        </Link> */}
       </main>
     </div>
   );

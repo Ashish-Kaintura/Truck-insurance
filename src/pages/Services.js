@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable jsx-a11y/iframe-has-title */
+import React, { useEffect, useState, useRef } from "react";
 
 import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
 import "../Css/Services.css";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../gif/ezgif.com-crop2.gif";
-
+import emailjs from "@emailjs/browser";
 // Modal Component
 const Modal = ({ closeModal, title, content }) => {
   return (
@@ -38,6 +39,24 @@ export default function Services() {
   const closeModal = () => {
     setModalContent(null);
   };
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_uvinq6d", "template_3bw1ulh", form.current, {
+        publicKey: "GyTexIxYXbqYdHlS5",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    e.target.reset();
+  };
   return (
     <div>
       <Nav />
@@ -54,7 +73,7 @@ export default function Services() {
                 Customizable Coverage: The J&S Insurance Difference
                 <br />
                 {/* Services We Provide: */}
-                 {/* J&S Insurance Agency */}
+                {/* J&S Insurance Agency */}
               </h3>
               <br />
               <div>
@@ -225,7 +244,7 @@ export default function Services() {
 
               <div className="">
                 <h2 className="text-2xl font-bold mb-2 text-gray-800">
-                  Roadside Assistance
+                  Physical Damage
                 </h2>
                 <p className="text-gray-700 line-clamp-3">
                   Unpredictably truckers on long trips can have mechanical
@@ -236,7 +255,7 @@ export default function Services() {
               <button
                 onClick={() =>
                   openModal(
-                    "Roadside Assistance",
+                    "Physical Damage",
                     "Stranded drivers stay safe with our roadside assistance. We promptly dispatch services for minor mechanical issues, towing, tire changes, jump starts, and fuel delivery."
                   )
                 }
@@ -680,7 +699,7 @@ export default function Services() {
                       </div>
                       <div>
                         <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
-                          Ga
+                          GA
                         </h1>
                       </div>
                     </div>
@@ -707,7 +726,7 @@ export default function Services() {
                       </div>
                       <div>
                         <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
-                          Fl
+                          WI
                         </h1>
                       </div>
                     </div>
@@ -732,22 +751,22 @@ export default function Services() {
                           MI
                         </h1>
                       </div>
-                      <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
-                          Fl
-                        </h1>
-                      </div>
                     </div>
                   </div>
                 </div>
+               
               </div>
             </div>
             <div>
               <div className="flex  justify-end  ">
-                <img
-                  src={require("../images/Google-Maps-Frontpage 1.png")}
-                  alt=""
-                  srcset=""
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204505.1526213393!2d-120.10639990764386!3d36.78512646901095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945de1549e4e9d%3A0x7b12406449a3b811!2sFresno%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1708935371056!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
+                  style={{ border: "0 2px" }}
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="origin"
                 />
               </div>
             </div>
@@ -811,7 +830,11 @@ export default function Services() {
                 <div className="text-sm font-merriweathermb-4 text-center text-white font-merriweather">
                   We try to Conenct with you ASAP
                 </div>
-                <form className="flex flex-col gap-3">
+                <form
+                  className="flex flex-col gap-3"
+                  ref={form}
+                  onSubmit={sendEmail}
+                >
                   <div className="block relative">
                     <label
                       for="name"
@@ -823,7 +846,9 @@ export default function Services() {
                       type="text"
                       placeholder="Enter Name"
                       id="name"
+                      name="name"
                       className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                      required
                     />
                   </div>
                   <div className="block relative">
@@ -837,7 +862,9 @@ export default function Services() {
                       type="text"
                       placeholder="Enter Mail"
                       id="email"
+                      name="email"
                       className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                      required
                     />
                   </div>
                   <div className="block relative">
@@ -850,14 +877,16 @@ export default function Services() {
                     <textarea
                       placeholder="Enter your Message"
                       type="text"
-                      id="password"
+                      id="message"
+                      name="message"
                       className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
+                      required
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded  text-lg "
+                    className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded  text-lg font-merriweather"
                   >
                     Submit
                   </button>

@@ -9,14 +9,33 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
   return (
     <div>
+      {/* <!-- whats app icon  --> */}
+      <Link
+        className="whats-app"
+        to="https://wa.me/+12066179034"
+        target="_blank" // Optional: If you want to open the link in a new tab
+      >
+        <i className="fab fa-whatsapp icon animate-bounce my-float flex justify-center">
+          <FaWhatsapp />
+        </i>
+      </Link>
       <footer
         className="footer bg-center bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="container">
+          <div className="sm:ps-[7rem] ps-4 pb-2 text-lg">
+            <h1 className=" text-sm font-semibold text-white ">
+              DBA Jay S Insurance Agency
+            </h1>
+            <h2 className="text-[14px]  font-semibold text-white">
+              Lic #6011255
+            </h2>
+          </div>
           <div className="row flex justify-evenly">
             <div className="footer-col">
               <h4>Links</h4>

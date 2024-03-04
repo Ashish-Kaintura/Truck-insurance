@@ -4,7 +4,6 @@ import Nav from "../component/Nav";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ClicntMail from "../component/ClicntMail";
-import GetInsuranceCertificate from "../component/GetInsuranceCertificate";
 export default function Profile() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,12 +19,11 @@ export default function Profile() {
   const handleButtonClick = (buttonType) => {
     setSelectedButton(buttonType);
   };
-  const [profileImgFile, setProfileImgFile] = useState(null);
+  // const [profileImgFile, setProfileImgFile] = useState(null);
   const [userDetails, setUserDetails] = useState({
     username: "",
     company_name: "",
     address: "",
-    profileImg: "",
   });
 
   useEffect(() => {
@@ -60,39 +58,76 @@ export default function Profile() {
     setIsFormChanged(true); // Set isFormChanged to true whenever there's a change in the form fields
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setProfileImgFile(file);
-    setIsFormChanged(true); // Set isFormChanged to true whenever there's a change in the file input
-  };
+  // const handleFileChange = (e) => {
+  //   const file = e.target.files[0];
+  //   setProfileImgFile(file);
+  //   setIsFormChanged(true); // Set isFormChanged to true whenever there's a change in the file input
+  // };
 
-  const handleUpdate = async (e) => {
-    e.preventDefault();
+  // const handleUpdate = async (e) => {
+  //   e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("username", userDetails.username);
-    formData.append("company_name", userDetails.company_name);
-    formData.append("address", userDetails.address);
+  //   const formData = new FormData();
+  //   formData.append("username", userDetails.username);
+  //   formData.append("company_name", userDetails.company_name);
+  //   formData.append("address", userDetails.address);
 
-    if (profileImgFile) {
-      formData.append("profileImg", profileImgFile);
-    } else {
-      // If no new image is selected, include the existing image filename
-      formData.append("profileImg", userDetails.profileImg);
-    }
+  //   try {
+  //     const response = await fetch(
+  //       `http://localhost:5000/clintUpdate/${auth.id}`,
+  //       {
+  //         method: "PUT",
+  //         body: formData,
+  //         headers: {
+  //           authorization: `bearer ${JSON.parse(localStorage.getItem("token"))}`,
+  //         },
+  //       }
+  //     );
+
+  //     if (response.ok) {
+  //       navigate(`/profile`);
+  //       console.log("User updated successfully");
+  //     } else {
+  //       console.error("Failed to update user");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error updating user:", error);
+  //   }
+  //   setIsFormChanged(false); // Reset isFormChanged to false after the update is completed
+  // };
+
+  const handleUpdate = async () => {
+    const userId = auth.id; // Assuming auth.id contains the user's ID
+    const { username, company_name, address } = userDetails;
+
+    const data = {
+      username,
+      company_name,
+      address,
+    };
+
     try {
       const response = await fetch(
-        `http://localhost:5000/clintUpdate/${auth.id}`,
+        `http://localhost:5000/clintUpdate/${userId}`,
         {
           method: "PUT",
-          body: formData,
           headers: {
-            authorization: `bearer ${JSON.parse(
+            "Content-Type": "application/json",
+            authorization: `Bearer ${JSON.parse(
               localStorage.getItem("token")
             )}`,
           },
+          body: JSON.stringify(data),
         }
       );
+
+      // Parse the response as JSON, handling potential syntax errors
+      let responseData;
+      try {
+        responseData = await response.json();
+      } catch (error) {
+        console.error("Error parsing JSON response:", error);
+      }
 
       if (response.ok) {
         navigate(`/profile`);
@@ -105,6 +140,7 @@ export default function Profile() {
     }
     setIsFormChanged(false); // Reset isFormChanged to false after the update is completed
   };
+
   return (
     <div>
       <Nav />
@@ -480,7 +516,7 @@ export default function Profile() {
                                   Date
                                 </label>
                                 <input
-                                type="datetime-local"
+                                  type="datetime-local"
                                   className="px-1 py-1 custom-placeholder bg-pink-200"
                                   placeholder="WORKERS COMPENSATION"
                                   // value={auth.insurance_type}
@@ -654,7 +690,7 @@ export default function Profile() {
                     </div>
                   </div>
                 </div>
-                
+
                 //   <div>
                 //   <GetInsuranceCertificate />
                 // </div>
@@ -829,7 +865,7 @@ export default function Profile() {
                         </div>
                       </div>
                       <div className="flex flex-wrap justify-center sm:gap-8 sm:mt-4 ">
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 items-center">
                           <div>
                             <label
                               htmlFor=""
@@ -862,6 +898,15 @@ export default function Profile() {
                               placeholder="Aggency/Company Issuing Card"
                               type="text"
                               value={auth.aggency_company_isuing_card}
+                            />
+                          </div>
+                        </div>{" "}
+                        <div className="flex gap-8 mt-2">
+                          <div>
+                            <img
+                              className="w-24 bg-slate-600"
+                              src={`http://localhost:5000/uploads/${userDetails.profileImg}`}
+                              alt=""
                             />
                           </div>
                         </div>
@@ -906,29 +951,6 @@ export default function Profile() {
                             value={userDetails.username}
                           />
                           <br />
-                        </div>
-                        <div className="flex gap-8 mt-2">
-                          <div>
-                            <img
-                              className="w-24 bg-slate-600"
-                              src={`http://localhost:5000/uploads/${userDetails.profileImg}`}
-                              alt=""
-                            />
-                          </div>
-                          <div>
-                            <label
-                              htmlFor=""
-                              className="font-semibold text-gray-800"
-                            >
-                              Signature
-                            </label>
-                            <input
-                              type="file"
-                              accept="image/*"
-                              id="profileImg"
-                              onChange={handleFileChange}
-                            />
-                          </div>
                         </div>
                       </div>
                       <div className="flex justify-center mt-4 pt-6">
