@@ -28,6 +28,9 @@ export default function Footer() {
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="container">
+          <div className="sm:ps-[6rem] ps-1">
+            <img className="w-48" src="./j&s logo black.png" alt="" />
+          </div>
           <div className="sm:ps-[7rem] ps-4 pb-2 text-lg">
             <h1 className=" text-sm font-semibold text-white ">
               DBA Jay S Insurance Agency
