@@ -17,10 +17,19 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Pagination, Autoplay } from "swiper/modules";
+import { Helmet } from "react-helmet";
 export default function Aboutus() {
   return (
     <div>
       <Nav />
+       <Helmet>
+              <meta charSet="utf-8" />
+              <title>About DBA  Jay S Insurance Agency | Truck Insurance Experts in Fresno</title>
+              <meta
+                name="description"
+          content="Learn more about DBA  Jay S Insurance Agency — a licensed insurance agency dedicated to protecting truck owners and commercial fleets across California with personalized coverage and expert support."  />
+              <h2>About DBA  Jay S Insurance Agency</h2>
+            </Helmet>
       <main>
         <section
           className="h-[80vh] relative bg-cover bg-center bg-no-repeat"
@@ -36,7 +45,7 @@ export default function Aboutus() {
             <div className="block flex-wrap justify-between px-8 items-center pt-8 ">
               <div className="flex flex-col mySlides">
                 <h1 className="sm:text-6xl text-4xl font-merriweather pt-3 text-white">
-                  Your One Stop Shop
+                  About DBA  Jay S Insurance Agency
                 </h1>
                 <h2 className="text-4xl font-merriweather pt-6 text-white">
                   J&S Truck Insurance Agency has provided
@@ -63,9 +72,9 @@ export default function Aboutus() {
         <section>
           <div className="p-5 py-8">
             <div className="py-5">
-              <h1 className="text-black text-3xl  uppercase text-center font-merriweather">
+              <h2 className="text-black text-3xl  uppercase text-center font-merriweather">
                 About Owner
-              </h1>
+              </h2>
             </div>
             <div className="p-2 sm:px-5">
               <p className="text-center font-merriweather">
@@ -101,9 +110,9 @@ export default function Aboutus() {
             style={{ backgroundImage: `url(${image1}) ` }}
           >
             <div className="py-5">
-              <h1 className="text-white text-4xl font-merriweather  uppercase text-center">
+              <h2 className="text-white text-4xl font-merriweather  uppercase text-center">
                 About Company
-              </h1>
+              </h2>
             </div>
             <div className="p-2 sm:px-5 text-white">
               <p className="text-center font-merriweather">
@@ -140,9 +149,9 @@ export default function Aboutus() {
             className="block justify-center text-center py-8 text-white bg-cover bg-center object-cover"
             style={{ backgroundImage: `url(${image1})` }}
           >
-            <h1 className="sm:text-5xl text-2xl uppercase font-cormorantgaramond">
+            <h2 className="sm:text-5xl text-2xl uppercase font-cormorantgaramond">
               Wellcome to J & S Insurance
-            </h1>
+            </h2>
             <h2 className="pt-8 font-cormorantgaramond">
               Meet the Dedicated Team Behind J&S Insurance Agency At J&S
               Insurance Agency, we’re not just about selling insurance policies
@@ -165,12 +174,12 @@ export default function Aboutus() {
             </h2>
           </div> */}
           <div data-aos="fade-up" data-aos-duration="3000">
-            <h1 className="text-center pt-20 pb-5 font-robotoflex text-[#0066A4]">
+            <h2 className="text-center pt-20 pb-5 font-robotoflex text-[#0066A4]">
               Our services
-            </h1>
-            <h1 className="font-robotoflex text-3xl text-black text-center font-semibold">
+            </h2>
+            <h2 className="font-robotoflex text-3xl text-black text-center font-semibold">
               What we Offer
-            </h1>
+            </h2>
             <p className="text-center pt-6 font-robotoflex text-sm text=[#d7d7d7]">
               At J&S Insurance Agency, we strive to provide excellent insurance
               coverage to clients in Arizona, California, Indiana, New Jersey,
@@ -199,9 +208,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Trucking Liability
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Protect your business with policies covering bodily injury,
                     property damage, and more. Our plans shield you from legal
@@ -218,9 +227,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Motor Truck Cargo
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Safeguard your truck's contents with robust coverage for
                     theft, collisions, weather events, and additional incidents.
@@ -237,9 +246,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Physical Damage
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Stranded drivers stay safe with our roadside assistance. We
                     promptly dispatch services for minor mechanical issues,
@@ -261,9 +270,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     General Liability
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Our general liability solutions shield your business from
                     legal expenses and claims. We cover costs associated with
@@ -285,9 +294,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Trailer Interchange
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Prevent financial loss when swapping trailers. Our coverage
                     handles physical damage along with liability arising from
@@ -309,9 +318,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Non-Owned Trailer
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Supplement your policies with protection for non-owned
                     trailers. We cover rented and borrowed equipment so you can
@@ -333,9 +342,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Auto Liability
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Safeguard your business autos with liability solutions
                     covering bodily injury, property damage, uninsured motorists
@@ -357,9 +366,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Truck Physical Damage
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Comprehensive coverage for truck repairs and replacement due
                     to collisions, vandalism, natural disasters and more. We
@@ -381,9 +390,9 @@ export default function Aboutus() {
                 }}
               >
                 <div className=" pt-5 ps-4 ">
-                  <h1 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
+                  <h2 className=" font-cormorantgaramond text-3xl uppercase font-semibold ">
                     Gas Station
-                  </h1>
+                  </h2>
                   <h2 className=" font-cormorantgaramond pt-2 ">
                     Our gas station insurance suite preserves your business.
                     Fuel spill liability, testing costs and personal injury on
@@ -410,10 +419,10 @@ export default function Aboutus() {
                 data-aos-easing="ease-in-sine"
               >
                 <div>
-                  <h1 className="text-[#0066A4] font-robotoflex">About Us</h1>
-                  <h1 className="text-3xl pt-2 font-robotoflex font-semibold">
+                  <h2 className="text-[#0066A4] font-robotoflex">About Us</h2>
+                  <h2 className="text-3xl pt-2 font-robotoflex font-semibold">
                     Who We Are ?
-                  </h1>
+                  </h2>
                   <p className="pt-4 font-sans">
                     At J&S Insurance Agency, we aren’t simply here to sell
                     policies and collect
@@ -472,9 +481,9 @@ export default function Aboutus() {
                 data-aos-easing="ease-in-sine"
               >
                 <div>
-                  <h1 className="text-3xl pt-2 font-robotoflex font-semibold text-[#0066A4]">
+                  <h2 className="text-3xl pt-2 font-robotoflex font-semibold text-[#0066A4]">
                     Why Choose J&S
-                  </h1>
+                  </h2>
                   <p className="pt-4 font-sans">
                     <span className="text-black font-semibold">Fact 1</span>
                     <br />
@@ -510,9 +519,9 @@ export default function Aboutus() {
           <div className="sm:flex block sm:justify-between justify-center relative py-10">
             <div className="sm:w-[50%] h-96 bg-[#E6EDF7]">
               <div className="ps-8 pt-8">
-                <h1 className="text-2xl font-semibold font-robotoflex">
+                <h2 className="text-2xl font-semibold font-robotoflex">
                   Our Achivements
-                </h1>
+                </h2>
                 <p className="pt-4 font-robotoflex pr-20">
                   At J&S Insurance Agency, we’re obsessed with preparing
                   trucking and commercial clients for the unexpected - combining
@@ -555,9 +564,9 @@ export default function Aboutus() {
                     alt=""
                   />
                 </div>
-                <h1 className="text-3xl font-merriweather text-white">
+                <h2 className="text-3xl font-merriweather text-white">
                   Our Clients Rave About Us
-                </h1>
+                </h2>
                 <br />
                 <h2 className="text-xl font-merriweather text-white">
                   Check out our reviews and see why you should switch to JS
@@ -604,7 +613,7 @@ export default function Aboutus() {
                           />
                         </div>
                       </div>
-                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                      <h2 className="text-center text-white font-merriweather text-[18px]">
                         "As a small business owner, I rely on my truck to make
                         deliveries every day. J&S Insurance
                         <br />
@@ -612,11 +621,11 @@ export default function Aboutus() {
                         afford. I'd
                         <br />
                         recommend them to any trucker looking for coverage.
-                      </h1>
-                      <h1 className="text-white font-merriweather pt-3">
+                      </h2>
+                      <h2 className="text-white font-merriweather pt-3">
                         {" "}
                         - John S., Chicago, IL
-                      </h1>
+                      </h2>
                       <br />
                       {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -635,7 +644,7 @@ export default function Aboutus() {
                           />
                         </div>
                       </div>
-                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                      <h2 className="text-center text-white font-merriweather text-[18px]">
                         "When I was in an accident 100 miles from home, J&S{" "}
                         <br />
                         immediately had a tow truck bring my rig to a repair{" "}
@@ -643,11 +652,11 @@ export default function Aboutus() {
                         shop they work with. They handled the claims process{" "}
                         <br />
                         quickly and I was back on the road in no time." <br />
-                      </h1>
-                      <h1 className="text-white font-merriweather pt-3">
+                      </h2>
+                      <h2 className="text-white font-merriweather pt-3">
                         {" "}
                         Michael R., Dallas, TX
-                      </h1>
+                      </h2>
                       <br />
                       {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -666,7 +675,7 @@ export default function Aboutus() {
                           />
                         </div>
                       </div>
-                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                      <h2 className="text-center text-white font-merriweather text-[18px]">
                         "J&S has insured my 3 truck fleet for over 5 years. They{" "}
                         <br />
                         make sure I have the coverage I need at competitive{" "}
@@ -674,11 +683,11 @@ export default function Aboutus() {
                         rates. Their customer service goes above and beyond when{" "}
                         <br />
                         I have questions or claims." <br />
-                      </h1>
-                      <h1 className="text-white font-merriweather pt-3">
+                      </h2>
+                      <h2 className="text-white font-merriweather pt-3">
                         {" "}
                         Susan P., Denver, CO
-                      </h1>
+                      </h2>
                       <br />
                       {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -702,14 +711,14 @@ export default function Aboutus() {
               }}
             >
               <div className="flex text-[#1C7987] font-robotoflex">
-                <h1>
+                <h2>
                   Get in Touch with the J&S Insurance Team we don’t just see you
                   as a customer
                   <br />
                   we see you as a part of our family. And family looks out for
                   one another.
                   <br />
-                </h1>
+                </h2>
               </div>
               <div className=" mt-2 sm:mt-0">
                 <button className="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50 overflow-hidden h-14 w-56 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">

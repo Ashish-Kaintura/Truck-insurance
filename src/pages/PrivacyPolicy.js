@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Nav from "../component/Nav";
+import { Helmet } from "react-helmet";
 
 export default function PivacyPolicy() {
   useEffect(() => {
@@ -8,6 +9,15 @@ export default function PivacyPolicy() {
 
   return (
     <>
+     <Helmet>
+            <meta charSet="utf-8" />
+        <title>Privacy Policy | DBA  Jay S Insurance Agency</title>
+            <meta
+              name="description"
+              content="Read the Privacy Policy of DBA  Jay S Insurance Agency to learn how we protect your personal and insurance information with secure and transparent practices."
+            />
+        <h2>Privacy Policy</h2>
+          </Helmet>
       <header>
         <Nav />
       </header>
@@ -33,14 +43,14 @@ export default function PivacyPolicy() {
           <div className="py-2 pb-10">
             <div className="pt-8 text-center flex justify-center">
               <h1 className="text-5xl  font-robotoflex pb-2 border-b-4 border-blue-700 ">
-                J&S INSURANCE AGENCY INC. WEBSITE PRIVACY POLICY
+                Privacy Policy
               </h1>
             </div>
             <div className="text-center pt-12 px-5">
               <div>
-                <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                   Last Updated 16/02/2024
-                </h1>
+                </h2>
               </div>
               <div>
                 <p className=" font-cormorantgaramond">
@@ -69,9 +79,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     COLLECTION OF YOUR INFORMATION
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -82,9 +92,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Personal Data
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -102,9 +112,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Derivative Data
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -117,9 +127,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Financial Data
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -138,9 +148,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Facebook Permissions
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -158,9 +168,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Data From Social Networks
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -175,9 +185,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Mobile Device Data
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -189,9 +199,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Third-Party Data
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -204,9 +214,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Data From Contests, Giveaways, and Surveys
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -217,9 +227,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     USE OF YOUR INFORMATION
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -268,9 +278,9 @@ export default function PivacyPolicy() {
               {/* //  */}
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     DISCLOSURE OF YOUR INFORMATION
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -282,9 +292,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     By Law or to Protect Rights
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -301,9 +311,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Third-Party Service Providers
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -316,9 +326,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Marketing Communications
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -330,9 +340,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Interactions with Other Users
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -345,9 +355,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Online Postings
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -358,9 +368,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Third-Party Advertisers
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -375,9 +385,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Affiliates
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -391,9 +401,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Business Partners
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -404,9 +414,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Offer Wall
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -426,10 +436,10 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Social Media Contacts If you connect to the Site. Other
                     Third Parties
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -442,9 +452,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Sale or Bankruptcy
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -467,9 +477,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     TRACKING TECHNOLOGIES
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond"></p>
@@ -501,9 +511,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Internet-Based Advertising
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -520,9 +530,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     Website Analytics
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -554,9 +564,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     THIRD-PARTY WEBSITES
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -581,9 +591,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     SECURITY OF YOUR INFORMATION
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -603,9 +613,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     POLICY FOR CHILDREN
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -618,9 +628,9 @@ export default function PivacyPolicy() {
               </div>
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     CONTROLS FOR DO-NOT-TRACK FEATURES
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -648,18 +658,18 @@ export default function PivacyPolicy() {
               {/* list li start here  */}
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     OPTIONS REGARDING YOUR INFORMATION
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className="font-cormorantgaramond text-2xl text-left py-5">
                     Account Information.
                   </p>
-                  <h1 className=" font-cormorantgaramond text-1xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-1xl text-left py-5">
                     You may at any time review or change the information in your
                     account or terminate your account by:
-                  </h1>
+                  </h2>
                 </div>
                 <div className="pt-2 font-cormorantgaramond">
                   <li>
@@ -685,19 +695,19 @@ export default function PivacyPolicy() {
                   <li>
                     Contacting us using the contact information provided below.
                   </li>
-                  <h1 className="">
+                  <h2 className="">
                     If you no longer wish to receive correspondence, emails, or
                     other communications from third parties, you are responsible
                     for contacting the third party directly.
-                  </h1>
+                  </h2>
                 </div>
               </div>
               {/* list li end here  */}
               <div className="pt-10 text-left">
                 <div>
-                  <h1 className=" font-cormorantgaramond text-4xl text-left py-5">
+                  <h2 className=" font-cormorantgaramond text-4xl text-left py-5">
                     CALIFORNIA PRIVACY RIGHTS
-                  </h1>
+                  </h2>
                 </div>
                 <div>
                   <p className=" font-cormorantgaramond">
@@ -727,9 +737,9 @@ export default function PivacyPolicy() {
                 </div>
               </div>
               <div className="text-left flex flex-col justify-start font-cormorantgaramond pt-5">
-                <h1 className="text-2xl text-gray-600 font-semibold">
+                <h2 className="text-2xl text-gray-600 font-semibold">
                   CONTACT US
-                </h1>
+                </h2>
                 <h2 className="py-4 ">
                   If you have questions or comments about this Privacy Policy,
                   please contact us at:

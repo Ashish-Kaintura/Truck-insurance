@@ -30,6 +30,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 // import { useNavigate } from "react-router-dom";
 import HomeNav from "../component/HomeNav";
+import { Helmet } from "react-helmet";
 // Modal Component
 const Modal = ({ closeModal, title, content }) => {
   return (
@@ -62,7 +63,7 @@ const Home = () => {
 
   const closeModal = () => {
     setModalContent(null);
-  };  
+  };
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -84,54 +85,15 @@ const Home = () => {
   };
   return (
     <div>
-      {/* <nav className="bg-[#515659]">
-        <ul className="flex justify-center py-6">
-          <div className="flex justify-evenly gap-64 border-b-2 pb-4 text-white items-center">
-            <div className="w-48">
-              <img src="./j&s logo black.png" alt="" />
-            </div>
-            <div className="sm:flex hidden gap-5 uppercase font-sans text-white text-sm">
-              <Link to={"/"}>
-                <li>home</li>
-              </Link>
-              <Link to={"/Aboutus"}>
-                <li>About Us</li>
-              </Link>
-              <Link to={"/services"}>
-                <li>Services</li>
-              </Link>
-              <Link to={"/contact"}>
-                <li>Contact Us</li>
-              </Link>
-            </div>
-            <div className="sm:flex hidden justify-center gap-8 font-sans">
-              <div className="flex justify-center">
-                {auth ? (
-                  <li>
-                    <Link onClick={Logout} to={"/signup"}>
-                      <button>Logout</button>
-                    </Link>
-                  </li>
-                ) : (
-                  <>
-                    <li>
-                      <Link to={"/login"}>
-                        <button>Login</button>
-                      </Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <Link to={"/signup"}>
-                        <button>Signup</button>
-                      </Link>
-                    </li>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </ul>
-      </nav> */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title> DBA Jay S Insurance Agency | Commercial Truck & Auto Insurance in Fresno, CA</title>
+        <meta
+          name="description"
+          content="Get reliable commercial truck and auto insurance from DBA  Jay S Insurance Agency in Fresno, CA. We help owner-operators and fleet owners find the right coverage at the best rates. Call today for a free quote."
+        />
+        <h2>Your Trusted Partner for Commercial Truck Insurance in California</h2>
+      </Helmet>
       <HomeNav />
       <main>
         <div
@@ -147,19 +109,20 @@ const Home = () => {
           <div className="flex flex-col absolute sm:top-[20%] top-[28%] inset-0">
             <div className="flex justify-center text-center items-center gap-5">
               <span className="bg-yellow-600 w-28 h-[2px] span1"></span>
-              <h1 className="uppercase text-2xl font-robotoflex text-yellow-600 italic exp">
+              <h2 className="uppercase text-2xl font-robotoflex text-yellow-600 italic exp">
                 Experience
-              </h1>
+              </h2>
               <span className="bg-yellow-600 w-28 h-[2px] span2"></span>
             </div>
             <br />
             <div>
-              <h3 className="text-center sm:text-5xl text-4xl text-white font-robotoflex pt-5">
-                We Offer Customized Commercial
-              </h3>
-              <h4 className="text-center text-5xl text-white font-robotoflex pt-5">
-                Truck Insurance Coverage
-              </h4>
+              <h1 className="text-center sm:text-5xl text-4xl text-white font-robotoflex pt-5">
+                Your Trusted Partner for Commercial
+
+                <span className="text-center text-5xl text-white font-robotoflex pt-5">
+                  Truck Insurance in California
+                </span>
+              </h1>
             </div>
           </div>
 
@@ -172,9 +135,9 @@ const Home = () => {
 
         <section className="bg-[#FAFAFA] pb-32 bg-[100vh] relative">
           <div className="flex justify-center pt-12">
-            <h1 className=" font-cormorantgaramond text-4xl py-5">
+            <h2 className=" font-cormorantgaramond text-4xl py-5">
               Explore our Insurance Plans
-            </h1>
+            </h2>
           </div>
           <div className="flex flex-wrap sm:justify-evenly justify-center sm:pt-20 z-[10]">
             <div
@@ -405,12 +368,12 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
-                  <h1 className="uppercase text-4xl font-merriweather text-white">
+                  <h2 className="uppercase text-4xl font-merriweather text-white">
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
                       About
                     </span>
                     J&S Insurance
-                  </h1>
+                  </h2>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
                     Customizable Coverage: The J&S Insurance Difference
@@ -446,9 +409,9 @@ const Home = () => {
         <section className="bg-cover bg-center bg-no-repeat pb-28 relative bg-[#FAFAFA] sm:px-0 px-4">
           <div className="sm:flex flex-wrap sm:justify-evenly justify-center px-2 sm:pt-28 pt-12 items-center">
             <div className="flex flex-col">
-              <h1 className="text-3xl font-merriweather">
+              <h2 className="text-3xl font-merriweather">
                 Serving California and Beyond
-              </h1>
+              </h2>
               <br />
               <h2 className="font-merriweather text-xl border-b-2 pb-8 border-red-600">
                 From our office in Fresno, CA, we serve trucking, personal, and
@@ -459,13 +422,13 @@ const Home = () => {
                 other states.
               </h2>
               <div className="flex flex-col pt-8">
-                <h1 className="text-3xl font-merriweather">
+                <h2 className="text-3xl font-merriweather">
                   An Independent Agency Gives You Options
-                </h1>
+                </h2>
                 <br />
-                <h1 className="font-merriweather text-xl pb-8">
+                <h2 className="font-merriweather text-xl pb-8">
                   We proudly represent the road warriors.
-                </h1>
+                </h2>
               </div>
               <div className="sm:flex block gap-5 justify-start">
                 <Link to={"/contact"}>
@@ -486,9 +449,9 @@ const Home = () => {
               className="pt-8 block justify-center bg-center bg-cover bg-no-repeat text-[white] pb-20 relative px-2 h-64 "
               style={{ backgroundImage: `url(${image1})` }}
             >
-              <h1 className="text-3xl pt-5 text-center font-merriweather">
+              <h2 className="text-3xl pt-5 text-center font-merriweather">
                 Secure Your Truck, Yourself, and Your Business
-              </h1>
+              </h2>
               <h2 className="sm:text-xl pt-5 text-center font-merriweather">
                 JS Truck Insurance Agency offers a variety of insurance by
                 industry, personal insurance, business
@@ -512,9 +475,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h1 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         Industries
-                      </h1>
+                      </h2>
                     </div>
                   </div>
                 </Link>
@@ -530,9 +493,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h1 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         personal
-                      </h1>
+                      </h2>
                     </div>
                   </div>
                 </Link>
@@ -548,9 +511,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h1 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         business
-                      </h1>
+                      </h2>
                     </div>
                   </div>
                 </Link>
@@ -566,9 +529,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h1 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         Benefits
-                      </h1>
+                      </h2>
                     </div>
                   </div>
                 </Link>
@@ -579,12 +542,12 @@ const Home = () => {
         <section className="p-6 relative pb-20 z-[2]">
           <div>
             <div className="flex flex-col justify-center sm:pt-20 pt-5">
-              <h1 className="text-6xl font-robotoflex ps-5 text-[#1C7987] whath1">
+              <h2 className="text-6xl font-robotoflex ps-5 text-[#1C7987] whath1">
                 W<span className="text-black">hat's covered in a</span>
-              </h1>
-              <h1 className="text-6xl font-robotoflex ps-5 text-[#1C7987] whath2">
+              </h2>
+              <h2 className="text-6xl font-robotoflex ps-5 text-[#1C7987] whath2">
                 <span className="text-black">Truck</span> Insurance
-              </h1>
+              </h2>
             </div>
             <div className="flex flex-wrap justify-center gap-5 sm:pt-20 pt-4">
               <div
@@ -598,7 +561,7 @@ const Home = () => {
                   <img width="50%" src={TruckDamageSvg} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">Accidents</h1>
+                  <h2 className="font-robotoflex pt-2">Accidents</h2>
                   <p className="pt-2 font-robotoflex">
                     Damages caused to the truck in case of
                   </p>
@@ -616,7 +579,7 @@ const Home = () => {
                   <img width="50%" src={TruckDamageSvg1} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">Theft</h1>
+                  <h2 className="font-robotoflex pt-2">Theft</h2>
                   <p className="pt-2 font-robotoflex">
                     Loss or damage to the truck due to theft
                   </p>
@@ -633,7 +596,7 @@ const Home = () => {
                   <img width="50%" src={TruckDamageSvg2} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">Fire</h1>
+                  <h2 className="font-robotoflex pt-2">Fire</h2>
                   <p className="pt-2 font-robotoflex">
                     Damages caused to your truck due to a fire
                   </p>
@@ -650,7 +613,7 @@ const Home = () => {
                   <img width="50%" src={TruckDamageSvg3} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">Natural Disasters</h1>
+                  <h2 className="font-robotoflex pt-2">Natural Disasters</h2>
                   <p className="pt-2 font-robotoflex">
                     Damages caused to your truck due to any
                   </p>
@@ -668,7 +631,7 @@ const Home = () => {
                   <img width="40%" src={TruckDamageSvg4} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">Personal Accident</h1>
+                  <h2 className="font-robotoflex pt-2">Personal Accident</h2>
                   <p className="pt-2 font-robotoflex">
                     If there is an accident of your truck, leading
                   </p>
@@ -688,7 +651,7 @@ const Home = () => {
                   <img width="50%" src={TruckDamageSvg5} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">Third Party Losses</h1>
+                  <h2 className="font-robotoflex pt-2">Third Party Losses</h2>
                   <p className="pt-2 font-robotoflex">
                     Any damages caused by your truck to a
                   </p>
@@ -708,9 +671,9 @@ const Home = () => {
                   <img width="50%" src={TruckDamageSvg6} alt="" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
-                  <h1 className="font-robotoflex pt-2">
+                  <h2 className="font-robotoflex pt-2">
                     Towing Disabled Vehicles
-                  </h1>
+                  </h2>
                   <p className="pt-2 font-robotoflex">
                     Any damages caused by your truck during
                   </p>
@@ -740,9 +703,9 @@ const Home = () => {
                     alt=""
                   />
                 </div>
-                <h1 className="text-3xl font-merriweather text-white">
+                <h2 className="text-3xl font-merriweather text-white">
                   Our Clients Rave About Us
-                </h1>
+                </h2>
                 <br />
                 <h2 className="text-xl font-merriweather text-white">
                   Check out our reviews and see why you should switch to JS
@@ -789,7 +752,7 @@ const Home = () => {
                           />
                         </div>
                       </div>
-                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                      <h2 className="text-center text-white font-merriweather text-[18px]">
                         "As a small business owner, I rely on my truck to make
                         deliveries every day. J&S Insurance
                         <br />
@@ -797,11 +760,11 @@ const Home = () => {
                         afford. I'd
                         <br />
                         recommend them to any trucker looking for coverage.
-                      </h1>
-                      <h1 className="text-white font-merriweather pt-3">
+                      </h2>
+                      <h2 className="text-white font-merriweather pt-3">
                         {" "}
                         - John S., Chicago, IL
-                      </h1>
+                      </h2>
                       <br />
                       {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -820,7 +783,7 @@ const Home = () => {
                           />
                         </div>
                       </div>
-                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                      <h2 className="text-center text-white font-merriweather text-[18px]">
                         "When I was in an accident 100 miles from home, J&S{" "}
                         <br />
                         immediately had a tow truck bring my rig to a repair{" "}
@@ -828,11 +791,11 @@ const Home = () => {
                         shop they work with. They handled the claims process{" "}
                         <br />
                         quickly and I was back on the road in no time." <br />
-                      </h1>
-                      <h1 className="text-white font-merriweather pt-3">
+                      </h2>
+                      <h2 className="text-white font-merriweather pt-3">
                         {" "}
                         Michael R., Dallas, TX
-                      </h1>
+                      </h2>
                       <br />
                       {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -851,7 +814,7 @@ const Home = () => {
                           />
                         </div>
                       </div>
-                      <h1 className="text-center text-white font-merriweather text-[18px]">
+                      <h2 className="text-center text-white font-merriweather text-[18px]">
                         "J&S has insured my 3 truck fleet for over 5 years. They{" "}
                         <br />
                         make sure I have the coverage I need at competitive{" "}
@@ -859,11 +822,11 @@ const Home = () => {
                         rates. Their customer service goes above and beyond when{" "}
                         <br />
                         I have questions or claims." <br />
-                      </h1>
-                      <h1 className="text-white font-merriweather pt-3">
+                      </h2>
+                      <h2 className="text-white font-merriweather pt-3">
                         {" "}
                         Susan P., Denver, CO
-                      </h1>
+                      </h2>
                       <br />
                       {/* <div className="flex justify-center gap-5">
                     <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
@@ -886,16 +849,16 @@ const Home = () => {
             <div className="bg-sky-600 sm:w-[50%] flex justify-center py-20">
               <div className="">
                 <div>
-                  <h1 className="font-merriweather text-4xl text-white">
+                  <h2 className="font-merriweather text-4xl text-white">
                     Let's Get Started
-                  </h1>
+                  </h2>
                 </div>
                 <div className="flex justify-between pr-[95px] pt-10 items-center">
                   <div className="w-10 h-10 border-2"></div>
                   <div className="flex flex-col">
-                    <h1 className="text-white font-merriweather text-sm">
+                    <h2 className="text-white font-merriweather text-sm">
                       STEP 1
-                    </h1>
+                    </h2>
                     <h2 className="text-white font-merriweather text-sm">
                       Fill out the form.
                     </h2>
@@ -906,9 +869,9 @@ const Home = () => {
                 <div className="flex justify-between pr-5 pt-2 items-center">
                   <div className="w-10 h-10 border-2"></div>
                   <div className="flex flex-col">
-                    <h1 className="text-white font-merriweather text-sm">
+                    <h2 className="text-white font-merriweather text-sm">
                       STEP 2
-                    </h1>
+                    </h2>
                     <h2 className="text-white font-merriweather text-sm">
                       Review your options with us.
                     </h2>
@@ -918,9 +881,9 @@ const Home = () => {
                 <div className="flex justify-between pr-10 pt-2 items-center">
                   <div className="w-10 h-10 border-2"></div>
                   <div className="flex flex-col">
-                    <h1 className="text-white font-merriweather text-sm">
+                    <h2 className="text-white font-merriweather text-sm">
                       STEP 3
-                    </h1>
+                    </h2>
                     <h2 className="text-white font-merriweather text-sm">
                       Get the coverage you need.
                     </h2>
@@ -1011,14 +974,14 @@ const Home = () => {
               }}
             >
               <div className="flex text-[#1C7987] font-robotoflex">
-                <h1>
+                <h2>
                   Get in Touch with the J&S Insurance Team we don’t just see you
                   as a customer
                   <br />
                   we see you as a part of our family. And family looks out for
                   one another.
                   <br />
-                </h1>
+                </h2>
               </div>
               <div className=" mt-2 sm:mt-0">
                 <button className="relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50 overflow-hidden h-14 w-56 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">

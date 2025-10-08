@@ -7,6 +7,7 @@ import "../Css/Services.css";
 import image from "../gif/ezgif.com-crop2.gif";
 import image1 from "../gif/ezgif.com-crop2.gif";
 import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet";
 // Modal Component
 const Modal = ({ closeModal, title, content }) => {
   return (
@@ -60,21 +61,30 @@ export default function Services() {
   return (
     <div>
       <Nav />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Commercial Truck Insurance Services | DBA  Jay S Insurance Agency </title>
+        <meta
+          name="description"
+          content="Explore our range of trucking and commercial auto insurance services — from liability and cargo coverage to physical damage protection. DBA  Jay S Insurance Agency helps California truckers stay protected and compliant."/>
+        <h2>Comprehensive Truck Insurance Services for Every Need</h2>
+      </Helmet>
+
       {/* // */}
       <main>
         <section className="py-12 sm:pt-0 pt-28 ">
           <div className="sm:flex flex-wrap sm:justify-between justify-center items-center sm:ps-12 px-4">
             <div className="flex flex-col uppercase ">
-              <h1 className="text-5xl font-bold font-sans">
+              <h2 className="text-5xl font-bold font-sans">
                 Affordable truck{" "}
-              </h1>
+              </h2>
               <h2 className="text-5xl font-semibold font-sans pt-4">Service</h2>
-              <h3 className="text-lg font-cormorantgaramond pt-4">
-                Customizable Coverage: The J&S Insurance Difference
+              <h1 className="text-lg font-cormorantgaramond pt-4">
+               Comprehensive Truck Insurance Services for Every Need
                 <br />
                 {/* Services We Provide: */}
                 {/* J&S Insurance Agency */}
-              </h3>
+              </h1>
               <br />
               <div>
                 <Link to={"/contact"}>
@@ -96,9 +106,9 @@ export default function Services() {
         <section className="border-t-2 border-gray-300">
           <div className="p-5 py-8">
             <div className="py-5">
-              <h1 className="text-black text-3xl  uppercase text-center font-merriweather">
+              <h2 className="text-black text-3xl  uppercase text-center font-merriweather">
                 Products & Services
-              </h1>
+              </h2>
             </div>
             <div className="p-2 sm:px-5 text-gray-700">
               <p className="text-center font-merriweather">
@@ -129,9 +139,9 @@ export default function Services() {
 
         <section className="py-20 bg-[#F2f2f2f2]">
           <div className=" justify-center text-center">
-            <h1 className="font-cormorantgaramond text-5xl uppercase">
+            <h2 className="font-cormorantgaramond text-5xl uppercase">
               Services you get with us
-            </h1>
+            </h2>
             <h2 className="font-cormorantgaramond pt-3 text-lg">
               At J&S Insurance Agency, we strive to provide excellent insurance
               coverage to clients in Arizona, California, Indiana, New Jersey,
@@ -616,12 +626,12 @@ export default function Services() {
                 </div>
 
                 <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
-                  <h1 className="uppercase text-4xl font-merriweather text-white">
+                  <h2 className="uppercase text-4xl font-merriweather text-white">
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
                       About
                     </span>
                     J&S Insurance
-                  </h1>
+                  </h2>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
                     Customizable Coverage: The J&S Insurance Difference
@@ -658,9 +668,9 @@ export default function Services() {
             <div className=" flex justify-center sm:h-96 items-center sm:w-[50%] sm:py-0 py-5">
               <div className=" justify-center px-10">
                 <div>
-                  <h1 className="font-cormorantgaramond sm:text-6xl text-xl pb-5 text-white uppercase">
+                  <h2 className="font-cormorantgaramond sm:text-6xl text-xl pb-5 text-white uppercase">
                     Where are We
-                  </h1>
+                  </h2>
                   <p className="font-cormorantgaramond  text-white ps-2 text-4xl ">
                     Located Fresno
                   </p>
@@ -672,84 +682,84 @@ export default function Services() {
                   </p>
                 </div>
                 <div className="mt-4">
-                  <h1 className="text-5xl font-cormorantgaramond text-white ">
+                  <h2 className="text-5xl font-cormorantgaramond text-white ">
                     Also In
-                  </h1>
+                  </h2>
                   <div className="flex gap-x-8">
                     <div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           CA
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           WA
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           AZ
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           NV
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           GA
-                        </h1>
+                        </h2>
                       </div>
                     </div>
                     <div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           TX
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           IL
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           OH
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           In
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           WI
-                        </h1>
+                        </h2>
                       </div>
                     </div>
                     <div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           NJ
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           VA
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           KS
-                        </h1>
+                        </h2>
                       </div>
                       <div>
-                        <h1 className="text-2xl text-white font-cormorantgaramond pt-2">
+                        <h2 className="text-2xl text-white font-cormorantgaramond pt-2">
                           MI
-                        </h1>
+                        </h2>
                       </div>
                     </div>
                   </div>
@@ -780,16 +790,16 @@ export default function Services() {
             <div className="bg-sky-600 sm:w-[50%] flex justify-center py-20">
               <div className="">
                 <div>
-                  <h1 className="font-merriweather text-4xl text-white">
+                  <h2 className="font-merriweather text-4xl text-white">
                     Let's Get Started
-                  </h1>
+                  </h2>
                 </div>
                 <div className="flex justify-between pr-[95px] pt-10 items-center">
                   <div className="w-10 h-10 border-2"></div>
                   <div className="flex flex-col">
-                    <h1 className="text-white font-merriweather text-sm">
+                    <h2 className="text-white font-merriweather text-sm">
                       STEP 1
-                    </h1>
+                    </h2>
                     <h2 className="text-white font-merriweather text-sm">
                       Fill out the form.
                     </h2>
@@ -800,9 +810,9 @@ export default function Services() {
                 <div className="flex justify-between pr-5 pt-2 items-center">
                   <div className="w-10 h-10 border-2"></div>
                   <div className="flex flex-col">
-                    <h1 className="text-white font-merriweather text-sm">
+                    <h2 className="text-white font-merriweather text-sm">
                       STEP 2
-                    </h1>
+                    </h2>
                     <h2 className="text-white font-merriweather text-sm">
                       Review your options with us.
                     </h2>
@@ -812,9 +822,9 @@ export default function Services() {
                 <div className="flex justify-between pr-10 pt-2 items-center">
                   <div className="w-10 h-10 border-2"></div>
                   <div className="flex flex-col">
-                    <h1 className="text-white font-merriweather text-sm">
+                    <h2 className="text-white font-merriweather text-sm">
                       STEP 3
-                    </h1>
+                    </h2>
                     <h2 className="text-white font-merriweather text-sm">
                       Get the coverage you need.
                     </h2>

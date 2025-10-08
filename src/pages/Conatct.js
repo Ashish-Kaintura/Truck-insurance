@@ -5,6 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoTime } from "react-icons/io5";
 import { IoMail } from "react-icons/io5";
 import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet";
 export default function Conatct() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,6 +32,15 @@ export default function Conatct() {
 
   return (
     <div>
+       <Helmet>
+              <meta charSet="utf-8" />
+        <title>Contact DBA  Jay S Insurance Agency | Get a Commercial Truck Insurance Quote</title>
+              <meta
+                name="description"
+          content="Get in touch with DBA  Jay S Insurance Agency in Fresno, CA for personalized truck and commercial auto insurance quotes. Call us or fill out our online form — we’re here to help you stay protected."
+              />
+        <h2>Contact DBA  Jay S Insurance Agency</h2>
+            </Helmet>
       <Nav />
       <section className="sm:p-8 p-2 sm:pt-0 pt-28">
         <div
@@ -58,7 +68,7 @@ export default function Conatct() {
                     Lets get <span className="text-white">Conencted</span>
                   </div>
                   <div className="text-sm font-merriweathermb-4 text-center text-white font-merriweather">
-                    We try to Conenct with you ASAP
+                  <h1>  Contact DBA  Jay S Insurance Agency</h1>
                   </div>
                   <form
                     className="flex flex-col gap-3"
@@ -152,9 +162,9 @@ export default function Conatct() {
               <div className="flex justify-start px-4 gap-5 items-center text-white  font-cormorantgaramond py-5 uppercase">
                 <FaLocationDot />
                 <div>
-                  <h1 className="text-lg sm:text-black font-semibold ">
+                  <h2 className="text-lg sm:text-black font-semibold ">
                     Address :
-                  </h1>
+                  </h2>
                   <h2 className="text-lg sm:text-gray-900">
                     Fresno California
                   </h2>
@@ -163,18 +173,18 @@ export default function Conatct() {
               <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
                 <FaPhoneAlt />
                 <div>
-                  <h1 className="text-lg sm:text-black font-semibold ">
+                  <h2 className="text-lg sm:text-black font-semibold ">
                     Phone :
-                  </h1>
+                  </h2>
                   <h2 className="text-lg sm:text-gray-900">2066179034</h2>
                 </div>
               </div>
               <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
                 <IoTime className="text-2xl" />
                 <div>
-                  <h1 className="text-lg sm:text-black font-semibold ">
+                  <h2 className="text-lg sm:text-black font-semibold ">
                     We are Open:
-                  </h1>
+                  </h2>
                   <h2 className="text-lg sm:text-gray-900">
                     Monday - Thursday: 9:00 AM-5:30 PM <br />
                     Friday 9:00 AM - 5:00 PM <br />
@@ -184,9 +194,9 @@ export default function Conatct() {
               <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
                 <IoMail className="text-2xl" />
                 <div>
-                  <h1 className="text-lg sm:text-black font-semibold ">
+                  <h2 className="text-lg sm:text-black font-semibold ">
                     E-mail:
-                  </h1>
+                  </h2>
                   <h2 className="text-lg sm:text-gray-900">
                     {" "}
                     <a href="mailto:sandy@jsinsur.com"> sandy@jsinsur.com</a>

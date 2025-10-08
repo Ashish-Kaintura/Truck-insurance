@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Nav from "../component/Nav";
 import userEvent from "@testing-library/user-event";
+import { Helmet } from "react-helmet";
 
 export default function Termscondition() {
   useEffect(() => {
@@ -9,6 +10,15 @@ export default function Termscondition() {
 
   return (
     <>
+     <Helmet>
+            <meta charSet="utf-8" />
+        <title>Terms & Conditions | DBA  Jay S Insurance Agency</title>
+            <meta
+              name="description"
+          content="Review the terms and conditions for using the DBA  Jay S Insurance Agency website, including our service policies, disclaimers, and user responsibilities."
+            />
+        <h2>DBA  Jay S Insurance Agency Terms & Conditions</h2>
+          </Helmet>
       <header>
         <Nav />
       </header>
@@ -64,10 +74,10 @@ export default function Termscondition() {
                 </p>
               </div>
               <div className="pt-8 text-center flex justify-center">
-                <h1 className="text-3xl  font-robotoflex pb-2 border-b-4 border-blue-700 ">
+                <h2 className="text-3xl  font-robotoflex pb-2 border-b-4 border-blue-700 ">
                   You may print or save a copy (PDF) of these Terms of Use for
                   your records.
-                </h1>
+                </h2>
               </div>
               {/* pointer  */}
               <div className="pt-10 px-2">
@@ -570,9 +580,9 @@ export default function Termscondition() {
               {/* //  */}
 
               <div className="text-left flex flex-col justify-start font-cormorantgaramond pt-5">
-                {/* <h1 className="text-2xl text-gray-600 font-semibold">
+                {/* <h2 className="text-2xl text-gray-600 font-semibold">
                   CONTACT US
-                </h1>
+                </h2>
                 <h2 className="py-4 ">
                   If you have questions or comments about this Privacy Policy,
                   please contact us at:
