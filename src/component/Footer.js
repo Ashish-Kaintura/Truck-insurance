@@ -111,7 +111,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <footer className="bg-gray-500 text-white font-robotoflex">
+      {/* <footer className="bg-gray-500 text-white font-robotoflex">
         <div>
           <h1 className="py-2 text-center">
             Developed And Design By{" "}
@@ -123,7 +123,7 @@ export default function Footer() {
             </a>
           </h1>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
