@@ -9,7 +9,7 @@ import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surro
 import CommercialVehTruck from "../images/Commercial-Veh-Truck.svg";
 import reportCardImage from "../images/achievement.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import video from "../video/Aboutuspagevideo.mp4";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,24 +22,36 @@ export default function Aboutus() {
   return (
     <div>
       <Nav />
-       <Helmet>
-              <meta charSet="utf-8" />
-              <title>About DBA  Jay S Insurance Agency | Truck Insurance Experts in Fresno</title>
-              <meta
-                name="description"
-          content="Learn more about DBA  Jay S Insurance Agency — a licensed insurance agency dedicated to protecting truck owners and commercial fleets across California with personalized coverage and expert support."  />
-              <h2>About DBA  Jay S Insurance Agency</h2>
-            </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About DBA  Jay S Insurance Agency | Truck Insurance Experts in Fresno</title>
+        <meta
+          name="description"
+          content="Learn more about DBA  Jay S Insurance Agency — a licensed insurance agency dedicated to protecting truck owners and commercial fleets across California with personalized coverage and expert support." />
+        <h2>About DBA  Jay S Insurance Agency</h2>
+      </Helmet>
       <main>
-        <section
-          className="h-[80vh] relative bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${image})` }}
-        >
+        <section className="h-[80vh] relative overflow-hidden">
+          {/* /* Video background (falls back to poster image) */ }
+          <video
+            className="absolute inset-0 w-full h-full object-cover z-0"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={image}
+          >
+            <source src={video}type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+            Your browser does not support the video tag.
+        
+
           <div
-            className="absolute inset-0 pt-28"
+            className="absolute inset-0 pt-28 z-10"
             style={{
-              backdropFilter: " blur(1px)",
-              backgrounCcolor: "rgba(25, 25, 25, 0.172)",
+              backdropFilter: "blur(1px)",
+              backgroundColor: "rgba(25, 25, 25, 0.172)",
             }}
           >
             <div className="block flex-wrap justify-between px-8 items-center pt-8 ">
@@ -48,7 +60,7 @@ export default function Aboutus() {
                   About DBA  Jay S Insurance Agency
                 </h1>
                 <h2 className="text-4xl font-merriweather pt-6 text-white">
-                  J&S Truck Insurance Agency has provided
+                  DBA Truck Insurance Agency has provided
                 </h2>
                 <h2 className="text-4xl font-merriweather pt-3 text-white">
                   insurance services since 2018.
@@ -73,32 +85,17 @@ export default function Aboutus() {
           <div className="p-5 py-8">
             <div className="py-5">
               <h2 className="text-black text-3xl  uppercase text-center font-merriweather">
-                About Owner
+                About the Owner
+
               </h2>
             </div>
             <div className="p-2 sm:px-5">
               <p className="text-center font-merriweather">
-                Sandy Gill founded J&S Insurance Agency in 2018, driven by a
-                passion for serving the community to the fullest extent. She
-                spent nearly eight months working for an insurance company in
-                the USA before deciding to open this business and obtain her own
-                agent license. Though she valued that front desk role, her
-                entrepreneurial spirit inspired her to obtain her insurance
-                agent license and eventually open her own agency.
+                Sandy Gill founded DBA Jay S Insurance Agency in 2018, driven by a passion for serving the community. After gaining experience working in the insurance industry, she obtained her agent license and opened her own agency.
               </p>
               <br />
               <p className="text-center font-merriweather">
-                After learning the nuances of the business for a few months as a
-                business agent, Sandy realized her dream in October 2018 when
-                she founded J&S Insurance. She has dedicated herself to
-                educating people and organizations about the basics of insurance
-                over the last two years, including what it is, how much it
-                costs, and what it includes. We still have several milestones to
-                reach as a young small business, but our main goal will always
-                be to be there in the community to help people with their
-                insurance requirements at every turn. Sandy's commitment to
-                helping people is the cornerstone of J&S Insurance Agency's
-                mission.
+                Since then, Sandy has focused on educating clients about commercial truck insurance, fleet coverage, and owner-operator policies. Her dedication to helping people and businesses with their insurance needs is the cornerstone of DBA Jay S Insurance Agency’s mission in Fresno and across California.
               </p>
             </div>
           </div>
@@ -111,36 +108,21 @@ export default function Aboutus() {
           >
             <div className="py-5">
               <h2 className="text-white text-4xl font-merriweather  uppercase text-center">
-                About Company
+                About the Company
+
               </h2>
             </div>
             <div className="p-2 sm:px-5 text-white">
               <p className="text-center font-merriweather">
-                Established in 2018 by Sandy Gill on the tenet of 'serving the
-                community to the fullest extent,' J&S Insurance Agency upholds
-                that principle. We are devoted to doing right by our clients and
-                providing optimal insurance guidance. Over the past two years,
-                our team has leveraged industry knowledge and experience to
-                deliver top-tier insurance policies to individuals and
-                businesses in 11 states: Arizona, California, Indiana, New
-                Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia and
-                Washington.
+                Founded in 2018 by Sandy Gill on the principle of “serving the community to the fullest,” DBA Jay S Insurance Agency is dedicated to providing reliable, personalized insurance guidance. We help individuals and businesses secure the right coverage across California and 11 other states, including Arizona, New Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia, and Washington.
               </p>
               <br />
               <p className="text-center font-merriweather">
-                Our insurance professionals collectively boast years of
-                expertise drafting customized truck and commercial plans
-                tailored to our clients’ needs. We take a boutique approach -
-                our amiable staff work with each client one-on-one not only to
-                craft the ideal policy, but foster an enduring, supportive
-                relationship over the years ahead. The attentive, thorough
-                service you’ll receive from our independent agency is
-                unparalleled. At J&S Insurance, our commitment to the
-                communities we serve comes first. When you opt our services,
-                you'll experience the quality service and attention to detail
-                that you can only find with an independent Best Truck And
-                Trucking Insurance Agency like J&S Insurance Agency.
+                Our team of insurance professionals has extensive experience crafting custom commercial truck insurance, fleet coverage, and owner-operator policies tailored to each client’s needs. Taking a boutique approach, we work one-on-one with clients to design the ideal policy while building lasting, supportive relationships.
               </p>
+              <br />
+              <p className="text-center font-merriweather">
+                At DBA  Jay S Insurance Agency, our commitment to our clients and the communities we serve comes first. When you choose us, you’ll experience attentive service, expert guidance, and the personalized care only an independent Fresno insurance agency can provide. </p>
             </div>
           </div>
         </section>
@@ -153,13 +135,13 @@ export default function Aboutus() {
               Wellcome to J & S Insurance
             </h2>
             <h2 className="pt-8 font-cormorantgaramond">
-              Meet the Dedicated Team Behind J&S Insurance Agency At J&S
+              Meet the Dedicated Team Behind DBA Insurance Agency At DBA
               Insurance Agency, we’re not just about selling insurance policies
               - we’re about building lasting relationships and protecting what
               matters most.
             </h2>
             <h2 className="pt-2 font-cormorantgaramond">
-              Founded in 2018 by Sandy Gill, J&S Insurance is rooted in a
+              Founded in 2018 by Sandy Gill, DBA Insurance is rooted in a
               passion for helping individuals and businesses secure customized
               coverage. After nearly a decade working for top insurance
               providers, Sandy pursued an entrepreneurial dream.
@@ -167,7 +149,7 @@ export default function Aboutus() {
             <h2 className="pt-2 font-cormorantgaramond">
               She obtained her agent license and dove headfirst into the
               independent agency world. Now, with over 5 years of combined
-              industry expertise, the J&S team offers an array of trucking and
+              industry expertise, the DBA team offers an array of trucking and
               commercial insurance products across 10 states. But more
               importantly, we provide genuine guidance to safeguard your assets
               and prepare for the unexpected.
@@ -181,20 +163,9 @@ export default function Aboutus() {
               What we Offer
             </h2>
             <p className="text-center pt-6 font-robotoflex text-sm text=[#d7d7d7]">
-              At J&S Insurance Agency, we strive to provide excellent insurance
-              coverage to clients in Arizona, California, Indiana, New Jersey,
-              New York, Ohio, Oregon, Texas, Utah, Virginia and Washington. Our{" "}
-              <br />
-              wide range of policies safeguards individuals, trucks, and
-              businesses such as hotels, motels, gas stations, and more. We
-              offer policies including physical damage, general liability, truck
-              <br />
-              cargo, roadside assistance, auto liability, and other options. If
-              br you are interested in coverage that is not listed, please email
-              <br />
-              sandy@jsinsur.com or call +1 206-617-9034 during business hours.
-              We are happy to discuss your insurance needs and explain all
-              available protections.
+              At DBA Jay S Insurance Agency, we are committed to providing comprehensive insurance solutions to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. <br />
+              Our wide range of policies protects individuals, trucks, and businesses such as hotels, motels, gas stations, and more. We offer specialized coverage, including
+
               <br />
             </p>
           </div>
@@ -424,7 +395,7 @@ export default function Aboutus() {
                     Who We Are ?
                   </h2>
                   <p className="pt-4 font-sans">
-                    At J&S Insurance Agency, we aren’t simply here to sell
+                    At DBA Insurance Agency, we aren’t simply here to sell
                     policies and collect
                     <br />
                     payments. We’re family-owned protectors using industry
@@ -482,7 +453,7 @@ export default function Aboutus() {
               >
                 <div>
                   <h2 className="text-3xl pt-2 font-robotoflex font-semibold text-[#0066A4]">
-                    Why Choose J&S
+                    Why Choose DBA
                   </h2>
                   <p className="pt-4 font-sans">
                     <span className="text-black font-semibold">Fact 1</span>
@@ -503,7 +474,7 @@ export default function Aboutus() {
                     <br />
                     <span className="text-black font-semibold">Fact 3</span>
                     <br />
-                    At J&S Insurance Agency, we’re obsessed with preparing
+                    At DBA Insurance Agency, we’re obsessed with preparing
                     trucking and commercial clients for the
                     <br />
                     unexpected - combining compassion and choice for unmatched
@@ -523,17 +494,12 @@ export default function Aboutus() {
                   Our Achivements
                 </h2>
                 <p className="pt-4 font-robotoflex pr-20">
-                  At J&S Insurance Agency, we’re obsessed with preparing
-                  trucking and commercial clients for the unexpected - combining
-                  compassion and choice for unmatched protection & peace of
-                  mind.
+                  At DBA Jay S Insurance Agency, we are dedicated to preparing trucking and commercial clients for the unexpected. By combining expertise, personalized service, and flexible coverage options, we provide unmatched protection and peace of mind for your business and fleet.
                 </p>
                 <br />
                 <p className="pt-4 font-robotoflex pr-20">
-                  Learn more about the J&S difference and get covered right
-                  today by calling +1 206-617-9034 now! Our advisors offer
-                  complimentary consultations to determine the optimal coverage
-                  guarding YOUR unique venture.
+                  Discover the DBA Jay S difference and secure your coverage today by calling +1 206-617-9034. Our advisors offer complimentary consultations to identify the best commercial truck insurance, cargo coverage, and fleet policies tailored to your unique business needs.
+
                 </p>
               </div>
             </div>
@@ -615,7 +581,7 @@ export default function Aboutus() {
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
                         "As a small business owner, I rely on my truck to make
-                        deliveries every day. J&S Insurance
+                        deliveries every day. DBA Insurance
                         <br />
                         found a policy that keeps me protected at a price I can
                         afford. I'd
@@ -623,15 +589,9 @@ export default function Aboutus() {
                         recommend them to any trucker looking for coverage.
                       </h2>
                       <h2 className="text-white font-merriweather pt-3">
-                        {" "}
-                        - John S., Chicago, IL
+                        {" "}- John S., Chicago, IL
                       </h2>
                       <br />
-                      {/* <div className="flex justify-center gap-5">
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                  </div> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -645,7 +605,7 @@ export default function Aboutus() {
                         </div>
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
-                        "When I was in an accident 100 miles from home, J&S{" "}
+                        "When I was in an accident 100 miles from home, DBA{" "}
                         <br />
                         immediately had a tow truck bring my rig to a repair{" "}
                         <br />
@@ -658,11 +618,6 @@ export default function Aboutus() {
                         Michael R., Dallas, TX
                       </h2>
                       <br />
-                      {/* <div className="flex justify-center gap-5">
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                  </div> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -676,7 +631,7 @@ export default function Aboutus() {
                         </div>
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
-                        "J&S has insured my 3 truck fleet for over 5 years. They{" "}
+                        "DBA has insured my 3 truck fleet for over 5 years. They{" "}
                         <br />
                         make sure I have the coverage I need at competitive{" "}
                         <br />
@@ -689,11 +644,6 @@ export default function Aboutus() {
                         Susan P., Denver, CO
                       </h2>
                       <br />
-                      {/* <div className="flex justify-center gap-5">
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                  </div> */}
                     </div>
                   </SwiperSlide>
                 </Swiper>
@@ -712,11 +662,9 @@ export default function Aboutus() {
             >
               <div className="flex text-[#1C7987] font-robotoflex">
                 <h2>
-                  Get in Touch with the J&S Insurance Team we don’t just see you
-                  as a customer
+                  Get in Touch with the DBA Jay S Insurance Agency Team
                   <br />
-                  we see you as a part of our family. And family looks out for
-                  one another.
+                  We don’t just see you as a client — we see you as part of our family. Our team looks out for one another, ensuring you get the best commercial truck insurance, fleet coverage, and owner-operator policies for peace of mind across Fresno and California
                   <br />
                 </h2>
               </div>

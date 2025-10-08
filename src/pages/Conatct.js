@@ -46,7 +46,7 @@ export default function Conatct() {
         <div
           className="sm:h-[100vh] h-[120vh] bg-center bg-cover object-cover relative "
           style={{
-            backgroundImage: `url(${require("../images/rhys-moult-7eaFIKeo1MQ-unsplash.jpg")})`,
+            backgroundImage: `url(${require("../images/contact-us-page-banner.jpg")})`,
           }}
         >
           <div

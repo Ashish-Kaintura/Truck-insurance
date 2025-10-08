@@ -14,7 +14,7 @@ import TruckDamageSvg3 from "../images/truck-insurance_flood.svg";
 import TruckDamageSvg4 from "../images/leg-cast.svg";
 import TruckDamageSvg5 from "../images/truck-insurance_third party accident.svg";
 import TruckDamageSvg6 from "../images/truck-insurance_towing.svg";
-import backgroundImage from "../images/truck8.jpg";
+import backgroundImage from "../images/homepagebanner.jpg";
 import backgroundImage1 from "../images/Homepage-Empty-Road-with-Two-Lanes-Surrounded-by-Green-Trees-with-Snow-Capped-Mountains-in-the-Background-Against-a-Blue-Sky.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -372,15 +372,15 @@ const Home = () => {
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
                       About
                     </span>
-                    J&S Insurance
+                    DBA Insurance
                   </h2>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
-                    Customizable Coverage: The J&S Insurance Difference
+                    Customizable Coverage: The DBA Insurance Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At J&S Insurance Agency, we are aware of the fact that no
+                    At DBA Insurance Agency, we are aware of the fact that no
                     two clients have precisely <br />
                     identical risk profiles as well as coverage needs. Being an
                     individual agency serving <br /> the needs of rental service
@@ -410,16 +410,11 @@ const Home = () => {
           <div className="sm:flex flex-wrap sm:justify-evenly justify-center px-2 sm:pt-28 pt-12 items-center">
             <div className="flex flex-col">
               <h2 className="text-3xl font-merriweather">
-                Serving California and Beyond
+                Serving Fresno, California, and Beyond
               </h2>
               <br />
-              <h2 className="font-merriweather text-xl border-b-2 pb-8 border-red-600">
-                From our office in Fresno, CA, we serve trucking, personal, and
-                <br />
-                business insurance clients throughout California and is over
-                fifteen
-                <br />
-                other states.
+              <h2 className="font-merriweather max-w-3xl mx-auto text-xl border-b-2 pb-8 border-red-600">
+                Based in Fresno, CA, DBA Jay S Insurance Agency proudly provides commercial truck insurance, fleet coverage, owner-operator policies, and business insurance solutions to clients throughout California and more than fifteen additional states. Our goal is to protect your trucks, cargo, and business wherever your operations take you.
               </h2>
               <div className="flex flex-col pt-8">
                 <h2 className="text-3xl font-merriweather">
@@ -439,7 +434,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex justify-center overflow-hidden rounded-lg sm:mt-0 mt-4">
-              <img src={require("../gif/ezgif.com-crop3.gif")} alt="" />
+              <img src={require("../gif/Image.jpg")} alt="" />
             </div>
           </div>
         </section>
@@ -450,15 +445,13 @@ const Home = () => {
               style={{ backgroundImage: `url(${image1})` }}
             >
               <h2 className="text-3xl pt-5 text-center font-merriweather">
-                Secure Your Truck, Yourself, and Your Business
+                Protect Your Trucks, Your Business, and Yourself
               </h2>
               <h2 className="sm:text-xl pt-5 text-center font-merriweather">
-                JS Truck Insurance Agency offers a variety of insurance by
-                industry, personal insurance, business
+                DBA Jay S Insurance Agency provides a wide range of insurance solutions for the trucking industry, including commercial truck insurance, cargo coverage, fleet insurance, owner-operator policies, and business protection plans
               </h2>
               <h3 className="sm:text-xl pt-1 text-center font-merriweather">
-                insurance, and employee benefits solutions to help you protect
-                what matters most.
+                Our comprehensive offerings help you safeguard what matters most—your vehicles, your cargo, and your livelihood—across Fresno and California.
               </h3>
             </div>
           </div>
@@ -708,7 +701,7 @@ const Home = () => {
                 </h2>
                 <br />
                 <h2 className="text-xl font-merriweather text-white">
-                  Check out our reviews and see why you should switch to JS
+                  Check out our reviews and see why you should switch to DBA
                   Truck
                 </h2>
 
@@ -754,7 +747,7 @@ const Home = () => {
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
                         "As a small business owner, I rely on my truck to make
-                        deliveries every day. J&S Insurance
+                        deliveries every day. DBA Insurance
                         <br />
                         found a policy that keeps me protected at a price I can
                         afford. I'd
@@ -766,11 +759,7 @@ const Home = () => {
                         - John S., Chicago, IL
                       </h2>
                       <br />
-                      {/* <div className="flex justify-center gap-5">
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
-                  </div> */}
+                  
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -784,7 +773,7 @@ const Home = () => {
                         </div>
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
-                        "When I was in an accident 100 miles from home, J&S{" "}
+                        "When I was in an accident 100 miles from home, DBA{" "}
                         <br />
                         immediately had a tow truck bring my rig to a repair{" "}
                         <br />
@@ -815,7 +804,7 @@ const Home = () => {
                         </div>
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
-                        "J&S has insured my 3 truck fleet for over 5 years. They{" "}
+                        "DBA has insured my 3 truck fleet for over 5 years. They{" "}
                         <br />
                         make sure I have the coverage I need at competitive{" "}
                         <br />
@@ -975,7 +964,7 @@ const Home = () => {
             >
               <div className="flex text-[#1C7987] font-robotoflex">
                 <h2>
-                  Get in Touch with the J&S Insurance Team we don’t just see you
+                  Get in Touch with the DBA Insurance Team we don’t just see you
                   as a customer
                   <br />
                   we see you as a part of our family. And family looks out for

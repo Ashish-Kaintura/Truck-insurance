@@ -66,7 +66,7 @@ export default function Services() {
         <title>Commercial Truck Insurance Services | DBA  Jay S Insurance Agency </title>
         <meta
           name="description"
-          content="Explore our range of trucking and commercial auto insurance services — from liability and cargo coverage to physical damage protection. DBA  Jay S Insurance Agency helps California truckers stay protected and compliant."/>
+          content="Explore our range of trucking and commercial auto insurance services — from liability and cargo coverage to physical damage protection. DBA  Jay S Insurance Agency helps California truckers stay protected and compliant." />
         <h2>Comprehensive Truck Insurance Services for Every Need</h2>
       </Helmet>
 
@@ -80,10 +80,10 @@ export default function Services() {
               </h2>
               <h2 className="text-5xl font-semibold font-sans pt-4">Service</h2>
               <h1 className="text-lg font-cormorantgaramond pt-4">
-               Comprehensive Truck Insurance Services for Every Need
+                Comprehensive Truck Insurance Services for Every Need
                 <br />
                 {/* Services We Provide: */}
-                {/* J&S Insurance Agency */}
+                {/* DBA Insurance Agency */}
               </h1>
               <br />
               <div>
@@ -112,26 +112,12 @@ export default function Services() {
             </div>
             <div className="p-2 sm:px-5 text-gray-700">
               <p className="text-center font-merriweather">
-                At J&S Insurance Agency, we strive to provide excellent
-                insurance coverage to clients in Arizona, California, Indiana,
-                New Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia and
-                Washington. Our wide range of policies safeguards individuals,
-                trucks, and businesses such as hotels, motels, gas stations, and
-                more.We offer policies including physical damage, general
-                liability, truck cargo, roadside assistance, auto liability, and
-                other options. If you are interested in coverage that is not
-                listed, please email sandy@jsinsur.com or call +1 206-617-9034
-                during business hours. We are happy to discuss your insurance
-                needs and explain all available protections.
+                At DBA Jay S Insurance Agency, we are committed to providing comprehensive insurance coverage to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. Our wide range of policies protects individuals, trucks, and businesses such as hotels, motels, gas stations, and more.
+
               </p>
               <br />
               <p className="text-center font-merriweather">
-                Trucking Liability Protect your business with policies covering
-                bodily injury, property damage, and more. Our plans shield you
-                from legal and financial risks. Motor Truck Cargo Safeguard your
-                truck's contents with robust coverage for theft, collisions,
-                weather events, and additional incidents. We offer adaptable
-                limits.
+                We offer specialized coverage, including commercial truck insurance, cargo insurance, fleet insurance, physical damage, general liability, roadside assistance, and commercial auto liability. If you require coverage not listed here, please email sandy@jsinsur.com or call +1 206-617-9034 during business hours. We are happy to discuss your unique insurance needs and explain all available protections.
               </p>
             </div>
           </div>
@@ -140,23 +126,16 @@ export default function Services() {
         <section className="py-20 bg-[#F2f2f2f2]">
           <div className=" justify-center text-center">
             <h2 className="font-cormorantgaramond text-5xl uppercase">
-              Services you get with us
+              Services You Get With Us
             </h2>
             <h2 className="font-cormorantgaramond pt-3 text-lg">
-              At J&S Insurance Agency, we strive to provide excellent insurance
-              coverage to clients in Arizona, California, Indiana, New Jersey,
-              New York, Ohio, Oregon, Texas, Utah, Virginia and Washington. Our
-              wide range of policies safeguards individuals, trucks, and
-              businesses such as hotels, motels, gas stations, and more.
+              At DBA Jay S Insurance Agency, we provide reliable insurance coverage to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. Our policies protect individuals, trucks, and businesses such as hotels, motels, gas stations, and more.
+
             </h2>
             <h3 className="font-cormorantgaramond pt-1 text-lg">
-              We offer policies including physical damage, general liability,
-              truck cargo, roadside assistance, auto liability, and other
-              options. If you are interested in coverage that is not listed,
+              We offer a variety of coverage options, including commercial truck insurance, fleet insurance, cargo insurance, physical damage, general liability, roadside assistance, and commercial auto liability.
               <br />
-              please email sandy@jsinsur.com or call +1 206-617-9034 during
-              business hours. We are happy to discuss your insurance needs and
-              explain all available protections.
+              If you need a type of coverage not listed above, please email sandy@jsinsur.com or call +1 206-617-9034 during business hours. Our team is happy to discuss your insurance needs and guide you to the best protection for your business and fleet.
             </h3>
           </div>
           <div className="flex flex-wrap sm:justify-evenly justify-center sm:pt-20 z-[10]">
@@ -630,15 +609,15 @@ export default function Services() {
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
                       About
                     </span>
-                    J&S Insurance
+                    DBA Insurance
                   </h2>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
-                    Customizable Coverage: The J&S Insurance Difference
+                    Customizable Coverage: The DBA Insurance Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At J&S Insurance Agency, we are aware of the fact that no
+                    At DBA Insurance Agency, we are aware of the fact that no
                     two clients have precisely <br />
                     identical risk profiles as well as coverage needs. Being an
                     individual agency serving <br /> the needs of rental service
@@ -764,7 +743,7 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-               
+
               </div>
             </div>
             <div>
