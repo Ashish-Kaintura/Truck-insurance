@@ -503,7 +503,7 @@ export default function Services() {
         </section>
         <section className="py-12">
           <section
-            className="sm:h-[70vh] h-[100vh] bg-cover bg-center bg-no-repeat relative"
+            className="sm:h-screen h-[120vh] bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: `url(${image})` }}
           >
             <div
@@ -513,7 +513,7 @@ export default function Services() {
                 backgroundColor: "rgba(86, 145, 235, 0.336)",
               }}
             >
-              <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 items-center">
+              <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 p-3 items-center">
                 <div className="sm:w-[50%]">
                   <div className="relative h-full w-full flex items-center justify-center">
                     <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
@@ -606,31 +606,26 @@ export default function Services() {
                 </div>
 
                 <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
-                  <h2 className="uppercase text-4xl font-merriweather text-white">
-                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
+                  <h2 className="uppercase sm:text-4xl text-2xl font-merriweather text-white">
+                    <span className="uppercase pb-2 pr-2 text-red-600">
                       About
-                    </span>
-                   J & S Insurance Agency Inc dba Jay s Insurance Agency
 
+                      J & S Insurance</span> Agency Inc dba Jay's Insurance Agency
                   </h2>
                   <br />
-                  <h2 className="text-2xl font-merriweather uppercase">
-                    Customizable Coverage: TheJ & S Insurance Agency Inc dba Jay s Insurance Agency
- Difference
+                  <h2 className="sm:text-2xl text-lg font-merriweather uppercase">
+                    Customizable Coverage: The J & S Insurance Agency Inc dba Jay's Insurance Agency Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    AtJ & S Insurance Agency Inc dba Jay s Insurance Agency
- Agency, we are aware of the fact that no
-                    two clients have precisely <br />
-                    identical risk profiles as well as coverage needs. Being an
-                    individual agency serving <br /> the needs of rental service
-                    trucks and commercial clients in 11 states for all its worth{" "}
-                    <br /> we are proud to present a customizable protection
-                    option.
+                    At J & S Insurance Agency Inc dba Jay's Insurance Agency, we are aware that no
+                    two clients have precisely identical risk profiles or coverage needs.
+                    As an independent agency serving the needs of rental service trucks and commercial
+                    clients across multiple states, we are proud to present customizable protection
+                    options tailored to your requirements.
                   </h3>
                   <div className="flex gap-5 sm:justify-start justify-evenly  pt-8">
-                    <Link to={"contact"}>
+                    <Link to={"/contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
                       </button>
