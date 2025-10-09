@@ -83,7 +83,8 @@ export default function Services() {
                 Comprehensive Truck Insurance Services for Every Need
                 <br />
                 {/* Services We Provide: */}
-                {/* DBA Insurance Agency */}
+                {/*J & S Insurance Agency Inc dba Jay s Insurance Agency
+ Agency */}
               </h1>
               <br />
               <div>
@@ -112,7 +113,7 @@ export default function Services() {
             </div>
             <div className="p-2 sm:px-5 text-gray-700">
               <p className="text-center font-merriweather">
-                At DBA Jay S Insurance Agency, we are committed to providing comprehensive insurance coverage to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. Our wide range of policies protects individuals, trucks, and businesses such as hotels, motels, gas stations, and more.
+                At J & S Insurance Agency Inc dba Jay s Insurance Agency, we are committed to providing comprehensive insurance coverage to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. Our wide range of policies protects individuals, trucks, and businesses such as hotels, motels, gas stations, and more.
 
               </p>
               <br />
@@ -129,7 +130,7 @@ export default function Services() {
               Services You Get With Us
             </h2>
             <h2 className="font-cormorantgaramond pt-3 text-lg">
-              At DBA Jay S Insurance Agency, we provide reliable insurance coverage to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. Our policies protect individuals, trucks, and businesses such as hotels, motels, gas stations, and more.
+              At J & S Insurance Agency Inc dba Jay s Insurance Agency, we provide reliable insurance coverage to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. Our policies protect individuals, trucks, and businesses such as hotels, motels, gas stations, and more.
 
             </h2>
             <h3 className="font-cormorantgaramond pt-1 text-lg">
@@ -609,15 +610,18 @@ export default function Services() {
                     <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
                       About
                     </span>
-                    DBA Insurance
+                   J & S Insurance Agency Inc dba Jay s Insurance Agency
+
                   </h2>
                   <br />
                   <h2 className="text-2xl font-merriweather uppercase">
-                    Customizable Coverage: The DBA Insurance Difference
+                    Customizable Coverage: TheJ & S Insurance Agency Inc dba Jay s Insurance Agency
+ Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At DBA Insurance Agency, we are aware of the fact that no
+                    AtJ & S Insurance Agency Inc dba Jay s Insurance Agency
+ Agency, we are aware of the fact that no
                     two clients have precisely <br />
                     identical risk profiles as well as coverage needs. Being an
                     individual agency serving <br /> the needs of rental service

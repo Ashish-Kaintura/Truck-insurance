@@ -91,11 +91,11 @@ export default function Aboutus() {
             </div>
             <div className="p-2 sm:px-5">
               <p className="text-center font-merriweather">
-                Sandy Gill founded DBA Jay S Insurance Agency in 2018, driven by a passion for serving the community. After gaining experience working in the insurance industry, she obtained her agent license and opened her own agency.
+                Sandy Gill founded J & S Insurance Agency Inc dba Jay s Insurance Agency in 2018, driven by a passion for serving the community. After gaining experience working in the insurance industry, she obtained her agent license and opened her own agency.
               </p>
               <br />
               <p className="text-center font-merriweather">
-                Since then, Sandy has focused on educating clients about commercial truck insurance, fleet coverage, and owner-operator policies. Her dedication to helping people and businesses with their insurance needs is the cornerstone of DBA Jay S Insurance Agency’s mission in Fresno and across California.
+                Since then, Sandy has focused on educating clients about commercial truck insurance, fleet coverage, and owner-operator policies. Her dedication to helping people and businesses with their insurance needs is the cornerstone of J & S Insurance Agency Inc dba Jay s Insurance Agency’s mission in Fresno and across California.
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Aboutus() {
             </div>
             <div className="p-2 sm:px-5 text-white">
               <p className="text-center font-merriweather">
-                Founded in 2018 by Sandy Gill on the principle of “serving the community to the fullest,” DBA Jay S Insurance Agency is dedicated to providing reliable, personalized insurance guidance. We help individuals and businesses secure the right coverage across California and 11 other states, including Arizona, New Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia, and Washington.
+                Founded in 2018 by Sandy Gill on the principle of “serving the community to the fullest,” J & S Insurance Agency Inc dba Jay s Insurance Agency is dedicated to providing reliable, personalized insurance guidance. We help individuals and businesses secure the right coverage across California and 11 other states, including Arizona, New Jersey, New York, Ohio, Oregon, Texas, Utah, Virginia, and Washington.
               </p>
               <br />
               <p className="text-center font-merriweather">
@@ -135,13 +135,15 @@ export default function Aboutus() {
               Wellcome to J & S Insurance
             </h2>
             <h2 className="pt-8 font-cormorantgaramond">
-              Meet the Dedicated Team Behind DBA Insurance Agency At DBA
+              Meet the Dedicated Team BehindJ & S Insurance Agency Inc dba Jay s Insurance Agency
+ Agency At DBA
               Insurance Agency, we’re not just about selling insurance policies
               - we’re about building lasting relationships and protecting what
               matters most.
             </h2>
             <h2 className="pt-2 font-cormorantgaramond">
-              Founded in 2018 by Sandy Gill, DBA Insurance is rooted in a
+              Founded in 2018 by Sandy Gill,J & S Insurance Agency Inc dba Jay s Insurance Agency
+ is rooted in a
               passion for helping individuals and businesses secure customized
               coverage. After nearly a decade working for top insurance
               providers, Sandy pursued an entrepreneurial dream.
@@ -163,7 +165,7 @@ export default function Aboutus() {
               What we Offer
             </h2>
             <p className="text-center pt-6 font-robotoflex text-sm text=[#d7d7d7]">
-              At DBA Jay S Insurance Agency, we are committed to providing comprehensive insurance solutions to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. <br />
+              At J & S Insurance Agency Inc dba Jay s Insurance Agency, we are committed to providing comprehensive insurance solutions to clients in California and 11 other states, including Arizona, Indiana, New Jersey, New York, Ohio, Oregon, Texas, Utah, and Virginia. <br />
               Our wide range of policies protects individuals, trucks, and businesses such as hotels, motels, gas stations, and more. We offer specialized coverage, including
 
               <br />
@@ -395,7 +397,8 @@ export default function Aboutus() {
                     Who We Are ?
                   </h2>
                   <p className="pt-4 font-sans">
-                    At DBA Insurance Agency, we aren’t simply here to sell
+                    AtJ & S Insurance Agency Inc dba Jay s Insurance Agency
+ Agency, we aren’t simply here to sell
                     policies and collect
                     <br />
                     payments. We’re family-owned protectors using industry
@@ -474,7 +477,8 @@ export default function Aboutus() {
                     <br />
                     <span className="text-black font-semibold">Fact 3</span>
                     <br />
-                    At DBA Insurance Agency, we’re obsessed with preparing
+                    AtJ & S Insurance Agency Inc dba Jay s Insurance Agency
+ Agency, we’re obsessed with preparing
                     trucking and commercial clients for the
                     <br />
                     unexpected - combining compassion and choice for unmatched
@@ -494,7 +498,7 @@ export default function Aboutus() {
                   Our Achivements
                 </h2>
                 <p className="pt-4 font-robotoflex pr-20">
-                  At DBA Jay S Insurance Agency, we are dedicated to preparing trucking and commercial clients for the unexpected. By combining expertise, personalized service, and flexible coverage options, we provide unmatched protection and peace of mind for your business and fleet.
+                  At J & S Insurance Agency Inc dba Jay s Insurance Agency, we are dedicated to preparing trucking and commercial clients for the unexpected. By combining expertise, personalized service, and flexible coverage options, we provide unmatched protection and peace of mind for your business and fleet.
                 </p>
                 <br />
                 <p className="pt-4 font-robotoflex pr-20">
@@ -581,7 +585,8 @@ export default function Aboutus() {
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
                         "As a small business owner, I rely on my truck to make
-                        deliveries every day. DBA Insurance
+                        deliveries every day.J & S Insurance Agency Inc dba Jay s Insurance Agency
+
                         <br />
                         found a policy that keeps me protected at a price I can
                         afford. I'd
@@ -662,7 +667,7 @@ export default function Aboutus() {
             >
               <div className="flex text-[#1C7987] font-robotoflex">
                 <h2>
-                  Get in Touch with the DBA Jay S Insurance Agency Team
+                  Get in Touch with the J & S Insurance Agency Inc dba Jay s Insurance Agency Team
                   <br />
                   We don’t just see you as a client — we see you as part of our family. Our team looks out for one another, ensuring you get the best commercial truck insurance, fleet coverage, and owner-operator policies for peace of mind across Fresno and California
                   <br />

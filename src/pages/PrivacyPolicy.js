@@ -36,12 +36,12 @@ export default function PivacyPolicy() {
         </section>
 
         <article className="max-w-5xl mx-auto my-10 px-4 sm:px-6 text-gray-800 leading-relaxed">
-          <h2 className="text-2xl font-semibold mb-2">DBA Jay S Insurance Agency Website Privacy Policy</h2>
+          <h2 className="text-2xl font-semibold mb-2">J & S Insurance Agency Inc dba Jay s Insurance Agency Website Privacy Policy</h2>
           <p className="text-sm text-gray-600 mb-4"><strong>Last Updated:</strong> 16/02/2024</p>
 
           <div className="space-y-4">
             <p>
-              DBA Jay S Insurance Agency (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”).
+              J & S Insurance Agency Inc dba Jay s Insurance Agency (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”).
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you
               visit our website WWW.JSINSUR.COM, including any media form, media channel, mobile website, or mobile
               application related thereto (collectively, the “Site”). Please read this privacy policy carefully. IF YOU
@@ -102,7 +102,7 @@ export default function PivacyPolicy() {
             </p>
 
             <h3 className="text-xl font-semibold mt-4">Third-Party Websites</h3>
-            <p>The Site may link to third-party websites. DBA Jay S Insurance Agency is not responsible for their privacy practices.</p>
+            <p>The Site may link to third-party websites. J & S Insurance Agency Inc dba Jay s Insurance Agency is not responsible for their privacy practices.</p>
 
             <h3 className="text-xl font-semibold mt-4">Security of Your Information</h3>
             <p>
@@ -131,7 +131,7 @@ export default function PivacyPolicy() {
             <h3 className="text-xl font-semibold mt-4">Contact Us</h3>
             <p>If you have questions about this Privacy Policy, contact:</p>
             <address className="not-italic text-gray-700">
-              DBA Jay S Insurance Agency<br />
+              J & S Insurance Agency Inc dba Jay s Insurance Agency<br />
               Location: Fresno, California, USA<br />
               Email: <a href="mailto:sandy@jsinsur.com" className="text-blue-600 hover:underline">sandy@jsinsur.com</a>
             </address>

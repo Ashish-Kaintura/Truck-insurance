@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
           <div className="sm:ps-[7rem] ps-4 pb-2 text-lg">
             <h1 className=" text-sm font-semibold text-white ">
-              DBA Jay S Insurance Agency
+              J & S Insurance Agency Inc dba Jay s Insurance Agency
             </h1>
             <h2 className="text-[14px]  font-semibold text-white">
               Lic #6011255

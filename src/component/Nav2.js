@@ -17,7 +17,7 @@ export default function Nav2() {
             <img src={navlogo} alt="" />
             <div>
               <h1 className=" text-sm font-semibold ps-2">
-                DBA Jay S Insurance Agency
+                J & S Insurance Agency Inc dba Jay s Insurance Agency
               </h1>
             </div>
           </div>

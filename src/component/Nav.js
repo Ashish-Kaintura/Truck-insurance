@@ -1,270 +1,136 @@
-import React from "react";
-import { Link, useNavigate, NavLink } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import close from "../icons/close.png";
 import menu from "../icons/menu.png";
 import navlogo from "../images/j&s ogoinalogo.png";
 import "../Css/Home.css";
+
 export default function Nav() {
-  // const auth = localStorage.getItem("user");
   const auth = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const Logout = () => {
-    // console.warn("apple");
     localStorage.clear();
     navigate("/signup");
   };
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
   return (
-    <div>
-      <nav className="bg-[white] sm:flex hidden justify-center">
-        {auth ? (
-          <ul className="flex justify-center  py-6">
-            <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
-              <div className="w-48">
-                <img src={navlogo} alt="" />
-                <div className="block gap-1">
-                  {/* <h1 className=" text-sm font-semibold ps-2">
-                    DBA Jay S Insurance Agency
-                  </h1>
-                  <h2 className="text-[14px] ps-2 font-semibold">
-                    Lic #6011255
-                  </h2> */}
-                </div>
-              </div>
-              <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
-                <Link to={"/"}>
-                  <li>home</li>
-                </Link>
-                <Link to={"/Aboutus"}>
-                  <li>About Us</li>
-                </Link>
-                <Link to={"/services"}>
-                  <li>Services</li>
-                </Link>
-                <Link to={"/profile"}>
-                  <li>Profile</li>
-                </Link>
-                <Link to={"/contact"}>
-                  <li>Contact Us</li>
-                </Link>
-              </div>
-              <div className="sm:flex hidden justify-center gap-8 font-sans">
-                <div className="flex justify-center gap-8">
-                  <div className="flex justify-center gap-8">
-                    <Link onClick={Logout} to={"/signup"}>
-                      Logout ({auth.username})
-                    </Link>
-                  </div>
-                </div>
-              </div>
+    <header className="w-full bg-white fixed top-0 left-0 z-50 shadow-sm">
+      {/* DESKTOP NAV */}
+      <nav className="hidden sm:flex justify-between items-center px-12 py-4">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img src={navlogo} alt="Logo" className="w-40" />
+        </div>
+
+        {/* Links */}
+        <ul className="flex gap-8 uppercase text-sm font-medium text-black">
+          <NavLink to="/" className="hover:text-gray-600">Home</NavLink>
+          <NavLink to="/Aboutus" className="hover:text-gray-600">About Us</NavLink>
+          <NavLink to="/services" className="hover:text-gray-600">Services</NavLink>
+          {auth && <NavLink to="/profile" className="hover:text-gray-600">Profile</NavLink>}
+          <NavLink to="/contact" className="hover:text-gray-600">Contact Us</NavLink>
+        </ul>
+
+        {/* Auth Buttons */}
+        <div>
+          {auth ? (
+            <button
+              onClick={Logout}
+              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg"
+            >
+              Logout ({auth.username})
+            </button>
+          ) : (
+            <div className="flex gap-4">
+              <Link to="/Login">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
+                  Log In
+                </button>
+              </Link>
+              <Link to="/signup">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
+                  Sign Up
+                </button>
+              </Link>
             </div>
-          </ul>
-        ) : (
-          <ul className="flex justify-center py-6">
-            <div className="flex justify-evenly gap-64 border-black border-b-2 pb-4 text-black items-center">
-              <div className="w-48">
-                <img src="./j&s logo final logo.png" alt="" />
-                <div className="block gap-1">
-                  {/* <h1 className=" text-sm font-semibold ps-2">
-                    DBA Jay S Insurance Agency
-                  </h1>
-                  <h2 className="text-[14px] ps-2 font-semibold">
-                    Lic #6011255
-                  </h2> */}
-                </div>
-              </div>
-              <div className="sm:flex hidden gap-5 uppercase font-sans text-black text-sm">
-                <Link to={"/"}>
-                  <li>home</li>
-                </Link>
-                <Link to={"/Aboutus"}>
-                  <li>About Us</li>
-                </Link>
-                <Link to={"/services"}>
-                  <li>Services</li>
-                </Link>
-                {/* <Link to={"/certificates"}>
-                <li>Certificates</li>
-              </Link> */}
-                <Link to={"/contact"}>
-                  <li>Contact Us</li>
-                </Link>
-              </div>
-              <div className="sm:flex hidden justify-center gap-8 font-sans">
-                <div className="flex justify-center gap-8">
-                  <Link to={"/Login"}>
-                    <button>Log In</button>
-                  </Link>
-                  <Link to={"/signup"}>
-                    <button>Sign up</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </ul>
-        )}
+          )}
+        </div>
       </nav>
-      <nav className="bg-[white] sm:hidden flex justify-between z-10 fixed w-full">
-        {auth ? (
-          <ul className="flex justify-between px-3 py-6 w-full items-center relative">
-            {isSidebarOpen && (
-              <div
-                className="sidenav absolute text-black flex flex-col gap-y-5 ps-2 mt-4 "
-                style={{
-                  position: "absolute",
-                  backgroundColor: "white",
-                  height: "100vh",
-                  top: 95,
-                  left: 0,
-                  zIndex: 5,
-                  overflowX: "hidden",
+
+      {/* MOBILE NAV */}
+      <nav className="flex sm:hidden justify-between items-center px-4 py-3">
+        <img src={navlogo} alt="Logo" className="w-32" />
+
+        <img
+          src={isSidebarOpen ? close : menu}
+          alt="menu"
+          className="w-7 cursor-pointer"
+          onClick={toggleSidebar}
+        />
+
+        {/* MOBILE SIDEBAR */}
+        <div
+          className={`fixed top-0 left-0 h-full w-3/4 bg-white text-black flex flex-col py-10 px-8 transition-transform duration-300 ease-in-out ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+        >
+          {auth && (
+            <div className="font-semibold text-lg mb-6 border-b pb-2">
+              Welcome, {auth.username}
+            </div>
+          )}
+
+          <NavLink onClick={toggleSidebar} to="/" className="py-2 border-b">
+            Home
+          </NavLink>
+          <NavLink onClick={toggleSidebar} to="/Aboutus" className="py-2 border-b">
+            About Us
+          </NavLink>
+          <NavLink onClick={toggleSidebar} to="/services" className="py-2 border-b">
+            Services
+          </NavLink>
+          {auth && (
+            <NavLink onClick={toggleSidebar} to="/profile" className="py-2 border-b">
+              Profile
+            </NavLink>
+          )}
+          <NavLink onClick={toggleSidebar} to="/contact" className="py-2 border-b">
+            Contact Us
+          </NavLink>
+
+          <div className="mt-6">
+            {auth ? (
+              <button
+                onClick={() => {
+                  Logout();
+                  toggleSidebar();
                 }}
+                className="bg-red-500 hover:bg-red-600 text-white w-full py-2 rounded-lg"
               >
-                {/* Sidebar content goes here */}
-                <div className="ps-7 pb-3 text-xl font-semibold">
-                  <h1>{auth.username}</h1>
-                </div>
-                <NavLink className="homeLink" to={"/"}>
-                  Home
-                </NavLink>
-                <NavLink className="homeLink" to={"/Aboutus"}>
-                  About
-                </NavLink>
-                <NavLink className="homeLink" to={"/profile"}>
-                  <li>Profile</li>
-                </NavLink>
-                <NavLink className="homeLink" to={"/Services"}>
-                  Services
-                </NavLink>
-                <NavLink className="homeLink" to={"/contact"}>
-                  Contact Us
-                </NavLink>
-                <div className="flex justify-start ps-6 text-xl mt-5  text-white  font-sans">
-                  <div className="flex gap-5">
-                    <li>
-                      <Link onClick={Logout} to={"/signup"}>
-                        <button className=" py-1 rounded-lg bg-red-600 border-2 shadow-2xl px-2">
-                          {" "}
-                          Logout
-                        </button>{" "}
-                        ({auth.username})
-                      </Link>
-                    </li>
-                  </div>
-                </div>
+                Logout ({auth.username})
+              </button>
+            ) : (
+              <div className="flex flex-col gap-3">
+                <Link to="/Login" onClick={toggleSidebar}>
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white w-full py-2 rounded-lg">
+                    Log In
+                  </button>
+                </Link>
+                <Link to="/signup" onClick={toggleSidebar}>
+                  <button className="bg-blue-500 hover:bg-blue-600 text-white w-full py-2 rounded-lg">
+                    Sign Up
+                  </button>
+                </Link>
               </div>
             )}
-            <div>
-              <img className="w-32" src={navlogo} alt="" />
-              <div className="block gap-1">
-                {/* <h1 className=" text-[13px] font-semibold ps-2 text-black">
-                  DBA Jay S Insurance Agency
-                </h1>
-                <h2 className="text-[14px] ps-2 font-semibold">
-                  Lic #6011255
-                </h2> */}
-              </div>
-            </div>
-            <div>
-              {isSidebarOpen ? (
-                <img
-                  className="w-6 menu cursor-pointer"
-                  src={close}
-                  alt=""
-                  onClick={toggleSidebar}
-                />
-              ) : (
-                <img
-                  className="w-6 close cursor-pointer"
-                  src={menu}
-                  alt=""
-                  onClick={toggleSidebar}
-                />
-              )}
-            </div>
-          </ul>
-        ) : (
-          <ul className="flex justify-between px-3 py-6 w-full items-center relative">
-            {isSidebarOpen && (
-              <div
-                className="sidenav absolute text-black flex flex-col gap-y-5 ps-4 mt-4 "
-                style={{
-                  position: "absolute",
-                  backgroundColor: "white",
-                  height: "100vh",
-                  top: 95,
-                  left: 0,
-                  zIndex: 5,
-                  overflowX: "hidden",
-                }}
-              >
-                {/* Sidebar content goes here */}
-                <div className="ps-3"></div>
-                <NavLink className="homeLink" to={"/"}>
-                  Home
-                </NavLink>
-                <NavLink className="homeLink" to={"/Aboutus"}>
-                  About
-                </NavLink>
-                <NavLink className="homeLink" to={"/Services"}>
-                  Services
-                </NavLink>
-                <NavLink className="homeLink" to={"/contact"}>
-                  Contact Us
-                </NavLink>
-                <div className="flex justify-start ps-6 text-xl mt-5  text-white  font-sans">
-                  <div className="flex gap-5">
-                    <Link to={"/Login"}>
-                      <button className="px-3 py1 rounded-lg bg-blue-400 border-2 shadow-2xl">
-                        Log In
-                      </button>
-                    </Link>
-                    <Link to={"/signup"}>
-                      <button className="px-3 py1 rounded-lg bg-blue-400 border-2 shadow-2xl">
-                        Sign up
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            )}
-            <div>
-              <img className="w-32" src={navlogo} alt="" />
-              <div className="block gap-1">
-                {/* <h1 className=" text-[13px] font-semibold ps-2 text-black">
-                  DBA Jay S Insurance Agency
-                </h1>
-                <h2 className="text-[14px] ps-2 font-semibold">
-                  Lic #6011255
-                </h2> */}
-              </div>
-            </div>
-            <div>
-              {isSidebarOpen ? (
-                <img
-                  className="w-6 menu cursor-pointer"
-                  src={close}
-                  alt=""
-                  onClick={toggleSidebar}
-                />
-              ) : (
-                <img
-                  className="w-6 close cursor-pointer"
-                  src={menu}
-                  alt=""
-                  onClick={toggleSidebar}
-                />
-              )}
-            </div>
-          </ul>
-        )}
+          </div>
+        </div>
+
+     
       </nav>
-    </div>
+    </header>
   );
 }

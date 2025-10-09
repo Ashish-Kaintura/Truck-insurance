@@ -52,7 +52,7 @@ export default function Termscondition() {
             aria-labelledby="terms-heading"
           >
             <p>
-              DBA Jay S Insurance Agency (“we”, “us”, or “our”) respects the privacy of our users (“user” or
+              J & S Insurance Agency Inc dba Jay s Insurance Agency (“we”, “us”, or “our”) respects the privacy of our users (“user” or
               “you”). These Terms & Conditions explain the rules for using our website WWW.JSINSUR.COM,
               including any media form, media channel, mobile website, or mobile application related thereto
               (collectively, the “Site”). Please read carefully. IF YOU DO NOT AGREE WITH THESE TERMS,
@@ -66,16 +66,16 @@ export default function Termscondition() {
             <h3>License Grant</h3>
             <p>
               You are granted a personal, revocable, limited, non-exclusive, non-transferable license to
-              access and use the DBA Jay S Insurance Agency website, conditioned on your continued acceptance
+              access and use the J & S Insurance Agency Inc dba Jay s Insurance Agency website, conditioned on your continued acceptance
               of these Terms. You may use the Site and its content for non-commercial personal use only.
-              DBA Jay S Insurance Agency reserves the right to restrict or suspend access for violations or
+              J & S Insurance Agency Inc dba Jay s Insurance Agency reserves the right to restrict or suspend access for violations or
               at our discretion.
             </p>
 
             <h3>License Restrictions</h3>
             <p>
               Unless expressly authorized, you may not copy, modify, distribute, sell, sublicense, reverse
-              engineer, or interfere with the Site or any DBA Jay S Insurance Agency content, including
+              engineer, or interfere with the Site or any J & S Insurance Agency Inc dba Jay s Insurance Agency content, including
               trademarks, logos, or proprietary notices. Unauthorized use, including attempts to obtain illegal
               access, introducing malware, or interfering with other users’ experience, is strictly
               prohibited.
@@ -83,7 +83,7 @@ export default function Termscondition() {
 
             <h3>Acceptance; Revisions to Terms</h3>
             <p>
-              These Terms constitute a binding agreement between you and DBA Jay S Insurance Agency. Your
+              These Terms constitute a binding agreement between you and J & S Insurance Agency Inc dba Jay s Insurance Agency. Your
               access signifies acceptance. We may revise these Terms at any time by posting updated Terms on
               the Site. Continued use confirms acceptance of changes.
             </p>
@@ -103,7 +103,7 @@ export default function Termscondition() {
             <h3>Personal Login Information</h3>
             <p>
               Some features require registration. Keep your login information confidential. Report
-              unauthorized use immediately. DBA Jay S Insurance Agency is not liable for misuse of login
+              unauthorized use immediately. J & S Insurance Agency Inc dba Jay s Insurance Agency is not liable for misuse of login
               credentials.
             </p>
 
@@ -116,7 +116,7 @@ export default function Termscondition() {
             <h3>User-Generated Content</h3>
             <p>
               You retain ownership of your content submitted on forums, blogs, or other platforms. By posting,
-              you grant DBA Jay S Insurance Agency a perpetual, non-exclusive, royalty-free license to use and
+              you grant J & S Insurance Agency Inc dba Jay s Insurance Agency a perpetual, non-exclusive, royalty-free license to use and
               distribute your content.
             </p>
 
@@ -137,7 +137,7 @@ export default function Termscondition() {
 
             <h3>Third-Party Information & Links</h3>
             <p>
-              The Site may feature third-party materials or links. DBA Jay S Insurance Agency does not
+              The Site may feature third-party materials or links. J & S Insurance Agency Inc dba Jay s Insurance Agency does not
               guarantee accuracy or endorse third-party content. Use third-party resources at your own risk.
             </p>
 
@@ -149,14 +149,14 @@ export default function Termscondition() {
 
             <h3>Limitation of Liability</h3>
             <p>
-              DBA Jay S Insurance Agency and affiliates are not liable for damages arising from use,
+              J & S Insurance Agency Inc dba Jay s Insurance Agency and affiliates are not liable for damages arising from use,
               inability to use, data loss, unauthorized access, third-party interactions, or reliance on
               content.
             </p>
 
             <h3>Indemnification</h3>
             <p>
-              You agree to defend and hold harmless DBA Jay S Insurance Agency from claims related to your
+              You agree to defend and hold harmless J & S Insurance Agency Inc dba Jay s Insurance Agency from claims related to your
               use of the Site, violation of Terms, or content submission.
             </p>
 
@@ -184,7 +184,7 @@ export default function Termscondition() {
               For questions, visit our “Contact Us” page or contact:
             </p>
             <address>
-              <strong>DBA Jay S Insurance Agency</strong>
+              <strong>J & S Insurance Agency Inc dba Jay s Insurance Agency</strong>
               <br />
               Location: Fresno, California, USA
               <br />

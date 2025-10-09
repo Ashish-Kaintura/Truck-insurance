@@ -87,7 +87,7 @@ const Home = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title> DBA Jay S Insurance Agency | Commercial Truck & Auto Insurance in Fresno, CA</title>
+        <title> J & S Insurance Agency Inc dba Jay s Insurance Agency | Commercial Truck & Auto Insurance in Fresno, CA</title>
         <meta
           name="description"
           content="Get reliable commercial truck and auto insurance from DBA  Jay S Insurance Agency in Fresno, CA. We help owner-operators and fleet owners find the right coverage at the best rates. Call today for a free quote."
@@ -118,7 +118,7 @@ const Home = () => {
             <div>
               <h1 className="text-center sm:text-5xl text-4xl text-white font-robotoflex pt-5">
                 Your Trusted Partner for Commercial
-
+                <br />
                 <span className="text-center text-5xl text-white font-robotoflex pt-5">
                   Truck Insurance in California
                 </span>
@@ -265,7 +265,7 @@ const Home = () => {
         </section>
         <section className="py-12">
           <section
-            className="sm:h-[70vh] h-[100vh] bg-cover bg-center bg-no-repeat relative"
+            className="sm:h-screen h-[120vh] bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: `url(${image})` }}
           >
             <div
@@ -275,7 +275,7 @@ const Home = () => {
                 backgroundColor: "rgba(86, 145, 235, 0.336)",
               }}
             >
-              <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 items-center">
+              <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 p-3 items-center">
                 <div className="sm:w-[50%]">
                   <div className="relative h-full w-full flex items-center justify-center">
                     <div className="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
@@ -368,28 +368,26 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col sm:mt-0 mt-12 sm:w-[50%] px-2">
-                  <h2 className="uppercase text-4xl font-merriweather text-white">
-                    <span className="uppercase border-b-2 text-red-600 border-red-600 pb-2 pr-2">
+                  <h2 className="uppercase sm:text-4xl text-2xl font-merriweather text-white">
+                    <span className="uppercase pb-2 pr-2 text-red-600">
                       About
-                    </span>
-                    DBA Insurance
+
+                      J & S Insurance</span> Agency Inc dba Jay's Insurance Agency
                   </h2>
                   <br />
-                  <h2 className="text-2xl font-merriweather uppercase">
-                    Customizable Coverage: The DBA Insurance Difference
+                  <h2 className="sm:text-2xl text-lg font-merriweather uppercase">
+                    Customizable Coverage: The J & S Insurance Agency Inc dba Jay's Insurance Agency Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At DBA Insurance Agency, we are aware of the fact that no
-                    two clients have precisely <br />
-                    identical risk profiles as well as coverage needs. Being an
-                    individual agency serving <br /> the needs of rental service
-                    trucks and commercial clients in 11 states for all its worth{" "}
-                    <br /> we are proud to present a customizable protection
-                    option.
+                    At J & S Insurance Agency Inc dba Jay's Insurance Agency, we are aware that no
+                    two clients have precisely identical risk profiles or coverage needs.
+                    As an independent agency serving the needs of rental service trucks and commercial
+                    clients across multiple states, we are proud to present customizable protection
+                    options tailored to your requirements.
                   </h3>
                   <div className="flex gap-5 sm:justify-start justify-evenly  pt-8">
-                    <Link to={"contact"}>
+                    <Link to={"/contact"}>
                       <button className="border-2 py-2 px-4 text-2xl text-white font-robotoflex mt-2 rounded-lg">
                         Contact Us
                       </button>
@@ -414,7 +412,7 @@ const Home = () => {
               </h2>
               <br />
               <h2 className="font-merriweather max-w-3xl mx-auto text-xl border-b-2 pb-8 border-red-600">
-                Based in Fresno, CA, DBA Jay S Insurance Agency proudly provides commercial truck insurance, fleet coverage, owner-operator policies, and business insurance solutions to clients throughout California and more than fifteen additional states. Our goal is to protect your trucks, cargo, and business wherever your operations take you.
+                Based in Fresno, CA, J & S Insurance Agency Inc dba Jay s Insurance Agency proudly provides commercial truck insurance, fleet coverage, owner-operator policies, and business insurance solutions to clients throughout California and more than fifteen additional states. Our goal is to protect your trucks, cargo, and business wherever your operations take you.
               </h2>
               <div className="flex flex-col pt-8">
                 <h2 className="text-3xl font-merriweather">
@@ -441,14 +439,14 @@ const Home = () => {
         <section>
           <div>
             <div
-              className="pt-8 block justify-center bg-center bg-cover bg-no-repeat text-[white] pb-20 relative px-2 h-64 "
+              className="pt-8 block justify-center bg-center bg-cover bg-no-repeat text-[white] pb-20 relative px-2 h-1/2 items-center "
               style={{ backgroundImage: `url(${image1})` }}
             >
               <h2 className="text-3xl pt-5 text-center font-merriweather">
                 Protect Your Trucks, Your Business, and Yourself
               </h2>
               <h2 className="sm:text-xl pt-5 text-center font-merriweather">
-                DBA Jay S Insurance Agency provides a wide range of insurance solutions for the trucking industry, including commercial truck insurance, cargo coverage, fleet insurance, owner-operator policies, and business protection plans
+                J & S Insurance Agency Inc dba Jay s Insurance Agency provides a wide range of insurance solutions for the trucking industry, including commercial truck insurance, cargo coverage, fleet insurance, owner-operator policies, and business protection plans
               </h2>
               <h3 className="sm:text-xl pt-1 text-center font-merriweather">
                 Our comprehensive offerings help you safeguard what matters most—your vehicles, your cargo, and your livelihood—across Fresno and California.
@@ -747,7 +745,8 @@ const Home = () => {
                       </div>
                       <h2 className="text-center text-white font-merriweather text-[18px]">
                         "As a small business owner, I rely on my truck to make
-                        deliveries every day. DBA Insurance
+                        deliveries every day.J & S Insurance Agency Inc dba Jay s Insurance Agency
+
                         <br />
                         found a policy that keeps me protected at a price I can
                         afford. I'd
@@ -759,7 +758,7 @@ const Home = () => {
                         - John S., Chicago, IL
                       </h2>
                       <br />
-                  
+
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -964,7 +963,8 @@ const Home = () => {
             >
               <div className="flex text-[#1C7987] font-robotoflex">
                 <h2>
-                  Get in Touch with the DBA Insurance Team we don’t just see you
+                  Get in Touch with theJ & S Insurance Agency Inc dba Jay s Insurance Agency
+                  Team we don’t just see you
                   as a customer
                   <br />
                   we see you as a part of our family. And family looks out for
@@ -987,16 +987,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* <!-- whats app icon  -->
-        <Link
-          className="whats-app"
-          to="https://wa.me/+12066179034"
-          target="_blank" // Optional: If you want to open the link in a new tab
-        >
-          <i className="fab fa-whatsapp icon animate-bounce my-float flex justify-center">
-            <FaWhatsapp />
-          </i>
-        </Link> */}
+
       </main>
     </div>
   );
