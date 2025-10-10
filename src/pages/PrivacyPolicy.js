@@ -11,10 +11,10 @@ export default function PivacyPolicy() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Privacy Policy | DBA  Jay S Insurance Agency</title>
+        <title>Privacy Policy | J & S insurance agency inc dba jay s insurance agency</title>
         <meta
           name="description"
-          content="Read the Privacy Policy of DBA  Jay S Insurance Agency to learn how we protect your personal and insurance information with secure and transparent practices."
+          content="Read the Privacy Policy of J & S insurance agency inc dba jay s insurance agency to learn how we protect your personal and insurance information with secure and transparent practices."
         />
       </Helmet>
 

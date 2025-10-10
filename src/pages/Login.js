@@ -81,7 +81,7 @@ export default function Login() {
                 <input
                   required={true}
                   placeholder="Email address"
-                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                   type="email"
                   onChange={handleChange}
                   id="email"
@@ -90,7 +90,7 @@ export default function Login() {
                 <input
                   required={true}
                   placeholder="Password"
-                  className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                   type="password"
                   onChange={handleChange}
                   id="password"

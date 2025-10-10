@@ -24,14 +24,14 @@ export default function Aboutus() {
       <Nav />
       <Helmet>
         <meta charSet="utf-8" />
-        <title>About DBA  Jay S Insurance Agency | Truck Insurance Experts in Fresno</title>
+        <title>About J & S insurance agency inc dba jay s insurance agency | Truck Insurance Experts in Fresno</title>
         <meta
           name="description"
-          content="Learn more about DBA  Jay S Insurance Agency — a licensed insurance agency dedicated to protecting truck owners and commercial fleets across California with personalized coverage and expert support." />
-        <h2>About DBA  Jay S Insurance Agency</h2>
+          content="Learn more aboutJ & S insurance agency inc dba jay s insurance agency — a licensed insurance agency dedicated to protecting truck owners and commercial fleets across California with personalized coverage and expert support." />
+        <h2>About J & S insurance agency inc dba jay s insurance agency</h2>
       </Helmet>
       <main>
-        <section className="h-[80vh] relative overflow-hidden">
+        <section className="h-[80vh] mt-[76px] relative overflow-hidden">
           {/* /* Video background (falls back to poster image) */ }
           <video
             className="absolute inset-0 w-full h-full object-cover z-0"
@@ -57,13 +57,13 @@ export default function Aboutus() {
             <div className="block flex-wrap justify-between px-8 items-center pt-8 ">
               <div className="flex flex-col mySlides">
                 <h1 className="sm:text-6xl text-4xl font-merriweather pt-3 text-white">
-                  About DBA  Jay S Insurance Agency
+                  About J & S insurance agency inc dba jay s insurance agency
                 </h1>
                 <h2 className="text-4xl font-merriweather pt-6 text-white">
-                  DBA Truck Insurance Agency has provided
+                  insurance agency has provided
                 </h2>
                 <h2 className="text-4xl font-merriweather pt-3 text-white">
-                  insurance services since 2018.
+                  since 2018.
                 </h2>
                 <div className="flex  justify-start gap-5 pt-8">
                   <Link to={"/contact"}>
@@ -122,7 +122,7 @@ export default function Aboutus() {
               </p>
               <br />
               <p className="text-center font-merriweather">
-                At DBA  Jay S Insurance Agency, our commitment to our clients and the communities we serve comes first. When you choose us, you’ll experience attentive service, expert guidance, and the personalized care only an independent Fresno insurance agency can provide. </p>
+                At J & S insurance agency inc dba jay s insurance agency, our commitment to our clients and the communities we serve comes first. When you choose us, you’ll experience attentive service, expert guidance, and the personalized care only an independent Fresno insurance agency can provide. </p>
             </div>
           </div>
         </section>

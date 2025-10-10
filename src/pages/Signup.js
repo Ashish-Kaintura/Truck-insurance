@@ -79,14 +79,14 @@ export default function Signup() {
                   "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
               }}
             >
-              <h2 className="text-2xl font-bold text-gray-200 mb-4">Sign up</h2>
+              <h2 className="text-2xl font-bold text-gray-100 mb-4">Sign up</h2>
               <form className="flex flex-col" onSubmit={handleSubmit}>
                 <div className="sm:flex flex-wrap gap-5">
                   <div className="flex justify-center">
                     <input
                       required={true}
                       placeholder="Enter Name"
-                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                       type="text"
                       // value={formData.Name}
                       onChange={handleChange}
@@ -97,7 +97,7 @@ export default function Signup() {
                     <input
                       required={true}
                       placeholder="Email address"
-                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                       type="email"
                       onChange={handleChange}
                       id="email"
@@ -109,7 +109,7 @@ export default function Signup() {
                     <input
                       required={true}
                       placeholder="Tax Id No"
-                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                       type="text"
                       onChange={handleChange}
                       id="tax_id"
@@ -119,7 +119,7 @@ export default function Signup() {
                     <input
                       required={true}
                       placeholder="Phone Number"
-                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                       type="number"
                       id="phone_number"
                       onChange={handleChange}
@@ -131,7 +131,7 @@ export default function Signup() {
                     <input
                       required={true}
                       placeholder="Company Name"
-                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                       type="text"
                       onChange={handleChange}
                       id="company_name"
@@ -141,7 +141,7 @@ export default function Signup() {
                     <input
                       required={true}
                       placeholder="Password"
-                      className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                      className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                       type="password"
                       onChange={handleChange}
                       id="password"
@@ -152,7 +152,7 @@ export default function Signup() {
                   <input
                     required={true}
                     placeholder="Enter Your Address"
-                    className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    className="bg-gray-50 text-gray-700 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     type="text"
                     onChange={handleChange}
                     id="address"

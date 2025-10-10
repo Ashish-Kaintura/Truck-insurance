@@ -2,11 +2,12 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
 import image from "../gif/ezgif.com-crop2.gif";
+import AboutVideo from "../video/aboutcomponentvideo.mp4"
 import image1 from "../images/AboutUs.png";
-import image2 from "../images/services/Industries.jpg";
-import image3 from "../images/services/PersonalTruck.jpg";
-import image4 from "../images/services/BUSINESS.jpg";
-import image5 from "../images/services/Benifits.jpg";
+import image2 from "../images/services/industry.jpg";
+import image3 from "../images/services/Personal.jpg";
+import image4 from "../images/services/Business.jpg";
+import image5 from "../images/services/Benefits.jpg";
 import TruckDamageSvg from "../images/truck-insurance_damage.svg";
 import TruckDamageSvg1 from "../images/truck-insurance_theft.svg";
 import TruckDamageSvg2 from "../images/truck-insurance_fire.svg";
@@ -90,7 +91,7 @@ const Home = () => {
         <title> J & S Insurance Agency Inc dba Jay s Insurance Agency | Commercial Truck & Auto Insurance in Fresno, CA</title>
         <meta
           name="description"
-          content="Get reliable commercial truck and auto insurance from DBA  Jay S Insurance Agency in Fresno, CA. We help owner-operators and fleet owners find the right coverage at the best rates. Call today for a free quote."
+          content="Get reliable commercial truck and auto insurance from J & S insurance agency inc dba jay s insurance agency in Fresno, CA. We help owner-operators and fleet owners find the right coverage at the best rates. Call today for a free quote."
         />
         <h2>Your Trusted Partner for Commercial Truck Insurance in California</h2>
       </Helmet>
@@ -266,13 +267,21 @@ const Home = () => {
         <section className="py-12">
           <section
             className="sm:h-screen h-[120vh] bg-cover bg-center bg-no-repeat relative"
-            style={{ backgroundImage: `url(${image})` }}
+        
           >
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              src={AboutVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            {/* Dark Overlay for contrast */}
+            <div className="absolute inset-0 bg-black/60" />
             <div
-              className="absolute inset-0 py-28"
+              className="relative z-10 py-28 h-[120vh] items-center"
               style={{
-                backdropFilter: "blur(4px)",
-                backgroundColor: "rgba(86, 145, 235, 0.336)",
               }}
             >
               <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 p-3 items-center">
@@ -375,7 +384,7 @@ const Home = () => {
                       J & S Insurance</span> Agency Inc dba Jay's Insurance Agency
                   </h2>
                   <br />
-                  <h2 className="sm:text-2xl text-lg font-merriweather uppercase">
+                  <h2 className="sm:text-2xl text-lg font-merriweather uppercase text-white">
                     Customizable Coverage: The J & S Insurance Agency Inc dba Jay's Insurance Agency Difference
                   </h2>
                   <br />
@@ -458,7 +467,7 @@ const Home = () => {
               <div className="overflow-hidden">
                 <Link to={""}>
                   <div
-                    className="sm:w-128 h-96 bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
+                    className="sm:w-128 h-96 bg-center bg-cover bg-no-repeat bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
                     style={{
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -466,9 +475,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      {/* <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         Industries
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
                 </Link>
@@ -476,7 +485,7 @@ const Home = () => {
               <div className="overflow-hidden">
                 <Link to={""}>
                   <div
-                    className="sm:w-128 h-96 bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
+                    className="sm:w-128 h-96 bg-center bg-cover bg-no-repeat bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
                     style={{
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -484,9 +493,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      {/* <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         personal
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
                 </Link>
@@ -494,7 +503,7 @@ const Home = () => {
               <div className="overflow-hidden">
                 <Link to={""}>
                   <div
-                    className="sm:w-128 h-96 bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
+                    className="sm:w-128 h-96 bg-center bg-cover bg-no-repeat bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
                     style={{
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -502,9 +511,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      {/* <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         business
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
                 </Link>
@@ -512,7 +521,7 @@ const Home = () => {
               <div className="overflow-hidden">
                 <Link to={""}>
                   <div
-                    className="sm:w-128 h-96 bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
+                    className="sm:w-128 h-96 bg-center bg-cover bg-no-repeat bg-white hover:scale-125 transition-all ease-in duration-500 blur-sm hover:blur-none"
                     style={{
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
@@ -520,9 +529,9 @@ const Home = () => {
                     }}
                   >
                     <div>
-                      <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
+                      {/* <h2 className="pt-12 text-2xl text-white ps-12 font-merriweather uppercase">
                         Benefits
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
                 </Link>

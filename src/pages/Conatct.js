@@ -32,181 +32,173 @@ export default function Conatct() {
 
   return (
     <div>
-       <Helmet>
-              <meta charSet="utf-8" />
-        <title>Contact DBA  Jay S Insurance Agency | Get a Commercial Truck Insurance Quote</title>
-              <meta
-                name="description"
-          content="Get in touch with DBA  Jay S Insurance Agency in Fresno, CA for personalized truck and commercial auto insurance quotes. Call us or fill out our online form — we’re here to help you stay protected."
-              />
-        <h2>Contact DBA  Jay S Insurance Agency</h2>
-            </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact J & S insurance agency inc dba jay s insurance agency | Get a Commercial Truck Insurance Quote</title>
+        <meta
+          name="description"
+          content="Get in touch withJ & S insurance agency inc dba jay s insurance agency in Fresno, CA for personalized truck and commercial auto insurance quotes. Call us or fill out our online form — we’re here to help you stay protected."
+        />
+        <h2>Contact J & S insurance agency inc dba jay s insurance agency</h2>
+      </Helmet>
       <Nav />
-      <section className="sm:p-8 p-2 sm:pt-0 pt-28">
+      <section className="sm:p-8 p-2 sm:pt-0 pt-28 mt-32">
         <div
-          className="sm:h-[100vh] h-[120vh] bg-center bg-cover object-cover relative "
+          className="relative sm:h-[100vh] h-[130vh] bg-center bg-cover bg-no-repeat flex items-center justify-center"
           style={{
             backgroundImage: `url(${require("../images/contact-us-page-banner.jpg")})`,
           }}
         >
-          <div
-            className="absolute inset-0 sm:flex block sm:justify-evenly justify-center items-center"
-            style={{}}
-          >
-            <div>
-              <div className=" flex justify-center mt-8 sm:mt-0">
-                <div
-                  className="max-w-md relative flex flex-col p-4 rounded-md text-black bg-transparent border-2 shadow-inner"
-                  style={{
-                    backdropFilter: " blur(10px)",
-                    backgrounCcolor: "rgba(255, 255, 255, 0.071)",
-                    boxShadow:
-                      "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
-                  }}
-                >
-                  <div className="text-4xl font-bold mb-2 text-white text-center">
-                    Lets get <span className="text-white">Conencted</span>
-                  </div>
-                  <div className="text-sm font-merriweathermb-4 text-center text-white font-merriweather">
-                  <h1>  Contact DBA  Jay S Insurance Agency</h1>
-                  </div>
-                  <form
-                    className="flex flex-col gap-3"
-                    ref={form}
-                    onSubmit={sendEmail}
-                  >
-                    <div className="block relative">
-                      <label
-                        for="name"
-                        className="block text-white cursor-text text-sm leading-[140%] font-merriweather mb-2"
-                      >
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter Name"
-                        id="name"
-                        name="name"
-                        className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
-                        required
-                      />
-                    </div>
-                    <div className="block relative">
-                      <label
-                        for="email"
-                        className="block text-white cursor-text text-sm leading-[140%] font-merriweather mb-2"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter Mail"
-                        id="email"
-                        name="email"
-                        className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
-                        required
-                      />
-                    </div>
-                    <div className="block relative">
-                      <label
-                        for="number"
-                        className="block text-white cursor-text text-sm leading-[140%] font-merriweather mb-2"
-                      >
-                        Phone Number
-                      </label>
-                      <input
-                        type="number"
-                        placeholder="Enter Number"
-                        id="number"
-                        name="number"
-                        className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
-                        required
-                      />
-                    </div>
-                    <div className="block relative">
-                      <label
-                        for="message"
-                        className="block text-white font-merriweather cursor-text text-sm leading-[140%]  mb-2"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        placeholder="Enter your Message"
-                        type="text"
-                        id="message"
-                        name="message"
-                        className="rounded border border-gray-200 text-sm w-full font-merriweather leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
-                        required
-                      ></textarea>
-                    </div>
+          {/* Overlay for better text contrast */}
+          <div className="absolute inset-0 bg-black/50" />
 
-                    <button
-                      type="submit"
-                      className="bg-white text-black font-merriweather w-max m-auto px-6 py-2 rounded text-lg"
-                    >
-                      Submit
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
+          {/* Main container */}
+          <div className="relative z-10 flex flex-col sm:flex-row justify-evenly items-start gap-8 w-full max-w-6xl mx-auto sm:px-4">
+
+            {/* Left: Contact Form */}
             <div
-              className="block justify-start border-2 sm:w-128 sm:mt-0 mt-2 mx-8"
-              style={{
-                backdropFilter: " blur(8px)",
-                backgrounCcolor: "rgba(255, 255, 255, 0.071)",
-                boxShadow:
-                  "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset",
-              }}
+              className="w-full sm:w-[50%] p-6 sm:p-8 rounded-2xl border border-white/30 shadow-2xl text-white backdrop-blur-md bg-white/10"
             >
-              <div className="flex justify-start px-4 gap-5 items-center text-white  font-cormorantgaramond py-5 uppercase">
-                <FaLocationDot />
+              <h1 className="text-4xl font-semibold mb-2 text-center">
+                Let’s Get <span className="text-blue-300">Connected</span>
+              </h1>
+              <p className="text-center text-sm text-gray-200 mb-6">
+                Contact <span className="font-semibold">J & S Insurance Agency Inc dba Jay’s Insurance Agency</span>
+              </p>
+
+              <form
+                className="flex flex-col gap-4"
+                ref={form}
+                onSubmit={sendEmail}
+              >
                 <div>
-                  <h2 className="text-lg sm:text-black font-semibold ">
-                    Address :
-                  </h2>
-                  <h2 className="text-lg sm:text-gray-900">
-                    Fresno California
-                  </h2>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-semibold mb-1"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    className="w-full rounded-md border border-gray-300 bg-white/90 text-black p-3 focus:ring-2 focus:ring-blue-400 outline-none"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold mb-1"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    className="w-full rounded-md border border-gray-300 bg-white/90 text-black p-3 focus:ring-2 focus:ring-blue-400 outline-none"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="number"
+                    className="block text-sm font-semibold mb-1"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="number"
+                    name="number"
+                    placeholder="Enter your number"
+                    className="w-full rounded-md border border-gray-300 bg-white/90 text-black p-3 focus:ring-2 focus:ring-blue-400 outline-none"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold mb-1"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message"
+                    className="w-full rounded-md border border-gray-300 bg-white/90 text-black p-3 h-24 resize-none focus:ring-2 focus:ring-blue-400 outline-none"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="mt-2 bg-blue-600 hover:bg-blue-500 transition-all duration-300 text-white font-semibold rounded-md py-2 px-8 mx-auto block"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            {/* Right: Contact Details */}
+            <div
+              className="w-full sm:w-[40%] p-6 sm:p-8 rounded-2xl border border-white/30 shadow-2xl backdrop-blur-md bg-white/10 text-white space-y-6"
+            >
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <FaLocationDot className="text-2xl text-blue-400 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg">Address</h3>
+                  <p className="text-gray-200">Fresno, California</p>
                 </div>
               </div>
-              <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
-                <FaPhoneAlt />
+
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <FaPhoneAlt className="text-2xl text-blue-400 mt-1" />
                 <div>
-                  <h2 className="text-lg sm:text-black font-semibold ">
-                    Phone :
-                  </h2>
-                  <h2 className="text-lg sm:text-gray-900">2066179034</h2>
+                  <h3 className="font-semibold text-lg">Phone</h3>
+                  <p className="text-gray-200">+1 206 617 9034</p>
                 </div>
               </div>
-              <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
-                <IoTime className="text-2xl" />
+
+              {/* Hours */}
+              <div className="flex items-start gap-4">
+                <IoTime className="text-2xl text-blue-400 mt-1" />
                 <div>
-                  <h2 className="text-lg sm:text-black font-semibold ">
-                    We are Open:
-                  </h2>
-                  <h2 className="text-lg sm:text-gray-900">
-                    Monday - Thursday: 9:00 AM-5:30 PM <br />
-                    Friday 9:00 AM - 5:00 PM <br />
-                  </h2>
+                  <h3 className="font-semibold text-lg">We’re Open</h3>
+                  <p className="text-gray-200 leading-relaxed">
+                    Monday - Thursday: 9:00 AM - 5:30 PM <br />
+                    Friday: 9:00 AM - 5:00 PM
+                  </p>
                 </div>
               </div>
-              <div className="flex justify-start px-4 gap-5 items-center text-white text-xl font-cormorantgaramond py-5">
-                <IoMail className="text-2xl" />
+
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <IoMail className="text-2xl text-blue-400 mt-1" />
                 <div>
-                  <h2 className="text-lg sm:text-black font-semibold ">
-                    E-mail:
-                  </h2>
-                  <h2 className="text-lg sm:text-gray-900">
-                    {" "}
-                    <a href="mailto:sandy@jsinsur.com"> sandy@jsinsur.com</a>
-                  </h2>
+                  <h3 className="font-semibold text-lg">E-mail</h3>
+                  <a
+                    href="mailto:sandy@jsinsur.com"
+                    className="text-gray-200 hover:text-blue-400 transition"
+                  >
+                    sandy@jsinsur.com
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 }

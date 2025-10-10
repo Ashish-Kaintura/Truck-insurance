@@ -12,10 +12,10 @@ export default function Termscondition() {
     <>
      <Helmet>
             <meta charSet="utf-8" />
-        <title>Terms & Conditions | DBA  Jay S Insurance Agency</title>
+        <title>Terms & Conditions | J & S insurance agency inc dba jay s insurance agency</title>
             <meta
               name="description"
-          content="Review the terms and conditions for using the DBA  Jay S Insurance Agency website, including our service policies, disclaimers, and user responsibilities."
+          content="Review the terms and conditions for using theJ & S insurance agency inc dba jay s insurance agency website, including our service policies, disclaimers, and user responsibilities."
             />
         <h2>DBA  Jay S Insurance Agency Terms & Conditions</h2>
           </Helmet>

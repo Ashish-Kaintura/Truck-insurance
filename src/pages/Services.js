@@ -5,6 +5,7 @@ import Nav from "../component/Nav";
 import { Link } from "react-router-dom";
 import "../Css/Services.css";
 import image from "../gif/ezgif.com-crop2.gif";
+import AboutVideo from "../video/aboutcomponentvideo.mp4"
 import image1 from "../gif/ezgif.com-crop2.gif";
 import emailjs from "@emailjs/browser";
 import { Helmet } from "react-helmet";
@@ -63,10 +64,10 @@ export default function Services() {
       <Nav />
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Commercial Truck Insurance Services | DBA  Jay S Insurance Agency </title>
+        <title>Commercial Truck Insurance Services | J & S insurance agency inc dba jay s insurance agency </title>
         <meta
           name="description"
-          content="Explore our range of trucking and commercial auto insurance services — from liability and cargo coverage to physical damage protection. DBA  Jay S Insurance Agency helps California truckers stay protected and compliant." />
+          content="Explore our range of trucking and commercial auto insurance services — from liability and cargo coverage to physical damage protection.J & S insurance agency inc dba jay s insurance agency helps California truckers stay protected and compliant." />
         <h2>Comprehensive Truck Insurance Services for Every Need</h2>
       </Helmet>
 
@@ -504,13 +505,21 @@ export default function Services() {
         <section className="py-12">
           <section
             className="sm:h-screen h-[120vh] bg-cover bg-center bg-no-repeat relative"
-            style={{ backgroundImage: `url(${image})` }}
+
           >
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              src={AboutVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            {/* Dark Overlay for contrast */}
+            <div className="absolute inset-0 bg-black/60" />
             <div
-              className="absolute inset-0 py-28"
+              className="relative z-10 py-28 h-[120vh] items-center"
               style={{
-                backdropFilter: "blur(4px)",
-                backgroundColor: "rgba(86, 145, 235, 0.336)",
               }}
             >
               <div className="sm:flex block sm:justify-evenly justify-center sm:px-4 p-3 items-center">
@@ -613,7 +622,7 @@ export default function Services() {
                       J & S Insurance</span> Agency Inc dba Jay's Insurance Agency
                   </h2>
                   <br />
-                  <h2 className="sm:text-2xl text-lg font-merriweather uppercase">
+                  <h2 className="sm:text-2xl text-lg font-merriweather uppercase text-white">
                     Customizable Coverage: The J & S Insurance Agency Inc dba Jay's Insurance Agency Difference
                   </h2>
                   <br />
