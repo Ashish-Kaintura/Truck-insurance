@@ -619,15 +619,15 @@ export default function Services() {
                     <span className="uppercase pb-2 pr-2 text-red-600">
                       About
 
-                      J & S Insurance</span> Agency Inc dba Jay's Insurance Agency
+                      J & S Insurance</span> Agency Inc dba Jay s Insurance Agency
                   </h2>
                   <br />
                   <h2 className="sm:text-2xl text-lg font-merriweather uppercase text-white">
-                    Customizable Coverage: The J & S Insurance Agency Inc dba Jay's Insurance Agency Difference
+                    Customizable Coverage: The J & S Insurance Agency Inc dba Jay s Insurance Agency Difference
                   </h2>
                   <br />
                   <h3 className="font-merriweather text-white">
-                    At J & S Insurance Agency Inc dba Jay's Insurance Agency, we are aware that no
+                    At J & S Insurance Agency Inc dba Jay s Insurance Agency, we are aware that no
                     two clients have precisely identical risk profiles or coverage needs.
                     As an independent agency serving the needs of rental service trucks and commercial
                     clients across multiple states, we are proud to present customizable protection

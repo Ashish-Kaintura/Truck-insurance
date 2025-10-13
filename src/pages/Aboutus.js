@@ -32,7 +32,7 @@ export default function Aboutus() {
       </Helmet>
       <main>
         <section className="h-[80vh] mt-[76px] relative overflow-hidden">
-          {/* /* Video background (falls back to poster image) */ }
+          {/* /* Video background (falls back to poster image) */}
           <video
             className="absolute inset-0 w-full h-full object-cover z-0"
             autoPlay
@@ -41,11 +41,11 @@ export default function Aboutus() {
             playsInline
             poster={image}
           >
-            <source src={video}type="video/mp4" />
+            <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-            Your browser does not support the video tag.
-        
+          Your browser does not support the video tag.
+
 
           <div
             className="absolute inset-0 pt-28 z-10"
@@ -515,7 +515,7 @@ export default function Aboutus() {
           </div>
         </section>
         <section
-          className="sm:h-[65vh] h-[85vh] bg-cover bg-center bg-no-repeat relative items-center"
+          className="sm:h-[65vh] h-[850px] bg-cover bg-center bg-no-repeat relative items-center"
           style={{ backgroundImage: `url(${backgroundImage1})` }}
         >
           <div
@@ -525,7 +525,7 @@ export default function Aboutus() {
               backgroundColor: "rgba(10, 10, 10, 0.4)",
             }}
           >
-            <div className="sm:flex flex-wrap sm:justify-evenly justify-center pt-8 items-center">
+            <div className="sm:flex flex-wrap sm:justify-evenly justify-center pt-8 items-center px-2">
               <div className="flex flex-col text-center justify-center">
                 <div className="flex justify-center overflow-hidden">
                   <img
@@ -539,7 +539,7 @@ export default function Aboutus() {
                 </h2>
                 <br />
                 <h2 className="text-xl font-merriweather text-white">
-                  Check out our reviews and see why you should switch to JS
+                  Check out our reviews and see why you should switch to DBA
                   Truck
                 </h2>
 
@@ -552,7 +552,7 @@ export default function Aboutus() {
                       Contact Us
                     </button>
                   </Link>
-                  <Link to={"/Services"}>
+                  <Link to={"/services"}>
                     <button className="border-2 py-2 px-4 text-2xl text-white font-sans mt-2 bg-[#816C54] rounded-lg">
                       Know More
                     </button>
@@ -594,9 +594,11 @@ export default function Aboutus() {
                         recommend them to any trucker looking for coverage.
                       </h2>
                       <h2 className="text-white font-merriweather pt-3">
-                        {" "}- John S., Chicago, IL
+                        {" "}
+                        - John S., Chicago, IL
                       </h2>
                       <br />
+
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -623,6 +625,11 @@ export default function Aboutus() {
                         Michael R., Dallas, TX
                       </h2>
                       <br />
+                      {/* <div className="flex justify-center gap-5">
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                  </div> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -649,6 +656,11 @@ export default function Aboutus() {
                         Susan P., Denver, CO
                       </h2>
                       <br />
+                      {/* <div className="flex justify-center gap-5">
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                    <div className="border-2 bg-[transparent] hover:bg-white cursor-pointer w-4 h-4 rounded-full"></div>
+                  </div> */}
                     </div>
                   </SwiperSlide>
                 </Swiper>

@@ -39,7 +39,7 @@ export default function Footer() {
                   className="w-44 mb-3"
                 />
                 <h1 className="text-lg font-semibold">
-                  J & S Insurance Agency Inc dba Jay’s Insurance Agency
+                  J & S Insurance Agency Inc dba Jay s Insurance Agency
                 </h1>
                 <p className="text-sm font-medium text-gray-200">Lic #6011255</p>
               </div>
@@ -49,7 +49,7 @@ export default function Footer() {
                 <h2 className="text-xl font-bold mb-2">About the Founder</h2>
                 <p className="text-gray-200 leading-relaxed text-sm">
                   <span className="font-semibold text-white">Sandy Gill</span> founded{" "}
-                  <span className="font-semibold">J & S Insurance Agency Inc</span> dba Jay’s Insurance Agency in 2018, driven by a deep
+                  <span className="font-semibold">J & S Insurance Agency Inc</span> dba Jay s Insurance Agency in 2018, driven by a deep
                   passion for serving the community. After gaining valuable
                   experience in the insurance industry, she obtained her agent
                   license and opened her own agency to provide trusted, personalized coverage.
@@ -99,7 +99,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="text-center text-sm text-gray-300 mt-10 pt-6 border-t border-gray-600">
-              © {new Date().getFullYear()} J & S Insurance Agency Inc dba Jay’s Insurance Agency. All Rights Reserved.
+              © {new Date().getFullYear()} J & S Insurance Agency Inc dba Jay s Insurance Agency. All Rights Reserved.
             </div>
           </div>
         </div>

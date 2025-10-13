@@ -63,7 +63,7 @@ export default function Conatct() {
                 Let’s Get <span className="text-blue-300">Connected</span>
               </h1>
               <p className="text-center text-sm text-gray-200 mb-6">
-                Contact <span className="font-semibold">J & S Insurance Agency Inc dba Jay’s Insurance Agency</span>
+                Contact <span className="font-semibold">J & S Insurance Agency Inc dba Jay s Insurance Agency</span>
               </p>
 
               <form
